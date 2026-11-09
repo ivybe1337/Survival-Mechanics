@@ -1,0 +1,5 @@
+Installed 34 packages in 71ms
+ref,fileName,date,description,status,publicScore,privateScore
+57913192,submission.json,2026-11-02 15:24:34.377000,"FATE/SSM V1 admissibility selection over open NVARC (Joshua Matthew Carter), CC BY 4.0",SubmissionStatus.COMPLETE,29.72,
+57677356,submission.json,2026-10-26 20:05:40.540000,FATE/SSM selection layer (V1 ledger mask) over open NVARC pipeline; private notebook,SubmissionStatus.COMPLETE,28.06,
+56404958,submission.json,2026-09-20 19:51:33.270000,"baseline: FARSEER exact-program searcher, pipeline validation",SubmissionStatus.COMPLETE,0.00,

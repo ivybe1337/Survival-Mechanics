@@ -1,0 +1,40 @@
+[{"stream_name":"stderr","time":8.553591497,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.553650511,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.55365597,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.553658896,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":9.31644749,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.316483077000001,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.316488163,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.316492097,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":11.033726752,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":11.034447002,"data":"  File \"\u003cstring\u003e\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":11.034470373,"data":"    import sys;import papermill as pm;pm.execute_notebook(\"__notebook__.ipynb\",\"__notebook__.ipynb\",progress_bar=False,log_output=True,stdout_file=sys.stdout,stderr_file=sys.stderr,allow_errors=False,timeout=43200)\n"}
+,{"stream_name":"stderr","time":11.034478764,"data":"                                      ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":11.034483751,"data":"  File \"/usr/local/lib/python3.13/dist-packages/papermill/execute.py\", line 131, in execute_notebook\n"}
+,{"stream_name":"stderr","time":11.03448819,"data":"    raise_for_execution_errors(nb, output_path)\n"}
+,{"stream_name":"stderr","time":11.034491667,"data":"    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":11.034495414,"data":"  File \"/usr/local/lib/python3.13/dist-packages/papermill/execute.py\", line 251, in raise_for_execution_errors\n"}
+,{"stream_name":"stderr","time":11.034499586,"data":"    raise error\n"}
+,{"stream_name":"stderr","time":11.034507643,"data":"papermill.exceptions.PapermillExecutionError: \n"}
+,{"stream_name":"stderr","time":11.034511263,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":11.034515558,"data":"Exception encountered at \"In [1]\":\n"}
+,{"stream_name":"stderr","time":11.034518875,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":11.034521853,"data":"FileNotFoundError                         Traceback (most recent call last)\n"}
+,{"stream_name":"stderr","time":11.03452441,"data":"/tmp/ipykernel_16/1643592739.py in \u003ccell line: 0\u003e()\n"}
+,{"stream_name":"stderr","time":11.034526956,"data":"      4 FRAMEWORK_SOURCE=COMPETITION_ROOT/'ARC-AGI-3-Agents'\n"}
+,{"stream_name":"stderr","time":11.034529378,"data":"      5 if not WHEELS.exists() or not FRAMEWORK_SOURCE.exists():\n"}
+,{"stream_name":"stderr","time":11.03453185,"data":"----\u003e 6     raise FileNotFoundError('Official ARC-AGI-3 Kaggle competition assets missing; attach ARC-AGI-3 competition data')\n"}
+,{"stream_name":"stderr","time":11.034534474,"data":"      7 subprocess.check_call([sys.executable,'-m','pip','install','--no-index','--find-links',str(WHEELS),'arc-agi','python-dotenv'])\n"}
+,{"stream_name":"stderr","time":11.034549324,"data":"      8 import torch\n"}
+,{"stream_name":"stderr","time":11.034551875,"data":"\n"}
+,{"stream_name":"stderr","time":11.034554552,"data":"FileNotFoundError: Official ARC-AGI-3 Kaggle competition assets missing; attach ARC-AGI-3 competition data\n"}
+,{"stream_name":"stderr","time":11.034557079,"data":"\n"}
+,{"stream_name":"stderr","time":13.853254934,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":13.853289304,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":14.053209218,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":14.053241235,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":14.944334385,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":15.035307038,"data":"[NbConvertApp] Writing 56560 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":18.162655327,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":18.881150059,"data":"[NbConvertApp] Writing 449354 bytes to __results__.html\n"}
+]

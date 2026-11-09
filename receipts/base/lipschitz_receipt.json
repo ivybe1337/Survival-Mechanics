@@ -1,0 +1,164 @@
+{
+  "receipt_E_lipschitz_bound_T15": {
+    "both_witnesses_tight": true,
+    "bound_holds_with_zero_violations": true,
+    "definition_note": "A^(H)(h) := {e in Sigma : R_V^(H-1)(h.e) != empty} for H>=1, empty for H=0; R_V^(H)(h) per T6. Claim: |A^(H)(h) sym-diff A^(H)(h')| <= min(|Sigma|, d_H^+(h,h')).",
+    "monotonic_rule_results": {
+      "L": 6,
+      "alphabet_size": 2,
+      "results_by_horizon": [
+        {
+          "H": 0,
+          "pairs_checked": 16129,
+          "tightness_witness_d_lt_sigma": null,
+          "tightness_witness_lhs_eq_sigma": null,
+          "violations": [],
+          "violations_found": 0
+        },
+        {
+          "H": 1,
+          "pairs_checked": 16129,
+          "tightness_witness_d_lt_sigma": {
+            "d": 1,
+            "h": "",
+            "hp": "b",
+            "lhs": 1
+          },
+          "tightness_witness_lhs_eq_sigma": {
+            "d": 3,
+            "h": "",
+            "hp": "bb",
+            "lhs": 2
+          },
+          "violations": [],
+          "violations_found": 0
+        },
+        {
+          "H": 2,
+          "pairs_checked": 16129,
+          "tightness_witness_d_lt_sigma": null,
+          "tightness_witness_lhs_eq_sigma": {
+            "d": 6,
+            "h": "",
+            "hp": "bb",
+            "lhs": 2
+          },
+          "violations": [],
+          "violations_found": 0
+        },
+        {
+          "H": 3,
+          "pairs_checked": 16129,
+          "tightness_witness_d_lt_sigma": null,
+          "tightness_witness_lhs_eq_sigma": {
+            "d": 11,
+            "h": "",
+            "hp": "bb",
+            "lhs": 2
+          },
+          "violations": [],
+          "violations_found": 0
+        },
+        {
+          "H": 4,
+          "pairs_checked": 16129,
+          "tightness_witness_d_lt_sigma": null,
+          "tightness_witness_lhs_eq_sigma": {
+            "d": 19,
+            "h": "",
+            "hp": "bb",
+            "lhs": 2
+          },
+          "violations": [],
+          "violations_found": 0
+        }
+      ],
+      "rule": "monotonic (avoid substring bb)"
+    },
+    "nonmonotonic_rule_results": {
+      "L": 6,
+      "alphabet_size": 2,
+      "results_by_horizon": [
+        {
+          "H": 0,
+          "pairs_checked": 16129,
+          "tightness_witness_d_lt_sigma": null,
+          "tightness_witness_lhs_eq_sigma": null,
+          "violations": [],
+          "violations_found": 0
+        },
+        {
+          "H": 1,
+          "pairs_checked": 16129,
+          "tightness_witness_d_lt_sigma": null,
+          "tightness_witness_lhs_eq_sigma": {
+            "d": 3,
+            "h": "",
+            "hp": "b",
+            "lhs": 2
+          },
+          "violations": [],
+          "violations_found": 0
+        },
+        {
+          "H": 2,
+          "pairs_checked": 16129,
+          "tightness_witness_d_lt_sigma": null,
+          "tightness_witness_lhs_eq_sigma": null,
+          "violations": [],
+          "violations_found": 0
+        },
+        {
+          "H": 3,
+          "pairs_checked": 16129,
+          "tightness_witness_d_lt_sigma": null,
+          "tightness_witness_lhs_eq_sigma": null,
+          "violations": [],
+          "violations_found": 0
+        },
+        {
+          "H": 4,
+          "pairs_checked": 16129,
+          "tightness_witness_d_lt_sigma": null,
+          "tightness_witness_lhs_eq_sigma": null,
+          "violations": [],
+          "violations_found": 0
+        }
+      ],
+      "rule": "non-monotonic (even count of b)"
+    },
+    "reverified_witness_regime_d_lt_sigma": {
+      "A_H_h": [
+        "a",
+        "b"
+      ],
+      "A_H_hp": [
+        "a"
+      ],
+      "H": 1,
+      "d_H_plus": 1,
+      "h": "",
+      "hp": "b",
+      "lhs_sym_diff": 1,
+      "rhs_min_sigma_d": 1,
+      "tight": true
+    },
+    "reverified_witness_regime_lhs_eq_sigma": {
+      "A_H_h": [
+        "a",
+        "b"
+      ],
+      "A_H_hp": [],
+      "H": 2,
+      "d_H_plus": 6,
+      "h": "",
+      "hp": "bb",
+      "lhs_sym_diff": 2,
+      "rhs_min_sigma_d": 2,
+      "tight": true
+    },
+    "total_pairs_checked": 161290,
+    "total_violations_found": 0
+  },
+  "receipt_sha256_without_hash_field": "bee85b395e9fdcb53b5f76064a561ed77af00c4ede5c06203aef9872d8b71307"
+}

@@ -1,0 +1,82 @@
+{
+  "receipt_F_presentation_uniqueness_T16": {
+    "all_checks_pass": true,
+    "alphabet": [
+      "a",
+      "b"
+    ],
+    "exactness_P_kappa": {
+      "checked": 189,
+      "exact": true,
+      "name": "P_kappa",
+      "violations": []
+    },
+    "exactness_P_mid": {
+      "checked": 189,
+      "exact": true,
+      "name": "P_mid",
+      "violations": []
+    },
+    "forced_uniqueness_ok": true,
+    "forced_uniqueness_violations": [],
+    "history_length_tested": 6,
+    "kappa_shortcut_matches_raw_row_partition": true,
+    "morphism_check_correct_psi": {
+      "is_valid_morphism": true,
+      "name": "psi (forced by T16, P_mid -> P_kappa)",
+      "output_violations": [],
+      "transition_violations": []
+    },
+    "morphism_check_wrong_psi_sanity": {
+      "is_valid_morphism": false,
+      "name": "psi_wrong (deliberately broken, sanity check)",
+      "output_violations": [
+        {
+          "lambda_src": 1,
+          "lambda_tgt_of_psi": 0,
+          "state": "A2"
+        }
+      ],
+      "transition_violations": [
+        {
+          "delta_tgt(psi)": "A",
+          "e": "a",
+          "psi(delta_src)": "D",
+          "state": "A1"
+        },
+        {
+          "delta_tgt(psi)": "D",
+          "e": "b",
+          "psi(delta_src)": "B",
+          "state": "A2"
+        },
+        {
+          "delta_tgt(psi)": "A",
+          "e": "a",
+          "psi(delta_src)": "D",
+          "state": "B"
+        }
+      ]
+    },
+    "non_minimality_witness": {
+      "confirms_P_mid_is_strictly_non_minimal": true,
+      "kappa_identifies_them": true,
+      "phi_mid_distinguishes_them": true,
+      "state_A1_example_history": "",
+      "state_A2_example_history": "a"
+    },
+    "part_b_isomorphism_check": {
+      "P_iso_is_exact": true,
+      "P_iso_is_minimal": true,
+      "confirms_part_b_isomorphism": true,
+      "psi_iso_inverse_is_valid_morphism": true,
+      "psi_iso_inverse_structure_map_condition_ok": true,
+      "psi_iso_is_bijective": true,
+      "psi_iso_is_valid_morphism": true
+    },
+    "raw_kappa_class_count_via_residual_rows": 3,
+    "raw_kappa_row_suffix_horizon": 8,
+    "survival_rule": "trace survives iff substring 'bb' never occurs"
+  },
+  "receipt_sha256_without_hash_field": "dfcc342e46eac29ff0676856cc776e5cd76f46a6da243b1055cdc3abf22a9e26"
+}

@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Joshua Matthew Carter, Independent researcher" />
+  <title>ARC Prize 2026 Report</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <style>
+  :root{--bg:#fdfdfb;--fg:#1b1b1b;--muted:#555;--link:#1f4fbf;--rule:#ddd}
+  @media (prefers-color-scheme: dark){:root{--bg:#141414;--fg:#e8e8e6;--muted:#aaa;--link:#8fb0ff;--rule:#333}}
+  html,body{background:var(--bg);color:var(--fg)}
+  body{max-width:46rem;margin:0 auto;padding:1.5rem 1rem 4rem;font:17px/1.6 Georgia,"Times New Roman",serif}
+  a{color:var(--link)} h1,h2,h3{line-height:1.25}
+  header#title-block-header .subtitle{font-size:1.15rem;color:var(--muted)}
+  .bar{display:flex;flex-wrap:wrap;gap:.75rem 1.25rem;padding:.75rem 0;margin-bottom:1rem;border-bottom:1px solid var(--rule);font-family:system-ui,sans-serif;font-size:.95rem}
+  table{border-collapse:collapse;display:block;overflow-x:auto;font-size:.9rem;margin:1rem 0}
+  td,th{border:1px solid var(--rule);padding:.35rem .5rem;vertical-align:top}
+  img{max-width:100%;height:auto}
+  mjx-container{overflow-x:auto;overflow-y:hidden;max-width:100%}
+  code{font-size:.9em}
+  </style>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<nav class="bar"><a href="./">← Home</a><a href="arc.html">ARC data, live</a><a href="paper.html">Theory paper</a><a href="https://github.com/ivybe1337/Survival-Mechanics/blob/main/reports/ARC_PRIZE_2026_REPORT.md">Source</a></nav>
+<header id="title-block-header">
+<h1 class="title">Likely Orders, Allowed Demotes</h1>
+<p class="subtitle">A complete report on my ARC Prize 2026 submissions
+built on Survival Mechanics and FATE</p>
+<p class="author">Joshua Matthew Carter, Independent researcher</p>
+<p class="date">November 2026</p>
+</header>
+<h2 id="abstract">Abstract</h2>
+<p>I entered both ARC Prize 2026 code tracks with systems built on one
+idea from my theory: what a model finds likely and what the task allows
+are different states, and they should be allowed to do different things.
+A learned score may order candidates. Only evidence that a candidate
+breaks a law of the task may push it down. On ARC-AGI-2 I added a
+pre-registered selection layer to the open NVARC pipeline. My final
+submission, 57913192, scored 29.72 on the public leaderboard, and a
+same-code replicate, 57677356, scored 28.06. Replayed on the identical
+candidate pools of the official public-evaluation run, the layer gains
+one test output of 157 and loses none, while a control that deletes by
+likelihood loses two. I show exactly why one is the right size: the
+truth is never generated for 103 of 157 outputs, the generator already
+respects every local law, and the global laws that catch wrong answers
+can be declared on only 12 outputs. On ARC-AGI-3 my hidden-set
+submission, 57913002, scored 0.00. The same code, run on the 25 public
+games under the official offline scorecard, completed 3 of 183 levels.
+None of these is a strong score, and I claim none as one. What I claim
+is an exact accounting of where accuracy goes in a generate-then-select
+system, a selection rule that held under a deliberate violation, and the
+evidence for every number, published with this report.</p>
+<h2 id="introduction">1. Introduction</h2>
+<p>ARC-AGI tests whether a system can learn a new rule from a few
+examples [1, 2]. The strongest ARC-AGI-2 entries of 2025 generate many
+candidate answers and then choose two [3, 4]. Choosing is where my
+theory has something specific to say. In <em>Likely and Allowed</em> [6]
+I separate two states of a history: the predictive state, which fixes
+what is likely next, and the residual state, which fixes what is still
+allowed. I prove the two are independent and that a forecaster that uses
+only one of them can be forced into large errors. An ARC task is a clean
+place to test that separation, because the demonstrations declare
+constraints and the model proposes answers.</p>
+<p>So I asked a narrow question and fixed my predictions before reading
+any data: inside a real, competitive solver, what does keeping the two
+states separate actually buy? This report answers it for ARC-AGI-2,
+reports honestly on ARC-AGI-3, and explains the code behind every
+submission.</p>
+<p>All numbers below come from files published alongside this report:
+Kaggle’s own submission records pulled with the Kaggle CLI, the
+notebooks’ run logs, the per-output analysis of the official run, and
+the public leaderboard snapshot. Section 8 lists them.</p>
+<h2 id="the-submissions">2. The submissions</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Track</th>
+<th>Submission</th>
+<th>Date</th>
+<th>Public score</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ARC-AGI-2</td>
+<td>57913192</td>
+<td>Nov 2, 2026</td>
+<td><strong>29.72</strong></td>
+<td>Final: V1 admissibility selection over open NVARC</td>
+</tr>
+<tr class="even">
+<td>ARC-AGI-2</td>
+<td>57677356</td>
+<td>Oct 26, 2026</td>
+<td>28.06</td>
+<td>Same code, earlier run</td>
+</tr>
+<tr class="odd">
+<td>ARC-AGI-2</td>
+<td>56404958</td>
+<td>Sep 20, 2026</td>
+<td>0.00</td>
+<td>FARSEER exact-program searcher, pipeline validation</td>
+</tr>
+<tr class="even">
+<td>ARC-AGI-3</td>
+<td>57913002</td>
+<td>Nov 2, 2026</td>
+<td><strong>0.00</strong></td>
+<td>DCIE agent through the official gateway</td>
+</tr>
+</tbody>
+</table>
+<p>Source: <code>kaggle_submissions_arc-agi-2.csv</code>,
+<code>kaggle_submissions_arc-agi-3.csv</code>. The two ARC-AGI-2 runs of
+the same code differ by 1.66 points. Section 6 shows why that
+matters.</p>
+<h2 id="prior-work">3. Prior work</h2>
+<p>The candidate generator is the Qwen3-4B component of NVARC [4], the
+2025 winner, as packaged in a public Kaggle notebook whose loader,
+solver and decoder I use byte for byte. It does per-task LoRA test-time
+training on augmented demonstrations, depth-first decoding over the ARC
+tokens, and re-scoring of every candidate under eight augmentations,
+descending from the ARChitects’ approach [5]. I did not write it and I
+do not claim it.</p>
+<p>Constrained decoding enforces rules during generation. I leave
+generation untouched, so one recorded pool supports every selection rule
+offline, and the comparison between rules is exact. FATE’s elimination
+step descends from arc consistency [7] and the forward–backward
+algorithm; what it adds is a logged reason for every removal.</p>
+<h2 id="approach">4. Approach</h2>
+<h3 id="the-rule">4.1 The rule</h3>
+<p>Every system here obeys one rule from the theory: <strong>a learned
+score may order; only a declared admissibility law may demote or
+delete.</strong> In the language of the paper, the model’s likelihood is
+a forecast from the predictive state, and an invariant that holds on
+every demonstration is a piece of the residual state. The rule keeps
+each state in its own job.</p>
+<h3 id="arc-agi-2-the-selection-layer">4.2 ARC-AGI-2: the selection
+layer</h3>
+<p><strong>Generator (unchanged).</strong> Each test output gets a pool
+of decoded grids with vote counts and eight augmentation likelihoods.
+The baseline V0 ranks candidates by votes minus mean negative
+log-likelihood, exactly as the public pipeline does.</p>
+<p><strong>The ledger, V1 (submitted).</strong> For each task I mine
+invariants from the demonstrations. An invariant is active only if it
+holds on every demonstration pair:</p>
+<ul>
+<li>output shape, as a function of input shape;</li>
+<li>palette;</li>
+<li>exact colour counts, conserved from input to output;</li>
+<li>sorted colour profile, the multiset of colour counts conserved from
+input to output.</li>
+</ul>
+<p>Candidates that break an active invariant move behind every
+admissible candidate. Nothing is deleted, and nothing leaves the two
+answer slots unless at least two admissible candidates exist.</p>
+<p><strong>FATE, V2 and V3.</strong> FATE intersects forward
+reachability from the input with backward preimages of the output. It
+meets in the middle over 60 exact invertible grid operations at depth 2
++ 2, plus a global colour map, and it logs the reason for every
+eliminated state. A program counts only if it reproduces every
+demonstration. When one exists, its output becomes the first attempt
+(V2), or the first attempt over the ledger order (V3). On 600 random
+nondeterministic systems with a planted trajectory, the engine never
+eliminated a true state.</p>
+<p><strong>Control, V4.</strong> V4 deletes every candidate whose
+likelihood trails the best by more than ln 10. It breaks the rule on
+purpose, so the rule can be tested.</p>
+<p><strong>Safety.</strong> Any error in the layer falls back to the
+pipeline’s own order for that task, and a CPU path fills tasks the
+12-hour budget never reaches.</p>
+<p><strong>Pre-registration.</strong> I wrote seven predictions before
+any pool or precision result was read. I report only paired differences
+between rules on identical pools, because the public checkpoint may have
+seen public-evaluation tasks during training.</p>
+<h3 id="arc-agi-3-the-agents">4.3 ARC-AGI-3: the agents</h3>
+<p>ARC-AGI-3 is interactive: an agent plays games it has never seen,
+through actions, and must discover each game’s goal. Every agent below
+runs the same split. A predictive model learns what the game does, and a
+survival model records what kills or does nothing.</p>
+<p><strong>DCIE (submitted as 57913002).</strong> Two trainable PyTorch
+recursive mixture-of-experts models, randomly initialized and trained
+online on the agent’s own observations, with test-time training on every
+action. It adds survival evidence per state, multi-step counterfactual
+scoring of actions, and the FARSEER navigation and click policy. In the
+competition rerun it joins the official <code>ARC-AGI-3-Agents</code>
+framework and plays the games issued by Kaggle’s gateway. Its models
+start with random weights; nothing is pretrained.</p>
+<p><strong>FARSEER v3.</strong> A CPU agent with an online transition
+model, the FARSEER causal navigation policy, and a click-admissibility
+ledger. Click outcomes are recorded per game, level and colour under the
+click as no-op, effect, progress or death. Candidate clicks whose class
+has only ever been seen as no-op or death move to the back; nothing is
+deleted.</p>
+<p><strong>FATE 3.</strong> A research agent run after the competition
+closed: a 26,058,049-parameter model with predictive, survival and
+policy heads, randomly initialized, with full-weight test-time training
+on verified transitions and FARSEER navigation to start.</p>
+<h2 id="results">5. Results</h2>
+<h3 id="arc-agi-2-the-official-public-evaluation-run">5.1 ARC-AGI-2: the
+official public-evaluation run</h3>
+<p>The official commit run covered all 120 public-evaluation tasks: 172
+test outputs, 157 of which received at least one candidate. Five tasks
+were not reached in that run.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Rule</th>
+<th>Top-2 correct of 157</th>
+<th>Change from V0</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>V0 baseline</td>
+<td>43</td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>V1 ledger (submitted)</strong></td>
+<td><strong>44</strong></td>
+<td>+1, −0</td>
+</tr>
+<tr class="odd">
+<td>V2 FATE / V3 both</td>
+<td>43 / 44</td>
+<td>+0 / +1</td>
+</tr>
+<tr class="even">
+<td>V4 control (deletes by likelihood)</td>
+<td>41</td>
+<td>+0, −2</td>
+</tr>
+<tr class="odd">
+<td>Top-1 only</td>
+<td>37</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Oracle: truth anywhere in the pool</td>
+<td>54</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Task-level bootstrap intervals on the difference from V0 are [0, +3]
+test outputs for V1 and [−5, 0] for V4; neither is significant (sign
+test p = 1.0 and 0.5). In task-equivalents the run scores 32.333 under
+V0 and 33.333 under V1, and my replay reproduces the run’s own log
+exactly. Source: <code>official_v1_analysis.json</code>.</p>
+<p><strong>Pre-registered predictions.</strong></p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Prediction</th>
+<th>Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>P1. V1 loses only through false exclusion</td>
+<td>Held: no violations</td>
+</tr>
+<tr class="even">
+<td>P2. The net gain is at most 2 outputs per 100</td>
+<td>Held: 0.64</td>
+</tr>
+<tr class="odd">
+<td>P3. FATE’s certified programs are 40–90% precise</td>
+<td>Untestable: 0 of 120 tasks certified</td>
+</tr>
+<tr class="even">
+<td>P4. FATE adds at most 1 output per 100</td>
+<td>Held: 0</td>
+</tr>
+<tr class="odd">
+<td>P5. V4 is no better than V1</td>
+<td>Held: 41 against 44</td>
+</tr>
+<tr class="even">
+<td>P6. The ledger touches at least 30% of outputs</td>
+<td><strong>Failed: 7.6%</strong></td>
+</tr>
+<tr class="odd">
+<td>P7. Recall is the binding ceiling</td>
+<td>Held</td>
+</tr>
+</tbody>
+</table>
+<h3 id="arc-agi-3">5.2 ARC-AGI-3</h3>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Agent</th>
+<th>Run</th>
+<th>Games</th>
+<th>Levels completed (of 183)</th>
+<th>Scorecard</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>DCIE, submitted code</td>
+<td>hidden set, 57913002</td>
+<td>hidden</td>
+<td>—</td>
+<td><strong>0.00</strong></td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>DCIE, same code</td>
+<td>public 25, offline</td>
+<td>25</td>
+<td><strong>3</strong></td>
+<td>0.186</td>
+<td>5,192</td>
+</tr>
+<tr class="odd">
+<td>FATE 3 (after the deadline)</td>
+<td>public 25, offline</td>
+<td>25</td>
+<td>1</td>
+<td>0.003</td>
+<td>3,500</td>
+</tr>
+</tbody>
+</table>
+<p>Neither DCIE nor FATE 3 completed a whole game. The DCIE public run’s
+code is byte-identical to the submitted notebook in all five code cells,
+so it is the public-set measurement of the submitted agent. By action
+type, DCIE completed 0 of 93 levels on the 13 keyboard-and-click games,
+1 of 29 on the 4 keyboard games, and 2 of 55 on the 7 click games. FATE
+3 ran on November 8, after submissions closed, and is research only.
+Sources: <code>arc3_public25_dcie.json</code>,
+<code>arc3_public25_fate3.json</code>, and each run’s log.</p>
+<p>The FARSEER v3 notebook reports, in its own header, 8 levels and a
+scorecard of 0.341 at a 500-action budget on the 25 public games against
+7 levels and 0.230 for its previous version, with seeds 1 and 2 giving
+0.305 against 0.195 and 0.203 against 0.202. The per-game files behind
+those numbers are not published here, so I do not count them as
+verified.</p>
+<p><strong>What went wrong on the hidden set.</strong> I submitted the
+wrong notebook. Submission 57913002 is the DCIE agent through the
+gateway runner, which is the agent’s foundation and scaffolding rather
+than the agent I meant to enter. The same code completes 3 public levels
+offline. Levels on the public games do not guarantee levels on the
+hidden ones, and I do not have the hidden-run logs, so I cannot say
+whether the agent or the harness failed there.</p>
+<h2 id="analysis">6. Analysis</h2>
+<h3 id="where-the-accuracy-goes">6.1 Where the accuracy goes</h3>
+<p>Accuracy factors exactly:</p>
+<p><span class="math display">\[\frac{44}{157} \;=\;
+\underbrace{\frac{54}{157}}_{\text{truth generated}} \times
+\underbrace{\frac{44}{54}}_{\text{truth selected}} .\]</span></p>
+<p>For 103 of the 157 outputs the model never generated the right
+answer, and no selection rule can recover an answer that is not in the
+pool. Selection is already efficient: 44 of the 54 available truths
+reach the top two.</p>
+<h3 id="why-a-mask-has-narrow-leverage">6.2 Why a mask has narrow
+leverage</h3>
+<p>A demotion rule can win an output only when the truth was generated,
+sits below the two answer slots, and enough candidates above it break a
+law. It can lose one only when the truth itself breaks a law and was
+already in the top two. Eleven outputs had the truth in the pool but
+outside the top two. Exactly one of them had an inadmissible candidate
+ahead of the truth, and V1 fixed it. In task <code>2b83f449</code>, 13
+of the 14 distinct candidates broke the colour profile that every
+demonstration obeys, and the truth rose from third place to first. That
+was the layer’s entire available gain, and it took it.</p>
+<p>The layer is safe. Among the 157 outputs, the ledger excluded the
+truth once, on <code>a25697e4_0</code>, and it cost nothing because the
+model had never generated the truth there.</p>
+<h3 id="local-laws-are-absorbed-global-laws-are-not">6.3 Local laws are
+absorbed; global laws are not</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Invariant</th>
+<th>Outputs where it is active</th>
+<th>Wrong candidates that violate it</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Output shape</td>
+<td>110</td>
+<td>0 of 816</td>
+</tr>
+<tr class="even">
+<td>Palette</td>
+<td>157</td>
+<td>1 of 1,155</td>
+</tr>
+<tr class="odd">
+<td>Exact colour count</td>
+<td>9</td>
+<td>48 of 74</td>
+</tr>
+<tr class="even">
+<td>Sorted colour profile</td>
+<td>3</td>
+<td>22 of 22</td>
+</tr>
+</tbody>
+</table>
+<p>Across all pools, 1,084 of 1,155 wrong candidates (93.9%) pass every
+active invariant. The table shows the mechanism. Wrong candidates
+essentially never break shape or palette, because a generator fitted to
+the demonstrations learns what a cell-by-cell decoder can enforce. They
+break global counting laws often, because no single cell can see a
+count. My reading is that the binding limit on this residual state is
+how seldom a global law can be declared, not how well it discriminates:
+the strong invariants were declarable on only 12 of 157 outputs, and
+only one of those held a fixable ranking error. This matches the
+theory’s prediction that the two states carry different information,
+here measured as a split between laws the predictor already absorbs and
+laws it cannot.</p>
+<p>Finer laws fail differently. Forcing each cell from its 3×3 input
+neighbourhood is violated by the truth on 74% of applicable outputs and
+by the wrong top candidate on 68%, so it can neither delete safely nor
+discriminate.</p>
+<h3 id="fate-certified-nothing-on-the-evaluation-set">6.4 FATE certified
+nothing on the evaluation set</h3>
+<p>FATE certified 0 of 120 evaluation tasks. On the training set it
+certified 15 of 1,000, of which 14 were correct. My inference is that
+ARC-AGI-2 evaluation tasks are rarely compositions of global invertible
+operations, so an exact engine over that library is precise but almost
+never applicable.</p>
+<h3 id="deleting-by-likelihood-is-measurably-wrong">6.5 Deleting by
+likelihood is measurably wrong</h3>
+<p>Both of V4’s losses, <code>4c3d4a41_1</code> and
+<code>b6f77b65_2</code>, are correct answers in second place, deleted on
+likelihood alone. That is the rule’s failure mode, observed exactly
+where the theory says it will appear.</p>
+<h3 id="more-sampling-raises-recall-not-accuracy">6.6 More sampling
+raises recall, not accuracy</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Fraction of decoded runs</th>
+<th>Recall</th>
+<th>Top-2 accuracy</th>
+<th>Mean candidates</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0.10</td>
+<td>21.2%</td>
+<td>20.8%</td>
+<td>1.63</td>
+</tr>
+<tr class="even">
+<td>0.25</td>
+<td>26.2%</td>
+<td>24.5%</td>
+<td>3.01</td>
+</tr>
+<tr class="odd">
+<td>0.50</td>
+<td>30.9%</td>
+<td>26.6%</td>
+<td>4.91</td>
+</tr>
+<tr class="even">
+<td>0.75</td>
+<td>32.9%</td>
+<td>27.4%</td>
+<td>6.43</td>
+</tr>
+<tr class="odd">
+<td>1.00</td>
+<td>34.4%</td>
+<td>27.4%</td>
+<td>7.70</td>
+</tr>
+</tbody>
+</table>
+<p>From half the runs to all of them, recall rises 3.5 points and top-2
+accuracy only 0.8. The extra truths arrive with few votes, and selection
+cannot promote them. The run used 5.4 of its 12 hours
+(<code>official_v1_task_times.json</code>).</p>
+<h3 id="noise">6.7 Noise</h3>
+<p>My two identical-code runs differ by 1.66 points. The leaderboard
+agrees with that scale. Among teams scoring 25 to 35 with at most two
+submissions, the mean is 29.48 with standard deviation 1.40, so 29.72
+sits at z = +0.17. Teams in the same band with ten or more submissions
+average 31.31: the band rises with re-rolls. To detect a one-task effect
+(0.83 points) at a two-sided 5% level with 80% power takes <span
+class="math inline">\(n = 2(1.96+0.84)^2\sigma^2/\delta^2\)</span> runs
+per arm, which is 31 with σ = 1.17 from my pair and 44 with σ = 1.40
+from the band. A paired replay on fixed pools costs one run. Leaderboard
+differences this small are not measurements. Source:
+<code>public_leaderboard_2026-11-08.csv</code>.</p>
+<h2 id="what-carries-beyond-arc">7. What carries beyond ARC</h2>
+<p>The accounting is general. Any system that generates candidates and
+then selects can be split the same way: recall, selection efficiency,
+and the leverage of each law, all measured on fixed pools before any
+compute is spent on bigger models. For ARC the numbers point away from
+selection and toward two things: generator recall, and declaring more
+global laws, such as relations between colour counts instead of exact
+conservation, or agreement across a task’s test inputs. Those are
+proposals, not results.</p>
+<p>The rule itself carries further. Letting likelihood order and only
+declared laws demote is the same split a code generator needs between
+“probably right” and “compiles”, and an agent needs between “promising”
+and “survivable”. The theory behind it, with proofs, is <em>Likely and
+Allowed</em> [6].</p>
+<h2 id="reproducibility-and-evidence">8. Reproducibility and
+evidence</h2>
+<p>Everything referenced here is in this repository under
+<code>docs/arc/data/</code>, and the interactive version at
+<code>arc.html</code> recomputes the main numbers in the browser from
+the same files.</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>File</th>
+<th>What it holds</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>kaggle_submissions_arc-agi-2.csv</code>,
+<code>kaggle_submissions_arc-agi-3.csv</code></td>
+<td>Kaggle’s submission records, pulled with the Kaggle CLI</td>
+</tr>
+<tr class="even">
+<td><code>official_v1_analysis.json</code>,
+<code>official_v1_analysis.txt</code></td>
+<td>Per-output records and summaries of the official ARC-AGI-2 run</td>
+</tr>
+<tr class="odd">
+<td><code>invariant_activity.json</code></td>
+<td>Invariant activity and violations</td>
+</tr>
+<tr class="even">
+<td><code>public_leaderboard_2026-11-08.csv</code>,
+<code>leaderboard_analysis.json</code></td>
+<td>Public leaderboard snapshot and its analysis</td>
+</tr>
+<tr class="odd">
+<td><code>task_2b83f449.json</code></td>
+<td>The public task the layer fixed</td>
+</tr>
+<tr class="even">
+<td><code>arc3_public25_dcie.json</code>,
+<code>arc3_public25_fate3.json</code></td>
+<td>Offline scorecards on the 25 public ARC-AGI-3 games</td>
+</tr>
+<tr class="odd">
+<td><code>logs/*.log</code></td>
+<td>Run logs of every notebook named in this report</td>
+</tr>
+</tbody>
+</table>
+<p>The notebooks are on Kaggle under <code>netphantom17</code>:
+<code>fate-ssm-final</code> (ARC-AGI-2),
+<code>ssm-farseer-arc3-official-gateway-runner</code> (the ARC-AGI-3
+submission), <code>dcie-ssm-arc3-eval</code>,
+<code>ssm-farseer-v3-arc3</code> and
+<code>fate3-egrwi-public25-rtx6000-research</code>. My code is released
+under MIT-0 and this text under CC BY-SA 4.0. The generator, the
+ARC-AGI-3 framework and the model weights belong to their authors and
+keep their own licences.</p>
+<h2 id="conclusion">9. Conclusion</h2>
+<p>Keeping what is likely separate from what is allowed was safe in a
+real solver, and the rule held when I broke it on purpose. It did not
+measurably raise accuracy, and I can say exactly why: the right answer
+is usually never generated, the generator already respects every local
+law, and the global laws that do separate right from wrong can rarely be
+declared. On ARC-AGI-3 I submitted the wrong notebook and scored 0.00.
+The same agent completes 3 of 183 public levels. The value of this work
+is not a score. It is a falsifiable accounting of where accuracy goes, a
+selection rule with a stated failure mode that showed up exactly where
+predicted, and every number published with the files that produced
+it.</p>
+<h2 id="references">References</h2>
+<p>[1] F. Chollet, <em>On the Measure of Intelligence</em>,
+arXiv:1911.01547, 2019. [2] F. Chollet et al., <em>ARC-AGI-2: A New
+Challenge for Frontier AI Reasoning Systems</em>, arXiv:2505.11831,
+2025. [3] F. Chollet et al., <em>ARC Prize 2025: Technical Report</em>,
+arXiv:2601.10904, 2026. [4] I. Sorokin and J.-F. Puget, <em>NVARC
+solution to ARC-AGI-2 2025</em>, ARC Prize 2025 solution write-up. [5]
+D. Franzen, J. Disselhoff and D. Hartmann, <em>Product of Experts with
+LLMs: Boosting Performance on ARC Is a Matter of Perspective</em>, 2025.
+[6] J. M. Carter, <em>Likely and Allowed: The Joint State of Prediction
+and Admissibility</em>, 2026,
+https://ivybe1337.github.io/Survival-Mechanics/. [7] A. K. Mackworth,
+<em>Consistency in Networks of Relations</em>, Artificial Intelligence 8
+(1977), 99–118.</p>
+</body>
+</html>

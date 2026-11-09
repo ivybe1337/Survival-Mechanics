@@ -1,0 +1,250 @@
+[{"stream_name":"stderr","time":8.360059681,"data":"/usr/local/lib/python3.13/dist-packages/nbformat/validator.py:434: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.\n"}
+,{"stream_name":"stderr","time":8.360086791,"data":"  _validate(nbdict, ref, version, version_minor, relax_add_props)\n"}
+,{"stream_name":"stderr","time":9.650473091,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.650491801,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.650493131,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.650494181,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":10.144659465,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":10.144679195,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":10.144680755,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":10.144681755,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":12.258384232,"data":"Looking in links: /kaggle/input/competitions/arc-prize-2026-arc-agi-3/arc_agi_3_wheels\n"}
+,{"stream_name":"stdout","time":12.275227472,"data":"Processing /kaggle/input/competitions/arc-prize-2026-arc-agi-3/arc_agi_3_wheels/arc_agi-0.9.8-py3-none-any.whl\n"}
+,{"stream_name":"stdout","time":12.288099392,"data":"Requirement already satisfied: python-dotenv in /usr/local/lib/python3.13/dist-packages (1.2.4)\n"}
+,{"stream_name":"stdout","time":12.289040732,"data":"Processing /kaggle/input/competitions/arc-prize-2026-arc-agi-3/arc_agi_3_wheels/arcengine-0.9.3-py3-none-any.whl (from arc-agi)\n"}
+,{"stream_name":"stdout","time":12.298678212,"data":"Requirement already satisfied: flask\u003e=3.1.0 in /usr/local/lib/python3.13/dist-packages (from arc-agi) (3.1.3)\n"}
+,{"stream_name":"stdout","time":12.298931912,"data":"Requirement already satisfied: matplotlib\u003e=3.7.0 in /usr/local/lib/python3.13/dist-packages (from arc-agi) (3.10.0)\n"}
+,{"stream_name":"stdout","time":12.299132072,"data":"Requirement already satisfied: pydantic\u003e=2.0.0 in /usr/local/lib/python3.13/dist-packages (from arc-agi) (2.14.1)\n"}
+,{"stream_name":"stdout","time":12.299378512,"data":"Requirement already satisfied: pillow\u003e=12.1.1 in /usr/local/lib/python3.13/dist-packages (from arc-agi) (13.0.0)\n"}
+,{"stream_name":"stdout","time":12.299709302,"data":"Requirement already satisfied: requests\u003e=2.31.0 in /usr/local/lib/python3.13/dist-packages (from arc-agi) (2.34.2)\n"}
+,{"stream_name":"stdout","time":12.302211392,"data":"Requirement already satisfied: numpy\u003e=1.24.0 in /usr/local/lib/python3.13/dist-packages (from arcengine\u003e=0.9.3-\u003earc-agi) (2.1.3)\n"}
+,{"stream_name":"stdout","time":12.304290232,"data":"Requirement already satisfied: blinker\u003e=1.9.0 in /usr/local/lib/python3.13/dist-packages (from flask\u003e=3.1.0-\u003earc-agi) (1.9.0)\n"}
+,{"stream_name":"stdout","time":12.304545192,"data":"Requirement already satisfied: click\u003e=8.1.3 in /usr/local/lib/python3.13/dist-packages (from flask\u003e=3.1.0-\u003earc-agi) (8.5.0)\n"}
+,{"stream_name":"stdout","time":12.304831862,"data":"Requirement already satisfied: itsdangerous\u003e=2.2.0 in /usr/local/lib/python3.13/dist-packages (from flask\u003e=3.1.0-\u003earc-agi) (2.2.0)\n"}
+,{"stream_name":"stdout","time":12.305052102,"data":"Requirement already satisfied: jinja2\u003e=3.1.2 in /usr/local/lib/python3.13/dist-packages (from flask\u003e=3.1.0-\u003earc-agi) (3.1.6)\n"}
+,{"stream_name":"stdout","time":12.305257862,"data":"Requirement already satisfied: markupsafe\u003e=2.1.1 in /usr/local/lib/python3.13/dist-packages (from flask\u003e=3.1.0-\u003earc-agi) (3.0.4)\n"}
+,{"stream_name":"stdout","time":12.305479642,"data":"Requirement already satisfied: werkzeug\u003e=3.1.0 in /usr/local/lib/python3.13/dist-packages (from flask\u003e=3.1.0-\u003earc-agi) (3.1.9)\n"}
+,{"stream_name":"stdout","time":12.316674842,"data":"Requirement already satisfied: contourpy\u003e=1.0.1 in /usr/local/lib/python3.13/dist-packages (from matplotlib\u003e=3.7.0-\u003earc-agi) (1.4.0)\n"}
+,{"stream_name":"stdout","time":12.316918242,"data":"Requirement already satisfied: cycler\u003e=0.10 in /usr/local/lib/python3.13/dist-packages (from matplotlib\u003e=3.7.0-\u003earc-agi) (0.12.1)\n"}
+,{"stream_name":"stdout","time":12.317097192,"data":"Requirement already satisfied: fonttools\u003e=4.22.0 in /usr/local/lib/python3.13/dist-packages (from matplotlib\u003e=3.7.0-\u003earc-agi) (4.67.0)\n"}
+,{"stream_name":"stdout","time":12.317310452,"data":"Requirement already satisfied: kiwisolver\u003e=1.3.1 in /usr/local/lib/python3.13/dist-packages (from matplotlib\u003e=3.7.0-\u003earc-agi) (1.5.1)\n"}
+,{"stream_name":"stdout","time":12.317582372,"data":"Requirement already satisfied: packaging\u003e=20.0 in /usr/local/lib/python3.13/dist-packages (from matplotlib\u003e=3.7.0-\u003earc-agi) (26.3)\n"}
+,{"stream_name":"stdout","time":12.317845482,"data":"Requirement already satisfied: pyparsing\u003e=2.3.1 in /usr/local/lib/python3.13/dist-packages (from matplotlib\u003e=3.7.0-\u003earc-agi) (3.3.3)\n"}
+,{"stream_name":"stdout","time":12.318071182,"data":"Requirement already satisfied: python-dateutil\u003e=2.7 in /usr/local/lib/python3.13/dist-packages (from matplotlib\u003e=3.7.0-\u003earc-agi) (2.9.0.post0)\n"}
+,{"stream_name":"stdout","time":12.339366122,"data":"Requirement already satisfied: annotated-types\u003e=0.6.0 in /usr/local/lib/python3.13/dist-packages (from pydantic\u003e=2.0.0-\u003earc-agi) (0.8.0)\n"}
+,{"stream_name":"stdout","time":12.339645142,"data":"Requirement already satisfied: pydantic-core==2.50.1 in /usr/local/lib/python3.13/dist-packages (from pydantic\u003e=2.0.0-\u003earc-agi) (2.50.1)\n"}
+,{"stream_name":"stdout","time":12.339835232,"data":"Requirement already satisfied: typing-extensions\u003e=4.16.0 in /usr/local/lib/python3.13/dist-packages (from pydantic\u003e=2.0.0-\u003earc-agi) (4.16.0)\n"}
+,{"stream_name":"stdout","time":12.340050933,"data":"Requirement already satisfied: typing-inspection\u003e=0.4.4 in /usr/local/lib/python3.13/dist-packages (from pydantic\u003e=2.0.0-\u003earc-agi) (0.4.4)\n"}
+,{"stream_name":"stdout","time":12.349212623,"data":"Requirement already satisfied: six\u003e=1.5 in /usr/local/lib/python3.13/dist-packages (from python-dateutil\u003e=2.7-\u003ematplotlib\u003e=3.7.0-\u003earc-agi) (1.17.0)\n"}
+,{"stream_name":"stdout","time":12.351305553,"data":"Requirement already satisfied: charset_normalizer\u003c4,\u003e=2 in /usr/local/lib/python3.13/dist-packages (from requests\u003e=2.31.0-\u003earc-agi) (3.4.9)\n"}
+,{"stream_name":"stdout","time":12.351593343,"data":"Requirement already satisfied: idna\u003c4,\u003e=2.5 in /usr/local/lib/python3.13/dist-packages (from requests\u003e=2.31.0-\u003earc-agi) (3.20)\n"}
+,{"stream_name":"stdout","time":12.351798383,"data":"Requirement already satisfied: urllib3\u003c3,\u003e=1.26 in /usr/local/lib/python3.13/dist-packages (from requests\u003e=2.31.0-\u003earc-agi) (2.8.0)\n"}
+,{"stream_name":"stdout","time":12.352015713,"data":"Requirement already satisfied: certifi\u003e=2023.5.7 in /usr/local/lib/python3.13/dist-packages (from requests\u003e=2.31.0-\u003earc-agi) (2026.10.23)\n"}
+,{"stream_name":"stdout","time":12.459756914,"data":"Looking in links: /kaggle/input/competitions/arc-prize-2026-arc-agi-3/arc_agi_3_wheels\n"}
+,{"stream_name":"stdout","time":12.459760794,"data":"Processing /kaggle/input/competitions/arc-prize-2026-arc-agi-3/arc_agi_3_wheels/arc_agi-0.9.8-py3-none-any.whl\n"}
+,{"stream_name":"stdout","time":12.459761714,"data":"Requirement already satisfied: python-dotenv in /usr/local/lib/python3.13/dist-packages (1.2.4)\n"}
+,{"stream_name":"stdout","time":12.459762484,"data":"Processing /kaggle/input/competitions/arc-prize-2026-arc-agi-3/arc_agi_3_wheels/arcengine-0.9.3-py3-none-any.whl (from arc-agi)\n"}
+,{"stream_name":"stdout","time":12.459763364,"data":"Requirement already satisfied: flask\u003e=3.1.0 in /usr/local/lib/python3.13/dist-packages (from arc-agi) (3.1.3)\n"}
+,{"stream_name":"stdout","time":12.459764214,"data":"Requirement already satisfied: matplotlib\u003e=3.7.0 in /usr/local/lib/python3.13/dist-packages (from arc-agi) (3.10.0)\n"}
+,{"stream_name":"stdout","time":12.459764994,"data":"Requirement already satisfied: pydantic\u003e=2.0.0 in /usr/local/lib/python3.13/dist-packages (from arc-agi) (2.14.1)\n"}
+,{"stream_name":"stdout","time":12.459765774,"data":"Requirement already satisfied: pillow\u003e=12.1.1 in /usr/local/lib/python3.13/dist-packages (from arc-agi) (13.0.0)\n"}
+,{"stream_name":"stdout","time":12.459766654,"data":"Requirement already satisfied: requests\u003e=2.31.0 in /usr/local/lib/python3.13/dist-packages (from arc-agi) (2.34.2)\n"}
+,{"stream_name":"stdout","time":12.459767454,"data":"Requirement already satisfied: numpy\u003e=1.24.0 in /usr/local/lib/python3.13/dist-packages (from arcengine\u003e=0.9.3-\u003earc-agi) (2.1.3)\n"}
+,{"stream_name":"stdout","time":12.459768424,"data":"Requirement already satisfied: blinker\u003e=1.9.0 in /usr/local/lib/python3.13/dist-packages (from flask\u003e=3.1.0-\u003earc-agi) (1.9.0)\n"}
+,{"stream_name":"stdout","time":12.459769244,"data":"Requirement already satisfied: click\u003e=8.1.3 in /usr/local/lib/python3.13/dist-packages (from flask\u003e=3.1.0-\u003earc-agi) (8.5.0)\n"}
+,{"stream_name":"stdout","time":12.459770194,"data":"Requirement already satisfied: itsdangerous\u003e=2.2.0 in /usr/local/lib/python3.13/dist-packages (from flask\u003e=3.1.0-\u003earc-agi) (2.2.0)\n"}
+,{"stream_name":"stdout","time":12.459771194,"data":"Requirement already satisfied: jinja2\u003e=3.1.2 in /usr/local/lib/python3.13/dist-packages (from flask\u003e=3.1.0-\u003earc-agi) (3.1.6)\n"}
+,{"stream_name":"stdout","time":12.459772034,"data":"Requirement already satisfied: markupsafe\u003e=2.1.1 in /usr/local/lib/python3.13/dist-packages (from flask\u003e=3.1.0-\u003earc-agi) (3.0.4)\n"}
+,{"stream_name":"stdout","time":12.459772854,"data":"Requirement already satisfied: werkzeug\u003e=3.1.0 in /usr/local/lib/python3.13/dist-packages (from flask\u003e=3.1.0-\u003earc-agi) (3.1.9)\n"}
+,{"stream_name":"stdout","time":12.459773654,"data":"Requirement already satisfied: contourpy\u003e=1.0.1 in /usr/local/lib/python3.13/dist-packages (from matplotlib\u003e=3.7.0-\u003earc-agi) (1.4.0)\n"}
+,{"stream_name":"stdout","time":12.459774784,"data":"Requirement already satisfied: cycler\u003e=0.10 in /usr/local/lib/python3.13/dist-packages (from matplotlib\u003e=3.7.0-\u003earc-agi) (0.12.1)\n"}
+,{"stream_name":"stdout","time":12.459775744,"data":"Requirement already satisfied: fonttools\u003e=4.22.0 in /usr/local/lib/python3.13/dist-packages (from matplotlib\u003e=3.7.0-\u003earc-agi) (4.67.0)\n"}
+,{"stream_name":"stdout","time":12.459776604,"data":"Requirement already satisfied: kiwisolver\u003e=1.3.1 in /usr/local/lib/python3.13/dist-packages (from matplotlib\u003e=3.7.0-\u003earc-agi) (1.5.1)\n"}
+,{"stream_name":"stdout","time":12.459779284,"data":"Requirement already satisfied: packaging\u003e=20.0 in /usr/local/lib/python3.13/dist-packages (from matplotlib\u003e=3.7.0-\u003earc-agi) (26.3)\n"}
+,{"stream_name":"stdout","time":12.459780204,"data":"Requirement already satisfied: pyparsing\u003e=2.3.1 in /usr/local/lib/python3.13/dist-packages (from matplotlib\u003e=3.7.0-\u003earc-agi) (3.3.3)\n"}
+,{"stream_name":"stdout","time":12.459781084,"data":"Requirement already satisfied: python-dateutil\u003e=2.7 in /usr/local/lib/python3.13/dist-packages (from matplotlib\u003e=3.7.0-\u003earc-agi) (2.9.0.post0)\n"}
+,{"stream_name":"stdout","time":12.459781954,"data":"Requirement already satisfied: annotated-types\u003e=0.6.0 in /usr/local/lib/python3.13/dist-packages (from pydantic\u003e=2.0.0-\u003earc-agi) (0.8.0)\n"}
+,{"stream_name":"stdout","time":12.459782754,"data":"Requirement already satisfied: pydantic-core==2.50.1 in /usr/local/lib/python3.13/dist-packages (from pydantic\u003e=2.0.0-\u003earc-agi) (2.50.1)\n"}
+,{"stream_name":"stdout","time":12.459783584,"data":"Requirement already satisfied: typing-extensions\u003e=4.16.0 in /usr/local/lib/python3.13/dist-packages (from pydantic\u003e=2.0.0-\u003earc-agi) (4.16.0)\n"}
+,{"stream_name":"stdout","time":12.459784424,"data":"Requirement already satisfied: typing-inspection\u003e=0.4.4 in /usr/local/lib/python3.13/dist-packages (from pydantic\u003e=2.0.0-\u003earc-agi) (0.4.4)\n"}
+,{"stream_name":"stdout","time":12.459785214,"data":"Requirement already satisfied: six\u003e=1.5 in /usr/local/lib/python3.13/dist-packages (from python-dateutil\u003e=2.7-\u003ematplotlib\u003e=3.7.0-\u003earc-agi) (1.17.0)\n"}
+,{"stream_name":"stdout","time":12.459786144,"data":"Requirement already satisfied: charset_normalizer\u003c4,\u003e=2 in /usr/local/lib/python3.13/dist-packages (from requests\u003e=2.31.0-\u003earc-agi) (3.4.9)\n"}
+,{"stream_name":"stdout","time":12.459787094,"data":"Requirement already satisfied: idna\u003c4,\u003e=2.5 in /usr/local/lib/python3.13/dist-packages (from requests\u003e=2.31.0-\u003earc-agi) (3.20)\n"}
+,{"stream_name":"stdout","time":12.459787934,"data":"Requirement already satisfied: urllib3\u003c3,\u003e=1.26 in /usr/local/lib/python3.13/dist-packages (from requests\u003e=2.31.0-\u003earc-agi) (2.8.0)\n"}
+,{"stream_name":"stdout","time":12.459788834,"data":"Requirement already satisfied: certifi\u003e=2023.5.7 in /usr/local/lib/python3.13/dist-packages (from requests\u003e=2.31.0-\u003earc-agi) (2026.10.23)\n"}
+,{"stream_name":"stdout","time":14.190971337,"data":"Installing collected packages: arcengine, arc-agi\n"}
+,{"stream_name":"stdout","time":14.235985357,"data":"\n"}
+,{"stream_name":"stdout","time":14.266048398,"data":"Successfully installed arc-agi-0.9.8 arcengine-0.9.3\n"}
+,{"stream_name":"stdout","time":14.434234949,"data":"Installing collected packages: arcengine, arc-agi\n"}
+,{"stream_name":"stdout","time":14.434259789,"data":"\n"}
+,{"stream_name":"stdout","time":14.434261399,"data":"Successfully installed arc-agi-0.9.8 arcengine-0.9.3\n"}
+,{"stream_name":"stdout","time":26.793340786999998,"data":"FATE3_TORCH 2.11.0+cu130 CUDA True GPU NVIDIA RTX PRO 6000 Blackwell Server Edition\n"}
+,{"stream_name":"stdout","time":26.807137347,"data":"FATE3_SOURCE_SHA256 13562871add84c65744ad25a526c92ed8665dbe41ba313b5d219a92d2ac76cdd\n"}
+,{"stream_name":"stdout","time":27.460585652,"data":"FATE3_GPU_VERIFY {\"cuda\": true, \"gpu\": \"NVIDIA RTX PRO 6000 Blackwell Server Edition\", \"compute_capability\": [12, 0], \"VRAM_GiB\": 94.97, \"torch\": \"2.11.0+cu130\"}\n"}
+,{"stream_name":"stdout","time":27.766215725,"data":"FATE3_MODEL_PARAMETERS 26058049\n"}
+,{"stream_name":"stdout","time":27.766447855,"data":"FATE3_STUDENT_RANDOM_INITIALIZATION: not pretrained; FARSEER supplies cold-start prior\n"}
+,{"stream_name":"stdout","time":32.19363089,"data":"FATE3_TEACHER no teacher weights; verified-receipt curriculum only\n"}
+,{"stream_name":"stdout","time":32.19386814,"data":"INFO:arc_agi.scorecard:Initialized ScorecardManager with idle_for=0:15:00 and max_open_for=3 days, 0:00:00\n"}
+,{"stream_name":"stdout","time":32.637616783,"data":"FATE3_REAL_PUBLIC_GAMES [\"ar25-0c556536\", \"bp35-0a0ad940\", \"cd82-fb555c5d\", \"cn04-2fe56bfb\", \"dc22-fdcac232\", \"ft09-0d8bbf25\", \"g50t-5849a774\", \"ka59-38d34dbb\", \"lf52-271a04aa\", \"lp85-305b61c3\", \"ls20-9607627b\", \"m0r0-492f87ba\", \"r11l-495a7899\", \"re86-8af5384d\", \"s5i5-18d95033\", \"sb26-7fbdac44\", \"sc25-635fd71a\", \"sk48-d8078629\", \"sp80-589a99af\", \"su15-1944f8ab\", \"tn36-ef4dde99\", \"tr87-cd924810\", \"tu93-0768757b\", \"vc33-5430563c\", \"wa30-ee6fef47\"]\n"}
+,{"stream_name":"stdout","time":32.637848183,"data":"2026-11-08 12:16:33 | INFO | Created new scorecard: 7ddeac17-9f03-4a93-9417-7cd906d14e3e\n"}
+,{"stream_name":"stdout","time":32.660131974,"data":"2026-11-08 12:16:33 | INFO | Successfully loaded game class Ar25 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/ar25/0c556536/ar25.py\n"}
+,{"stream_name":"stdout","time":44.571110788,"data":"FATE3_PROGRESS ar25-0c556536 30 levels 0 TTT_COMMIT 1 TTT_ROLLBACK 0\n"}
+,{"stream_name":"stdout","time":46.265620982,"data":"FATE3_PROGRESS ar25-0c556536 60 levels 0 TTT_COMMIT 3 TTT_ROLLBACK 0\n"}
+,{"stream_name":"stdout","time":47.209766059,"data":"FATE3_PROGRESS ar25-0c556536 90 levels 0 TTT_COMMIT 3 TTT_ROLLBACK 1\n"}
+,{"stream_name":"stdout","time":49.226211635,"data":"FATE3_PROGRESS ar25-0c556536 120 levels 0 TTT_COMMIT 3 TTT_ROLLBACK 3\n"}
+,{"stream_name":"stdout","time":50.524555105,"data":"FATE3_GAME ar25-0c556536 {\"levels\": 0, \"actions\": 140, \"resets\": 0, \"error\": null, \"elapsed_sec\": 17.886}\n"}
+,{"stream_name":"stdout","time":50.560655105,"data":"2026-11-08 12:16:51 | INFO | Successfully loaded game class Bp35 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/bp35/0a0ad940/bp35.py\n"}
+,{"stream_name":"stdout","time":51.276398871,"data":"FATE3_PROGRESS bp35-0a0ad940 30 levels 0 TTT_COMMIT 4 TTT_ROLLBACK 4\n"}
+,{"stream_name":"stdout","time":52.290370749,"data":"FATE3_PROGRESS bp35-0a0ad940 60 levels 0 TTT_COMMIT 5 TTT_ROLLBACK 4\n"}
+,{"stream_name":"stdout","time":52.911737844,"data":"FATE3_PROGRESS bp35-0a0ad940 90 levels 0 TTT_COMMIT 5 TTT_ROLLBACK 4\n"}
+,{"stream_name":"stdout","time":53.410497588,"data":"FATE3_PROGRESS bp35-0a0ad940 120 levels 0 TTT_COMMIT 5 TTT_ROLLBACK 4\n"}
+,{"stream_name":"stdout","time":53.743961711,"data":"FATE3_GAME bp35-0a0ad940 {\"levels\": 0, \"actions\": 140, \"resets\": 5, \"error\": null, \"elapsed_sec\": 3.219}\n"}
+,{"stream_name":"stdout","time":53.761260131,"data":"2026-11-08 12:16:54 | INFO | Successfully loaded game class Cd82 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/cd82/fb555c5d/cd82.py\n"}
+,{"stream_name":"stdout","time":54.317963285,"data":"FATE3_PROGRESS cd82-fb555c5d 30 levels 0 TTT_COMMIT 6 TTT_ROLLBACK 4\n"}
+,{"stream_name":"stdout","time":55.630001536,"data":"FATE3_PROGRESS cd82-fb555c5d 60 levels 0 TTT_COMMIT 7 TTT_ROLLBACK 5\n"}
+,{"stream_name":"stdout","time":56.568144663,"data":"FATE3_PROGRESS cd82-fb555c5d 90 levels 0 TTT_COMMIT 7 TTT_ROLLBACK 6\n"}
+,{"stream_name":"stdout","time":59.277218545,"data":"FATE3_PROGRESS cd82-fb555c5d 120 levels 0 TTT_COMMIT 9 TTT_ROLLBACK 6\n"}
+,{"stream_name":"stdout","time":60.821946207,"data":"FATE3_GAME cd82-fb555c5d {\"levels\": 0, \"actions\": 140, \"resets\": 1, \"error\": null, \"elapsed_sec\": 7.077}\n"}
+,{"stream_name":"stdout","time":60.844550377,"data":"2026-11-08 12:17:01 | INFO | Successfully loaded game class Cn04 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/cn04/2fe56bfb/cn04.py\n"}
+,{"stream_name":"stdout","time":61.394099251,"data":"FATE3_PROGRESS cn04-2fe56bfb 30 levels 0 TTT_COMMIT 11 TTT_ROLLBACK 6\n"}
+,{"stream_name":"stdout","time":62.46533415,"data":"FATE3_PROGRESS cn04-2fe56bfb 60 levels 0 TTT_COMMIT 11 TTT_ROLLBACK 8\n"}
+,{"stream_name":"stdout","time":62.721690612,"data":"FATE3_PROGRESS cn04-2fe56bfb 90 levels 0 TTT_COMMIT 11 TTT_ROLLBACK 8\n"}
+,{"stream_name":"stdout","time":64.692109298,"data":"FATE3_PROGRESS cn04-2fe56bfb 120 levels 0 TTT_COMMIT 11 TTT_ROLLBACK 10\n"}
+,{"stream_name":"stdout","time":65.966616248,"data":"FATE3_GAME cn04-2fe56bfb {\"levels\": 0, \"actions\": 140, \"resets\": 1, \"error\": null, \"elapsed_sec\": 5.145}\n"}
+,{"stream_name":"stdout","time":65.998377428,"data":"2026-11-08 12:17:06 | INFO | Successfully loaded game class Dc22 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/dc22/fdcac232/dc22.py\n"}
+,{"stream_name":"stdout","time":66.553733862,"data":"FATE3_PROGRESS dc22-fdcac232 30 levels 0 TTT_COMMIT 11 TTT_ROLLBACK 12\n"}
+,{"stream_name":"stdout","time":68.084057584,"data":"FATE3_PROGRESS dc22-fdcac232 60 levels 0 TTT_COMMIT 12 TTT_ROLLBACK 13\n"}
+,{"stream_name":"stdout","time":69.530875026,"data":"FATE3_PROGRESS dc22-fdcac232 90 levels 0 TTT_COMMIT 13 TTT_ROLLBACK 13\n"}
+,{"stream_name":"stdout","time":72.849149542,"data":"FATE3_PROGRESS dc22-fdcac232 120 levels 0 TTT_COMMIT 15 TTT_ROLLBACK 13\n"}
+,{"stream_name":"stdout","time":73.084253244,"data":"FATE3_GAME dc22-fdcac232 {\"levels\": 0, \"actions\": 140, \"resets\": 1, \"error\": null, \"elapsed_sec\": 7.117}\n"}
+,{"stream_name":"stdout","time":73.103861374,"data":"2026-11-08 12:17:13 | INFO | Successfully loaded game class Ft09 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/ft09/0d8bbf25/ft09.py\n"}
+,{"stream_name":"stdout","time":73.79121343,"data":"FATE3_PROGRESS ft09-0d8bbf25 30 levels 0 TTT_COMMIT 16 TTT_ROLLBACK 13\n"}
+,{"stream_name":"stdout","time":75.544105303,"data":"FATE3_PROGRESS ft09-0d8bbf25 60 levels 0 TTT_COMMIT 18 TTT_ROLLBACK 13\n"}
+,{"stream_name":"stdout","time":76.995571135,"data":"FATE3_PROGRESS ft09-0d8bbf25 90 levels 0 TTT_COMMIT 19 TTT_ROLLBACK 13\n"}
+,{"stream_name":"stdout","time":80.342997271,"data":"FATE3_PROGRESS ft09-0d8bbf25 120 levels 0 TTT_COMMIT 21 TTT_ROLLBACK 13\n"}
+,{"stream_name":"stdout","time":82.486367819,"data":"FATE3_GAME ft09-0d8bbf25 {\"levels\": 0, \"actions\": 140, \"resets\": 0, \"error\": null, \"elapsed_sec\": 9.402}\n"}
+,{"stream_name":"stdout","time":82.539687239,"data":"2026-11-08 12:17:23 | INFO | Successfully loaded game class G50t from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/g50t/5849a774/g50t.py\n"}
+,{"stream_name":"stdout","time":83.123106353,"data":"FATE3_PROGRESS g50t-5849a774 30 levels 0 TTT_COMMIT 23 TTT_ROLLBACK 13\n"}
+,{"stream_name":"stdout","time":84.270095763,"data":"FATE3_PROGRESS g50t-5849a774 60 levels 0 TTT_COMMIT 23 TTT_ROLLBACK 15\n"}
+,{"stream_name":"stdout","time":85.666056334,"data":"FATE3_PROGRESS g50t-5849a774 90 levels 0 TTT_COMMIT 24 TTT_ROLLBACK 15\n"}
+,{"stream_name":"stdout","time":88.93358907,"data":"FATE3_PROGRESS g50t-5849a774 120 levels 0 TTT_COMMIT 26 TTT_ROLLBACK 15\n"}
+,{"stream_name":"stdout","time":89.154754071,"data":"FATE3_GAME g50t-5849a774 {\"levels\": 0, \"actions\": 140, \"resets\": 1, \"error\": null, \"elapsed_sec\": 6.668}\n"}
+,{"stream_name":"stdout","time":89.205257392,"data":"2026-11-08 12:17:30 | INFO | Successfully loaded game class Ka59 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/ka59/38d34dbb/ka59.py\n"}
+,{"stream_name":"stdout","time":89.678856196,"data":"FATE3_PROGRESS ka59-38d34dbb 30 levels 0 TTT_COMMIT 26 TTT_ROLLBACK 16\n"}
+,{"stream_name":"stdout","time":90.785563004,"data":"FATE3_PROGRESS ka59-38d34dbb 60 levels 0 TTT_COMMIT 26 TTT_ROLLBACK 18\n"}
+,{"stream_name":"stdout","time":91.694378232,"data":"FATE3_PROGRESS ka59-38d34dbb 90 levels 0 TTT_COMMIT 26 TTT_ROLLBACK 19\n"}
+,{"stream_name":"stdout","time":93.713308087,"data":"FATE3_PROGRESS ka59-38d34dbb 120 levels 0 TTT_COMMIT 26 TTT_ROLLBACK 21\n"}
+,{"stream_name":"stdout","time":95.021088948,"data":"FATE3_GAME ka59-38d34dbb {\"levels\": 0, \"actions\": 140, \"resets\": 1, \"error\": null, \"elapsed_sec\": 5.866}\n"}
+,{"stream_name":"stdout","time":95.073093728,"data":"2026-11-08 12:17:35 | INFO | Successfully loaded game class Lf52 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/lf52/271a04aa/lf52.py\n"}
+,{"stream_name":"stdout","time":95.669715943,"data":"FATE3_PROGRESS lf52-271a04aa 30 levels 0 TTT_COMMIT 27 TTT_ROLLBACK 22\n"}
+,{"stream_name":"stdout","time":96.788577712,"data":"FATE3_PROGRESS lf52-271a04aa 60 levels 0 TTT_COMMIT 27 TTT_ROLLBACK 24\n"}
+,{"stream_name":"stdout","time":97.8407325,"data":"FATE3_PROGRESS lf52-271a04aa 90 levels 0 TTT_COMMIT 27 TTT_ROLLBACK 25\n"}
+,{"stream_name":"stdout","time":99.216865481,"data":"FATE3_PROGRESS lf52-271a04aa 120 levels 0 TTT_COMMIT 28 TTT_ROLLBACK 25\n"}
+,{"stream_name":"stdout","time":100.418979141,"data":"FATE3_GAME lf52-271a04aa {\"levels\": 0, \"actions\": 140, \"resets\": 2, \"error\": null, \"elapsed_sec\": 5.397}\n"}
+,{"stream_name":"stdout","time":100.459101911,"data":"2026-11-08 12:17:41 | INFO | Successfully loaded game class Lp85 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/lp85/305b61c3/lp85.py\n"}
+,{"stream_name":"stdout","time":101.070365806,"data":"FATE3_PROGRESS lp85-305b61c3 30 levels 0 TTT_COMMIT 29 TTT_ROLLBACK 26\n"}
+,{"stream_name":"stdout","time":102.193136465,"data":"FATE3_PROGRESS lp85-305b61c3 60 levels 0 TTT_COMMIT 29 TTT_ROLLBACK 28\n"}
+,{"stream_name":"stdout","time":103.128729482,"data":"FATE3_PROGRESS lp85-305b61c3 90 levels 0 TTT_COMMIT 29 TTT_ROLLBACK 29\n"}
+,{"stream_name":"stdout","time":105.830249884,"data":"FATE3_PROGRESS lp85-305b61c3 120 levels 1 TTT_COMMIT 30 TTT_ROLLBACK 30\n"}
+,{"stream_name":"stdout","time":107.14591842,"data":"FATE3_GAME lp85-305b61c3 {\"levels\": 1, \"actions\": 140, \"resets\": 0, \"error\": null, \"elapsed_sec\": 6.727}\n"}
+,{"stream_name":"stdout","time":107.17763693,"data":"2026-11-08 12:17:48 | INFO | Successfully loaded game class Ls20 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/ls20/9607627b/ls20.py\n"}
+,{"stream_name":"stdout","time":107.751265307,"data":"FATE3_PROGRESS ls20-9607627b 30 levels 0 TTT_COMMIT 31 TTT_ROLLBACK 31\n"}
+,{"stream_name":"stdout","time":109.385597418,"data":"FATE3_PROGRESS ls20-9607627b 60 levels 0 TTT_COMMIT 33 TTT_ROLLBACK 31\n"}
+,{"stream_name":"stdout","time":110.286599124,"data":"FATE3_PROGRESS ls20-9607627b 90 levels 0 TTT_COMMIT 33 TTT_ROLLBACK 32\n"}
+,{"stream_name":"stdout","time":112.843126151,"data":"FATE3_PROGRESS ls20-9607627b 120 levels 0 TTT_COMMIT 34 TTT_ROLLBACK 33\n"}
+,{"stream_name":"stdout","time":113.02557975,"data":"FATE3_GAME ls20-9607627b {\"levels\": 0, \"actions\": 140, \"resets\": 1, \"error\": null, \"elapsed_sec\": 5.879}\n"}
+,{"stream_name":"stdout","time":113.04225959,"data":"2026-11-08 12:17:53 | INFO | Successfully loaded game class M0r0 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/m0r0/492f87ba/m0r0.py\n"}
+,{"stream_name":"stdout","time":113.495252778,"data":"FATE3_PROGRESS m0r0-492f87ba 30 levels 0 TTT_COMMIT 34 TTT_ROLLBACK 34\n"}
+,{"stream_name":"stdout","time":114.583105112,"data":"FATE3_PROGRESS m0r0-492f87ba 60 levels 0 TTT_COMMIT 34 TTT_ROLLBACK 36\n"}
+,{"stream_name":"stdout","time":115.489562228,"data":"FATE3_PROGRESS m0r0-492f87ba 90 levels 0 TTT_COMMIT 34 TTT_ROLLBACK 37\n"}
+,{"stream_name":"stdout","time":118.694200361,"data":"FATE3_PROGRESS m0r0-492f87ba 120 levels 0 TTT_COMMIT 36 TTT_ROLLBACK 37\n"}
+,{"stream_name":"stdout","time":120.752953591,"data":"FATE3_GAME m0r0-492f87ba {\"levels\": 0, \"actions\": 140, \"resets\": 0, \"error\": null, \"elapsed_sec\": 7.725}\n"}
+,{"stream_name":"stdout","time":120.79377186,"data":"2026-11-08 12:18:01 | INFO | Successfully loaded game class R11l from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/r11l/495a7899/r11l.py\n"}
+,{"stream_name":"stdout","time":121.362438428,"data":"FATE3_PROGRESS r11l-495a7899 30 levels 0 TTT_COMMIT 38 TTT_ROLLBACK 37\n"}
+,{"stream_name":"stdout","time":122.656922311,"data":"FATE3_PROGRESS r11l-495a7899 60 levels 0 TTT_COMMIT 39 TTT_ROLLBACK 38\n"}
+,{"stream_name":"stdout","time":123.656848516,"data":"FATE3_PROGRESS r11l-495a7899 90 levels 0 TTT_COMMIT 40 TTT_ROLLBACK 38\n"}
+,{"stream_name":"stdout","time":126.201807793,"data":"FATE3_PROGRESS r11l-495a7899 120 levels 0 TTT_COMMIT 42 TTT_ROLLBACK 38\n"}
+,{"stream_name":"stdout","time":127.493013206,"data":"FATE3_GAME r11l-495a7899 {\"levels\": 0, \"actions\": 140, \"resets\": 2, \"error\": null, \"elapsed_sec\": 6.741}\n"}
+,{"stream_name":"stdout","time":127.545115586,"data":"2026-11-08 12:18:08 | INFO | Successfully loaded game class Re86 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/re86/8af5384d/re86.py\n"}
+,{"stream_name":"stdout","time":127.994509464,"data":"FATE3_PROGRESS re86-8af5384d 30 levels 0 TTT_COMMIT 42 TTT_ROLLBACK 40\n"}
+,{"stream_name":"stdout","time":129.392799817,"data":"FATE3_PROGRESS re86-8af5384d 60 levels 0 TTT_COMMIT 43 TTT_ROLLBACK 41\n"}
+,{"stream_name":"stdout","time":130.71377322,"data":"FATE3_PROGRESS re86-8af5384d 90 levels 0 TTT_COMMIT 44 TTT_ROLLBACK 41\n"}
+,{"stream_name":"stdout","time":132.70780418,"data":"FATE3_PROGRESS re86-8af5384d 120 levels 0 TTT_COMMIT 44 TTT_ROLLBACK 43\n"}
+,{"stream_name":"stdout","time":133.991900764,"data":"FATE3_GAME re86-8af5384d {\"levels\": 0, \"actions\": 140, \"resets\": 1, \"error\": null, \"elapsed_sec\": 6.499}\n"}
+,{"stream_name":"stdout","time":134.028166363,"data":"2026-11-08 12:18:14 | INFO | Successfully loaded game class S5i5 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/s5i5/18d95033/s5i5.py\n"}
+,{"stream_name":"stdout","time":134.583732441,"data":"FATE3_PROGRESS s5i5-18d95033 30 levels 0 TTT_COMMIT 45 TTT_ROLLBACK 44\n"}
+,{"stream_name":"stdout","time":135.374876766,"data":"FATE3_PROGRESS s5i5-18d95033 60 levels 0 TTT_COMMIT 46 TTT_ROLLBACK 44\n"}
+,{"stream_name":"stdout","time":137.303010987,"data":"FATE3_PROGRESS s5i5-18d95033 90 levels 0 TTT_COMMIT 48 TTT_ROLLBACK 44\n"}
+,{"stream_name":"stdout","time":138.525190931,"data":"FATE3_PROGRESS s5i5-18d95033 120 levels 0 TTT_COMMIT 48 TTT_ROLLBACK 45\n"}
+,{"stream_name":"stdout","time":139.870418494,"data":"FATE3_GAME s5i5-18d95033 {\"levels\": 0, \"actions\": 140, \"resets\": 2, \"error\": null, \"elapsed_sec\": 5.878}\n"}
+,{"stream_name":"stdout","time":139.893533844,"data":"2026-11-08 12:18:20 | INFO | Successfully loaded game class Sb26 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/sb26/7fbdac44/sb26.py\n"}
+,{"stream_name":"stdout","time":140.341316881,"data":"FATE3_PROGRESS sb26-7fbdac44 30 levels 0 TTT_COMMIT 48 TTT_ROLLBACK 47\n"}
+,{"stream_name":"stdout","time":141.634367625,"data":"FATE3_PROGRESS sb26-7fbdac44 60 levels 0 TTT_COMMIT 49 TTT_ROLLBACK 48\n"}
+,{"stream_name":"stdout","time":142.959289138,"data":"FATE3_PROGRESS sb26-7fbdac44 90 levels 0 TTT_COMMIT 50 TTT_ROLLBACK 48\n"}
+,{"stream_name":"stdout","time":144.957133568,"data":"FATE3_PROGRESS sb26-7fbdac44 120 levels 0 TTT_COMMIT 50 TTT_ROLLBACK 50\n"}
+,{"stream_name":"stdout","time":146.241906531,"data":"FATE3_GAME sb26-7fbdac44 {\"levels\": 0, \"actions\": 140, \"resets\": 0, \"error\": null, \"elapsed_sec\": 6.371}\n"}
+,{"stream_name":"stdout","time":146.291228711,"data":"2026-11-08 12:18:27 | INFO | Successfully loaded game class Sc25 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/sc25/635fd71a/sc25.py\n"}
+,{"stream_name":"stdout","time":146.873491758,"data":"FATE3_PROGRESS sc25-635fd71a 30 levels 0 TTT_COMMIT 51 TTT_ROLLBACK 51\n"}
+,{"stream_name":"stdout","time":147.697707404,"data":"FATE3_PROGRESS sc25-635fd71a 60 levels 0 TTT_COMMIT 52 TTT_ROLLBACK 51\n"}
+,{"stream_name":"stdout","time":148.650801509,"data":"FATE3_PROGRESS sc25-635fd71a 90 levels 0 TTT_COMMIT 53 TTT_ROLLBACK 51\n"}
+,{"stream_name":"stdout","time":149.895783003,"data":"FATE3_PROGRESS sc25-635fd71a 120 levels 0 TTT_COMMIT 54 TTT_ROLLBACK 51\n"}
+,{"stream_name":"stdout","time":151.226041866,"data":"FATE3_GAME sc25-635fd71a {\"levels\": 0, \"actions\": 140, \"resets\": 2, \"error\": null, \"elapsed_sec\": 4.981}\n"}
+,{"stream_name":"stdout","time":151.244589376,"data":"2026-11-08 12:18:32 | INFO | Successfully loaded game class Sk48 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/sk48/d8078629/sk48.py\n"}
+,{"stream_name":"stdout","time":151.699136684,"data":"FATE3_PROGRESS sk48-d8078629 30 levels 0 TTT_COMMIT 55 TTT_ROLLBACK 52\n"}
+,{"stream_name":"stdout","time":152.788558858,"data":"FATE3_PROGRESS sk48-d8078629 60 levels 0 TTT_COMMIT 55 TTT_ROLLBACK 54\n"}
+,{"stream_name":"stdout","time":154.123192421,"data":"FATE3_PROGRESS sk48-d8078629 90 levels 0 TTT_COMMIT 56 TTT_ROLLBACK 54\n"}
+,{"stream_name":"stdout","time":157.347591735,"data":"FATE3_PROGRESS sk48-d8078629 120 levels 0 TTT_COMMIT 58 TTT_ROLLBACK 54\n"}
+,{"stream_name":"stdout","time":159.417170885,"data":"FATE3_GAME sk48-d8078629 {\"levels\": 0, \"actions\": 140, \"resets\": 0, \"error\": null, \"elapsed_sec\": 8.193}\n"}
+,{"stream_name":"stdout","time":159.436903105,"data":"2026-11-08 12:18:40 | INFO | Successfully loaded game class Sp80 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/sp80/589a99af/sp80.py\n"}
+,{"stream_name":"stdout","time":159.991523842,"data":"FATE3_PROGRESS sp80-589a99af 30 levels 0 TTT_COMMIT 60 TTT_ROLLBACK 54\n"}
+,{"stream_name":"stdout","time":160.690478368,"data":"FATE3_PROGRESS sp80-589a99af 60 levels 0 TTT_COMMIT 60 TTT_ROLLBACK 55\n"}
+,{"stream_name":"stdout","time":161.642095883,"data":"FATE3_PROGRESS sp80-589a99af 90 levels 0 TTT_COMMIT 60 TTT_ROLLBACK 56\n"}
+,{"stream_name":"stdout","time":162.831148687,"data":"FATE3_PROGRESS sp80-589a99af 120 levels 0 TTT_COMMIT 60 TTT_ROLLBACK 57\n"}
+,{"stream_name":"stdout","time":164.28828244,"data":"FATE3_GAME sp80-589a99af {\"levels\": 0, \"actions\": 140, \"resets\": 4, \"error\": null, \"elapsed_sec\": 4.871}\n"}
+,{"stream_name":"stdout","time":164.31492033,"data":"2026-11-08 12:18:45 | INFO | Successfully loaded game class Su15 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/su15/1944f8ab/su15.py\n"}
+,{"stream_name":"stdout","time":164.890833017,"data":"FATE3_PROGRESS su15-1944f8ab 30 levels 0 TTT_COMMIT 62 TTT_ROLLBACK 57\n"}
+,{"stream_name":"stdout","time":166.545185188,"data":"FATE3_PROGRESS su15-1944f8ab 60 levels 0 TTT_COMMIT 64 TTT_ROLLBACK 57\n"}
+,{"stream_name":"stdout","time":167.901212641,"data":"FATE3_PROGRESS su15-1944f8ab 90 levels 0 TTT_COMMIT 65 TTT_ROLLBACK 57\n"}
+,{"stream_name":"stdout","time":170.473455369,"data":"FATE3_PROGRESS su15-1944f8ab 120 levels 0 TTT_COMMIT 66 TTT_ROLLBACK 58\n"}
+,{"stream_name":"stdout","time":171.894552771,"data":"FATE3_GAME su15-1944f8ab {\"levels\": 0, \"actions\": 140, \"resets\": 1, \"error\": null, \"elapsed_sec\": 7.605}\n"}
+,{"stream_name":"stdout","time":171.938932151,"data":"2026-11-08 12:18:52 | INFO | Successfully loaded game class Tn36 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/tn36/ef4dde99/tn36.py\n"}
+,{"stream_name":"stdout","time":172.414734599,"data":"FATE3_PROGRESS tn36-ef4dde99 30 levels 0 TTT_COMMIT 67 TTT_ROLLBACK 59\n"}
+,{"stream_name":"stdout","time":174.05614582,"data":"FATE3_PROGRESS tn36-ef4dde99 60 levels 0 TTT_COMMIT 69 TTT_ROLLBACK 59\n"}
+,{"stream_name":"stdout","time":175.133641185,"data":"FATE3_PROGRESS tn36-ef4dde99 90 levels 0 TTT_COMMIT 70 TTT_ROLLBACK 59\n"}
+,{"stream_name":"stdout","time":176.266613759,"data":"FATE3_PROGRESS tn36-ef4dde99 120 levels 0 TTT_COMMIT 70 TTT_ROLLBACK 60\n"}
+,{"stream_name":"stdout","time":177.450308933,"data":"FATE3_GAME tn36-ef4dde99 {\"levels\": 0, \"actions\": 140, \"resets\": 2, \"error\": null, \"elapsed_sec\": 5.556}\n"}
+,{"stream_name":"stdout","time":177.471215503,"data":"2026-11-08 12:18:58 | INFO | Successfully loaded game class Tr87 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/tr87/cd924810/tr87.py\n"}
+,{"stream_name":"stdout","time":178.08013125,"data":"FATE3_PROGRESS tr87-cd924810 30 levels 0 TTT_COMMIT 71 TTT_ROLLBACK 61\n"}
+,{"stream_name":"stdout","time":179.755444661,"data":"FATE3_PROGRESS tr87-cd924810 60 levels 0 TTT_COMMIT 73 TTT_ROLLBACK 61\n"}
+,{"stream_name":"stdout","time":181.132345844,"data":"FATE3_PROGRESS tr87-cd924810 90 levels 0 TTT_COMMIT 74 TTT_ROLLBACK 61\n"}
+,{"stream_name":"stdout","time":184.390614898,"data":"FATE3_PROGRESS tr87-cd924810 120 levels 0 TTT_COMMIT 76 TTT_ROLLBACK 61\n"}
+,{"stream_name":"stdout","time":184.595480737,"data":"FATE3_GAME tr87-cd924810 {\"levels\": 0, \"actions\": 140, \"resets\": 1, \"error\": null, \"elapsed_sec\": 7.145}\n"}
+,{"stream_name":"stdout","time":184.620538027,"data":"2026-11-08 12:19:05 | INFO | Successfully loaded game class Tu93 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/tu93/0768757b/tu93.py\n"}
+,{"stream_name":"stdout","time":185.190894004,"data":"FATE3_PROGRESS tu93-0768757b 30 levels 0 TTT_COMMIT 77 TTT_ROLLBACK 61\n"}
+,{"stream_name":"stdout","time":185.99995825,"data":"FATE3_PROGRESS tu93-0768757b 60 levels 0 TTT_COMMIT 78 TTT_ROLLBACK 61\n"}
+,{"stream_name":"stdout","time":187.93878609,"data":"FATE3_PROGRESS tu93-0768757b 90 levels 0 TTT_COMMIT 80 TTT_ROLLBACK 61\n"}
+,{"stream_name":"stdout","time":189.285372043,"data":"FATE3_PROGRESS tu93-0768757b 120 levels 0 TTT_COMMIT 81 TTT_ROLLBACK 61\n"}
+,{"stream_name":"stdout","time":190.859553485,"data":"FATE3_GAME tu93-0768757b {\"levels\": 0, \"actions\": 140, \"resets\": 2, \"error\": null, \"elapsed_sec\": 6.263}\n"}
+,{"stream_name":"stdout","time":190.885409975,"data":"2026-11-08 12:19:11 | INFO | Successfully loaded game class Vc33 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/vc33/5430563c/vc33.py\n"}
+,{"stream_name":"stdout","time":191.469780682,"data":"FATE3_PROGRESS vc33-5430563c 30 levels 0 TTT_COMMIT 83 TTT_ROLLBACK 61\n"}
+,{"stream_name":"stdout","time":192.073635019,"data":"FATE3_PROGRESS vc33-5430563c 60 levels 0 TTT_COMMIT 83 TTT_ROLLBACK 62\n"}
+,{"stream_name":"stdout","time":193.704256231,"data":"FATE3_PROGRESS vc33-5430563c 90 levels 0 TTT_COMMIT 83 TTT_ROLLBACK 64\n"}
+,{"stream_name":"stdout","time":194.956904444,"data":"FATE3_PROGRESS vc33-5430563c 120 levels 0 TTT_COMMIT 83 TTT_ROLLBACK 65\n"}
+,{"stream_name":"stdout","time":196.323880807,"data":"FATE3_GAME vc33-5430563c {\"levels\": 0, \"actions\": 140, \"resets\": 2, \"error\": null, \"elapsed_sec\": 5.464}\n"}
+,{"stream_name":"stdout","time":196.345176927,"data":"2026-11-08 12:19:17 | INFO | Successfully loaded game class Wa30 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/wa30/ee6fef47/wa30.py\n"}
+,{"stream_name":"stdout","time":196.791184815,"data":"FATE3_PROGRESS wa30-ee6fef47 30 levels 0 TTT_COMMIT 83 TTT_ROLLBACK 67\n"}
+,{"stream_name":"stdout","time":197.861271659,"data":"FATE3_PROGRESS wa30-ee6fef47 60 levels 0 TTT_COMMIT 83 TTT_ROLLBACK 69\n"}
+,{"stream_name":"stdout","time":198.744604275,"data":"FATE3_PROGRESS wa30-ee6fef47 90 levels 0 TTT_COMMIT 83 TTT_ROLLBACK 70\n"}
+,{"stream_name":"stdout","time":200.740026795,"data":"FATE3_PROGRESS wa30-ee6fef47 120 levels 0 TTT_COMMIT 83 TTT_ROLLBACK 72\n"}
+,{"stream_name":"stdout","time":202.796881914,"data":"FATE3_GAME wa30-ee6fef47 {\"levels\": 0, \"actions\": 140, \"resets\": 0, \"error\": null, \"elapsed_sec\": 6.472}\n"}
+,{"stream_name":"stdout","time":202.797124334,"data":"2026-11-08 12:19:23 | INFO | Closed scorecard: 7ddeac17-9f03-4a93-9417-7cd906d14e3e\n"}
+,{"stream_name":"stdout","time":202.847992084,"data":"FATE3_PUBLIC_SCORE 0.0026062098134170203 output /kaggle/working/FATE3_PUBLIC25_RESULTS.json\n"}
+,{"stream_name":"stderr","time":207.275720852,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":207.275738502,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":207.431729501,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":207.431743411,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":207.911564458,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":207.953044198,"data":"[NbConvertApp] Writing 112326 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":209.162511622,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":209.426053681,"data":"[NbConvertApp] Writing 387116 bytes to __results__.html\n"}
+]

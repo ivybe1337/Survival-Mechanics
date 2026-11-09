@@ -1,0 +1,119 @@
+{
+  "receipt_D_sperner_tightness_bound": {
+    "all_part2_exact_match": true,
+    "part_1_exhaustive_max_antichain_n4": {
+      "exact_match": true,
+      "families_checked": 65536,
+      "max_antichain_size_found": 6,
+      "sperner_bound_C(4,2)": 6,
+      "universe_size": 4
+    },
+    "part_2_threshold_construction_n2_to_n14": [
+      {
+        "C(n,floor(n/2))": 2,
+        "all_minimal_nogoods_have_size_floor_n_2": true,
+        "exact_match": true,
+        "minimal_nogood_count": 2,
+        "n": 2,
+        "threshold_k": 0
+      },
+      {
+        "C(n,floor(n/2))": 3,
+        "all_minimal_nogoods_have_size_floor_n_2": true,
+        "exact_match": true,
+        "minimal_nogood_count": 3,
+        "n": 3,
+        "threshold_k": 0
+      },
+      {
+        "C(n,floor(n/2))": 6,
+        "all_minimal_nogoods_have_size_floor_n_2": true,
+        "exact_match": true,
+        "minimal_nogood_count": 6,
+        "n": 4,
+        "threshold_k": 1
+      },
+      {
+        "C(n,floor(n/2))": 10,
+        "all_minimal_nogoods_have_size_floor_n_2": true,
+        "exact_match": true,
+        "minimal_nogood_count": 10,
+        "n": 5,
+        "threshold_k": 1
+      },
+      {
+        "C(n,floor(n/2))": 20,
+        "all_minimal_nogoods_have_size_floor_n_2": true,
+        "exact_match": true,
+        "minimal_nogood_count": 20,
+        "n": 6,
+        "threshold_k": 2
+      },
+      {
+        "C(n,floor(n/2))": 35,
+        "all_minimal_nogoods_have_size_floor_n_2": true,
+        "exact_match": true,
+        "minimal_nogood_count": 35,
+        "n": 7,
+        "threshold_k": 2
+      },
+      {
+        "C(n,floor(n/2))": 70,
+        "all_minimal_nogoods_have_size_floor_n_2": true,
+        "exact_match": true,
+        "minimal_nogood_count": 70,
+        "n": 8,
+        "threshold_k": 3
+      },
+      {
+        "C(n,floor(n/2))": 126,
+        "all_minimal_nogoods_have_size_floor_n_2": true,
+        "exact_match": true,
+        "minimal_nogood_count": 126,
+        "n": 9,
+        "threshold_k": 3
+      },
+      {
+        "C(n,floor(n/2))": 252,
+        "all_minimal_nogoods_have_size_floor_n_2": true,
+        "exact_match": true,
+        "minimal_nogood_count": 252,
+        "n": 10,
+        "threshold_k": 4
+      },
+      {
+        "C(n,floor(n/2))": 462,
+        "all_minimal_nogoods_have_size_floor_n_2": true,
+        "exact_match": true,
+        "minimal_nogood_count": 462,
+        "n": 11,
+        "threshold_k": 4
+      },
+      {
+        "C(n,floor(n/2))": 924,
+        "all_minimal_nogoods_have_size_floor_n_2": true,
+        "exact_match": true,
+        "minimal_nogood_count": 924,
+        "n": 12,
+        "threshold_k": 5
+      },
+      {
+        "C(n,floor(n/2))": 1716,
+        "all_minimal_nogoods_have_size_floor_n_2": true,
+        "exact_match": true,
+        "minimal_nogood_count": 1716,
+        "n": 13,
+        "threshold_k": 5
+      },
+      {
+        "C(n,floor(n/2))": 3432,
+        "all_minimal_nogoods_have_size_floor_n_2": true,
+        "exact_match": true,
+        "minimal_nogood_count": 3432,
+        "n": 14,
+        "threshold_k": 6
+      }
+    ]
+  },
+  "receipt_sha256_without_hash_field": "25955e510d88b04f142871dc226f8bb2b7a4bf8578f35303400eceeceaa1024f"
+}

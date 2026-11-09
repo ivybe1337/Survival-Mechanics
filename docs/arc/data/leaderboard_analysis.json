@@ -1,0 +1,93 @@
+{
+ "n_teams": 3544,
+ "max": 88.06,
+ "median": 29.31,
+ "zero": 892,
+ "nonzero": 2652,
+ "team_row": {
+  "Rank": "2158",
+  "TeamId": "16625846",
+  "TeamName": "netphantom17",
+  "LastSubmissionDate": "2026-10-26 20:05:40",
+  "Score": "28.06",
+  "SubmissionCount": "2",
+  "TeamMemberUserNames": "netphantom17"
+ },
+ "28.06": {
+  "rank_if_counted": 2108,
+  "ties": 54,
+  "top_pct": 59.5,
+  "pct_strictly_below": 39.0,
+  "task_equiv_of_120": 33.672,
+  "rank_nonzero": 2108
+ },
+ "29.72": {
+  "rank_if_counted": 1555,
+  "ties": 161,
+  "top_pct": 43.9,
+  "pct_strictly_below": 51.6,
+  "task_equiv_of_120": 35.664,
+  "rank_nonzero": 1555
+ },
+ "band_28_33_all": {
+  "n": 1952,
+  "mean": 30.49,
+  "sd": 1.181,
+  "median": 30.56
+ },
+ "band_25_35_all": {
+  "n": 2141,
+  "mean": 30.347,
+  "sd": 1.538,
+  "median": 30.56
+ },
+ "band_25_35_subs_le2": {
+  "n": 624,
+  "mean": 29.482,
+  "sd": 1.402,
+  "median": 29.72
+ },
+ "band_25_35_subs_1": {
+  "n": 299,
+  "mean": 29.16,
+  "sd": 1.38,
+  "median": 29.17
+ },
+ "band_25_35_subs_ge10": {
+  "n": 669,
+  "mean": 31.31,
+  "sd": 1.251,
+  "median": 31.39
+ },
+ "above_35": 151,
+ "frac_nonzero_in_25_35": 0.807,
+ "z_vs_le2_band": {
+  "28.06": -1.01,
+  "29.72": 0.17
+ },
+ "modes": [
+  28.47,
+  28.89,
+  29.31,
+  29.72,
+  30.14,
+  30.56,
+  30.97,
+  31.39,
+  31.81,
+  32.22,
+  32.64
+ ],
+ "mode_spacing": [
+  0.42,
+  0.42,
+  0.41,
+  0.42,
+  0.42,
+  0.41,
+  0.42,
+  0.42,
+  0.41,
+  0.42
+ ]
+}

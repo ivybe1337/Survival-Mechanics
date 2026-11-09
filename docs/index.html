@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Likely and Allowed</title>
+<meta name="description" content="The joint state of prediction and admissibility. A paper by Joshua Matthew Carter, with live exact-arithmetic simulators, in-browser verification, and Lean 4 proofs.">
+<meta property="og:title" content="Likely and Allowed">
+<meta property="og:description" content="Knowing what is likely is not knowing what is allowed. A paper with its proofs, its simulators, and its verification running in your browser.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f6f2; --bg2:#ecece6; --panel:#ffffffcc; --fg:#15161a; --muted:#5d6068; --faint:#9a9ca3; --rule:#d9d9d2;
+  --eps:#0a8f9e; --kap:#b86a00; --joint:#4b3fd1; --dead:#c2263d; --ok:#1f8a4c;
+  --glow:0 0 0 1px var(--rule);
+  --mono:"JetBrains Mono",ui-monospace,monospace; --sans:"Inter Tight",system-ui,sans-serif; --serif:"Newsreader",Georgia,serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#07080b; --bg2:#0e1016; --panel:#10131acc; --fg:#ecedf0; --muted:#a2a6b1; --faint:#5f6470; --rule:#232733;
+  --eps:#45e0ee; --kap:#ffb547; --joint:#a99bff; --dead:#ff5c74; --ok:#4fdc8c;
+}}
+:root[data-theme="dark"]{
+  --bg:#07080b; --bg2:#0e1016; --panel:#10131acc; --fg:#ecedf0; --muted:#a2a6b1; --faint:#5f6470; --rule:#232733;
+  --eps:#45e0ee; --kap:#ffb547; --joint:#a99bff; --dead:#ff5c74; --ok:#4fdc8c;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:linear-gradient(var(--rule) 1px,transparent 1px),linear-gradient(90deg,var(--rule) 1px,transparent 1px);
+  background-size:64px 64px;opacity:.28;mask-image:radial-gradient(ellipse at 50% 0%,#000 0%,transparent 70%)}
+a{color:inherit}
+.wrap{position:relative;z-index:1;max-width:1120px;margin:0 auto;padding:0 20px}
+nav.top{position:sticky;top:0;z-index:10;backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 78%,transparent);border-bottom:1px solid var(--rule)}
+nav.top .wrap{display:flex;align-items:center;gap:22px;height:56px}
+nav.top .brand{font-weight:600;letter-spacing:.02em;text-decoration:none;white-space:nowrap}
+nav.top .links{display:flex;gap:18px;margin-left:auto;font-size:14px;color:var(--muted)}
+nav.top .links a{text-decoration:none} nav.top .links a:hover{color:var(--fg)}
+#theme{margin-left:6px;background:none;border:1px solid var(--rule);color:var(--muted);border-radius:8px;padding:4px 8px;font:13px var(--mono);cursor:pointer}
+@media (max-width:640px){nav.top .links .hide-s{display:none}}
+header.hero{padding:88px 0 40px}
+.eyebrow{font:500 12px/1 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+h1{font:600 clamp(44px,8vw,96px)/.95 var(--sans);letter-spacing:-.035em;margin:18px 0 22px}
+h1 .and{color:var(--faint);font-weight:300}
+.lede{font:400 clamp(19px,2.4vw,25px)/1.45 var(--serif);max-width:820px;margin:0}
+.lede em{font-style:italic;color:var(--muted)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:999px;border:1px solid var(--rule);text-decoration:none;font-weight:500;font-size:15px;background:var(--panel);cursor:pointer;color:var(--fg);font-family:var(--sans)}
+.btn.primary{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.btn:hover{transform:translateY(-1px)} .btn:disabled{opacity:.5;cursor:wait;transform:none}
+.meta{margin-top:18px;color:var(--muted);font-size:14px}
+section{padding:72px 0;border-top:1px solid var(--rule)}
+h2{font:600 clamp(28px,4vw,42px)/1.1 var(--sans);letter-spacing:-.02em;margin:10px 0 14px}
+.sub{font:400 19px/1.55 var(--serif);color:var(--muted);max-width:760px;margin:0 0 28px}
+.grid2{display:grid;grid-template-columns:1.05fr .95fr;gap:22px}
+@media (max-width:900px){.grid2{grid-template-columns:1fr}}
+.panel{background:var(--panel);border:1px solid var(--rule);border-radius:18px;padding:22px;backdrop-filter:blur(8px)}
+.panel h3{font:600 15px/1.3 var(--sans);margin:0 0 4px;letter-spacing:.01em}
+.panel .hint{font-size:13.5px;color:var(--muted);margin:0 0 14px}
+.mono{font-family:var(--mono)}
+.k-eps{color:var(--eps)} .k-kap{color:var(--kap)} .k-joint{color:var(--joint)} .k-dead{color:var(--dead)}
+/* live stream */
+.stream{margin-top:46px;display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:center}
+@media (max-width:760px){.stream{grid-template-columns:1fr}}
+.lattice{display:grid;grid-template-columns:auto repeat(3,64px);grid-auto-rows:44px;gap:8px;align-items:center;font:12px var(--mono)}
+.lattice .h{color:var(--muted);text-align:center}
+.lattice .r{color:var(--muted);padding-right:6px;text-align:right}
+.cell{height:44px;border-radius:12px;border:1px solid var(--rule);background:var(--bg2);position:relative;transition:all .25s}
+.cell.on{border-color:var(--joint);box-shadow:0 0 0 1px var(--joint),0 0 28px color-mix(in srgb,var(--joint) 55%,transparent);background:color-mix(in srgb,var(--joint) 18%,var(--bg2))}
+.cell.dead.on{border-color:var(--dead);box-shadow:0 0 0 1px var(--dead),0 0 28px color-mix(in srgb,var(--dead) 50%,transparent);background:color-mix(in srgb,var(--dead) 16%,var(--bg2))}
+.cell .v{position:absolute;inset:auto 6px 4px auto;font-size:10px;color:var(--faint)}
+.tape{font:15px/1 var(--mono);letter-spacing:.32em;white-space:nowrap;overflow:hidden;padding:14px 16px;border:1px solid var(--rule);border-radius:12px;background:var(--bg2);mask-image:linear-gradient(90deg,transparent,#000 22%)}
+.tape .b{color:var(--kap)} .tape .x{color:var(--dead)}
+.streamcap{font-size:13.5px;color:var(--muted);margin-top:10px}
+/* simulator */
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.sym{font:600 18px var(--mono);width:52px;height:46px;border-radius:12px;border:1px solid var(--rule);background:var(--bg2);color:var(--fg);cursor:pointer}
+.sym:hover{border-color:var(--fg)}
+.small{font:500 13px var(--sans);height:36px;padding:0 12px;border-radius:10px;border:1px solid var(--rule);background:transparent;color:var(--muted);cursor:pointer}
+.hist{min-height:54px;margin:14px 0;padding:14px 16px;border:1px dashed var(--rule);border-radius:12px;font:18px/1.4 var(--mono);letter-spacing:.16em;word-break:break-all}
+.hist .empty{color:var(--faint);letter-spacing:0;font:14px var(--sans)}
+label.ctl{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--muted)}
+select,input[type=range]{accent-color:var(--joint)}
+select{background:var(--bg2);color:var(--fg);border:1px solid var(--rule);border-radius:8px;padding:5px 8px;font:13px var(--mono)}
+.readout{display:grid;grid-template-columns:1fr auto;gap:10px 16px;font-size:14.5px;margin-top:6px}
+.readout dt{color:var(--muted)} .readout dd{margin:0;font-family:var(--mono);text-align:right}
+.exact{display:block;font-size:11px;color:var(--faint);max-width:240px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-left:auto}
+.bars{display:grid;gap:14px;margin-top:8px}
+.bar{display:grid;gap:6px} .bar .lab{display:flex;justify-content:space-between;font-size:13.5px;color:var(--muted)}
+.track{height:10px;border-radius:99px;background:var(--bg2);border:1px solid var(--rule);overflow:hidden;position:relative}
+.fill{height:100%;border-radius:99px;transition:width .35s}
+.track .mark{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--fg);opacity:.5}
+/* results */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:900px){.cards{grid-template-columns:1fr 1fr}} @media (max-width:600px){.cards{grid-template-columns:1fr}}
+.card{border:1px solid var(--rule);border-radius:16px;padding:20px;background:var(--panel)}
+.card .tag{font:500 11px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+.card h4{font:600 18px/1.25 var(--sans);margin:8px 0 6px}
+.card p{margin:0;font-size:14.5px;color:var(--muted)}
+/* verify */
+.checks{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:8px}
+.checks li{display:grid;grid-template-columns:22px 1fr auto;gap:10px;align-items:baseline;font-size:14px;padding:9px 12px;border:1px solid var(--rule);border-radius:10px;background:var(--bg2)}
+.checks .st{font-family:var(--mono)} .checks .d{color:var(--muted);font:12px var(--mono);text-align:right}
+.pass{color:var(--ok)} .fail{color:var(--dead)} .wait{color:var(--faint)}
+pre.lean{font:12.5px/1.55 var(--mono);background:var(--bg2);border:1px solid var(--rule);border-radius:12px;padding:14px;overflow-x:auto;margin:12px 0 0}
+.lean .kw{color:var(--joint)} .lean .cm{color:var(--faint)}
+.hist-ax{display:grid;gap:6px;margin-top:10px;font-size:13px}
+.hist-ax div{display:grid;grid-template-columns:1fr 56px;gap:8px}
+.big{font:600 40px/1 var(--sans);letter-spacing:-.02em}
+blockquote{margin:0;padding:0 0 0 18px;border-left:2px solid var(--joint);font:400 21px/1.5 var(--serif)}
+footer{padding:56px 0 80px;border-top:1px solid var(--rule);color:var(--muted);font-size:14px}
+footer pre{font:12px/1.5 var(--mono);background:var(--bg2);border:1px solid var(--rule);border-radius:12px;padding:14px;overflow-x:auto;color:var(--fg)}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<nav class="top"><div class="wrap">
+  <a class="brand" href="#">Likely <span style="color:var(--faint)">&amp;</span> Allowed</a>
+  <div class="links"><a href="report.html">ARC report</a><a href="arc.html">ARC data</a><a href="#play" class="hide-s">Simulator</a><a href="#results" class="hide-s">Results</a><a href="#verify">Verify</a><a href="paper.html">Paper</a><a href="https://github.com/ivybe1337/survival-mechanics" class="hide-s">Code</a></div>
+  <button id="theme" aria-label="Toggle color theme">◐</button>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="eyebrow">Joshua Matthew Carter · 2026 · Survival Mechanics</div>
+  <h1>Likely <span class="and">and</span> Allowed</h1>
+  <p class="lede">Give a forecaster the exact probability law of a process, then ask what happens next given that the future must obey a rule. If it ignores which futures the rule still allows, it can be forced to be wrong by nearly as much as any forecaster can be. <em>Knowing what is likely is not knowing what is allowed.</em></p>
+  <div class="cta">
+    <a class="btn primary" href="paper.html">Read the paper</a>
+    <a class="btn" href="#play">Run the simulator</a>
+    <a class="btn" href="#verify">Verify it here</a>
+    <a class="btn" href="arc.html">The ARC submissions</a>
+    <a class="btn" href="Likely_and_Allowed.pdf">PDF</a>
+  </div>
+  <p class="meta">Every result is proved in the paper. The core theorems are machine-checked in Lean 4, and every finite claim reruns in exact arithmetic, on this page if you like.</p>
+
+  <div class="stream" aria-label="Live joint-state stream">
+    <div>
+      <div class="lattice" id="heroLattice"></div>
+    </div>
+    <div>
+      <div class="tape" id="heroTape" aria-live="off"></div>
+      <div class="streamcap">A live sample of the paper's running example. Each symbol moves the history to a new <span class="k-eps">predictive state ε</span> and a new <span class="k-kap">residual state κ</span>. The lit cell is the <span class="k-joint">joint state J</span>. Two b's in a row are not allowed, and the history <span class="k-dead">dies</span>.</div>
+    </div>
+  </div>
+</div></header>
+
+<section><div class="wrap">
+  <div class="eyebrow">The idea</div>
+  <h2>Two states, one future</h2>
+  <div class="grid2">
+    <div>
+      <p class="sub" style="margin-bottom:16px">A history carries two different kinds of information about its future. The <span class="k-eps">predictive state ε</span> is what it makes probable: two histories share it when they give the same law over everything that comes next. The <span class="k-kap">residual state κ</span> is what it still allows: two histories share it when exactly the same continuations keep them admissible under a declared rule.</p>
+      <p class="sub" style="margin-bottom:0">Each is classical on its own. The predictive state is the causal state of computational mechanics; the residual state is the Myhill–Nerode congruence of the rule. The paper is about the pair. It proves that <span class="k-joint">J = (ε, κ)</span> is exactly the state that survival-aware prediction needs: no less, and under full support, no more.</p>
+    </div>
+    <div class="panel">
+      <blockquote>A model can predict the next word perfectly and still write code that will not compile.</blockquote>
+      <p class="hint" style="margin:16px 0 0">The same split runs through every system that samples from a learned model under hard constraints: a code generator that must compile, a planner that must stay feasible, an agent that must stay inside a safety envelope.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="play"><div class="wrap">
+  <div class="eyebrow">Simulator · exact arithmetic</div>
+  <h2>Build a history. Watch both states.</h2>
+  <p class="sub">The process emits <span class="mono">a</span> with probability α at even positions and β at odd ones, so the predictive state is the parity of the length. The rule forbids <span class="mono">bb</span>, which gives three residual states. Every number below is computed exactly as a fraction, in your browser.</p>
+  <div class="grid2">
+    <div class="panel">
+      <h3>History</h3>
+      <p class="hint">Append symbols, or sample the next one from the process.</p>
+      <div class="row">
+        <button class="sym" data-x="a" aria-label="Append a">a</button>
+        <button class="sym" data-x="b" aria-label="Append b">b</button>
+        <button class="small" id="sample">Sample next</button>
+        <button class="small" id="undo">Undo</button>
+        <button class="small" id="reset">Reset</button>
+      </div>
+      <div class="hist" id="hist"></div>
+      <div class="row" style="gap:18px">
+        <label class="ctl">α <select id="pa"></select></label>
+        <label class="ctl">β <select id="pb"></select></label>
+        <label class="ctl" style="flex:1;min-width:200px">horizon n <input id="hn" type="range" min="1" max="40" value="6" style="flex:1"><span class="mono" id="hnv">6</span></label>
+      </div>
+      <div style="margin-top:18px" class="lattice" id="simLattice"></div>
+    </div>
+    <div class="panel">
+      <h3>What the history knows</h3>
+      <p class="hint">Exact values; hover a number for the full fraction.</p>
+      <dl class="readout" id="readout"></dl>
+    </div>
+  </div>
+
+  <div class="panel" style="margin-top:22px">
+    <h3>The price of forgetting one coordinate</h3>
+    <p class="hint">Fix the current predictive state and vary the residual state, or the other way round. If the survival-conditioned forecasts differ, a forecaster that sees only one coordinate cannot tell those histories apart, and must be wrong by at least half the distance between them on one of them. This is the midpoint argument of Proposition 5.7. The paper shows the forced error can approach 1/2 on two symbols, and 1 − 1/d on d symbols, and that nothing can force more.</p>
+    <div class="bars" id="bars"></div>
+  </div>
+</div></section>
+
+<section id="results"><div class="wrap">
+  <div class="eyebrow">Results</div>
+  <h2>What the paper proves</h2>
+  <div class="cards">
+    <div class="card"><div class="tag">Theorem 5.4</div><h4>The joint state is exact</h4><p>Every survival probability and survival-conditioned forecast depends only on J. Under full support, those forecasts recover J.</p></div>
+    <div class="card"><div class="tag">Proposition 5.10</div><h4>The horizon is sharp</h4><p>Recovery happens by horizon max(k − 2, m − 1), and no shorter horizon works in general, even with full support.</p></div>
+    <div class="card"><div class="tag">Theorem 5.13</div><h4>It survives noise</h4><p>Forecasts that agree within a margin pin down κ exactly and ε to within an observability bound. Counterexamples show neither condition can go.</p></div>
+    <div class="card"><div class="tag">Propositions 5.7 · 5.11</div><h4>Forgetting costs up to 1 − 1/d</h4><p>A forecaster with the exact law that ignores one coordinate can be forced to that error on d symbols, the worst case for any forecaster.</p></div>
+    <div class="card"><div class="tag">Theorem 4.1 · 4.4 · 4.5</div><h4>Independent, and when that is typical</h4><p>The two partitions can realize every combination. Generic on unifilar models; false for generic two-state hidden Markov models.</p></div>
+    <div class="card"><div class="tag">Lean 4</div><h4>Machine-checked</h4><p>159 theorems, no sorry, no axioms beyond propext, Classical.choice and Quot.sound.</p></div>
+  </div>
+</div></section>
+
+<section id="verify"><div class="wrap">
+  <div class="eyebrow">Verification</div>
+  <h2>Don't trust me. Check it here.</h2>
+  <p class="sub">Three independent layers. The first checks the theorems on the running example with fresh code. The second reruns the paper's own published Python receipts inside your browser and compares every digest with the published manifest. The third is the Lean audit.</p>
+  <div class="grid2">
+    <div class="panel">
+      <h3>1 · Exact checks on the running example</h3>
+      <p class="hint">Brute-force enumeration with rational arithmetic, written separately from the simulator above. Uses the current α and β.</p>
+      <button class="btn" id="runChecks">Run the checks</button>
+      <ul class="checks" id="checks"></ul>
+    </div>
+    <div class="panel">
+      <h3>2 · Rerun the published receipts in Python</h3>
+      <p class="hint">Loads a Python runtime into this page (about 10 MB, once), fetches the scripts from this site, runs them, and compares each receipt's digest with <span class="mono">MANIFEST.json</span>. A matching digest means every number in that receipt came out identical.</p>
+      <div class="row"><button class="btn" id="runPy">Run 13 receipts</button><label class="ctl"><input type="checkbox" id="withR2"> include R2 (several minutes)</label></div>
+      <ul class="checks" id="pyList"></ul>
+    </div>
+  </div>
+  <div class="panel" style="margin-top:22px">
+    <div class="grid2" style="gap:28px">
+      <div>
+        <h3>3 · The Lean audit</h3>
+        <p class="hint">Parsed live from the published output of <span class="mono">lake env lean LikelyAllowed/Audit.lean</span>. Lean does not run in a browser, so this layer is the build record: rerun it with <span class="mono">lake build</span> from the repository.</p>
+        <div class="big" id="leanCount">…</div>
+        <div class="hint" style="margin:4px 0 0">theorems audited</div>
+        <div class="hist-ax" id="leanAx"></div>
+      </div>
+      <div>
+        <h3>Theorem 5.4(b) as Lean states it</h3>
+<pre class="lean"><span class="kw">theorem</span> truncated_forecasts_eq_iff_jEquiv
+    [Finite (Quotient (resSetoid V))] (L : LinRep P)
+    {h h' : List α} (hh : P.AllPos h) (hh' : P.AllPos h') {H : ℕ}
+    (hHk : Nat.card (Quotient (resSetoid V)) - 2 ≤ H)
+    (hHm : L.dim - 1 ≤ H) :
+    ((∀ z : List α, z.length ≤ H → P.pred h z = P.pred h' z) ∧
+        (∀ n ≤ H, P.survProb V n h = P.survProb V n h') ∧
+        ∀ n ≤ H, ∀ z ∈ words α n, P.condLaw V n h z = P.condLaw V n h' z) ↔
+      P.JEquiv V h h'</pre>
+        <p class="hint" style="margin-top:10px"><a href="https://github.com/ivybe1337/survival-mechanics/blob/main/lean/LikelyAllowed/Exactness.lean">Exactness.lean</a> · <a href="https://github.com/ivybe1337/survival-mechanics/blob/main/lean/LEAN_MAP.md">every result mapped to Lean</a></p>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="eyebrow">Next</div>
+  <h2>Beyond the pair</h2>
+  <div class="grid2">
+    <p class="sub" style="margin:0">Condition a process on staying admissible and you get a new process. Its own causal states are built out of both ε and κ, and Proposition 5.12 already shows that survival reports alone can need strictly less state than J. What the minimal machine of that conditioned process is, in general, I do not know yet. That is the next paper.</p>
+    <div class="panel"><h3>Linked code submission</h3><p class="hint" style="margin:0">My ARC Prize 2026 entry for the ARC-AGI-2 track, FATE (Kaggle notebook <span class="mono">netphantom17/fate-ssm-final</span>, submission 57913192), uses this split: the model's likelihood may only order candidate answers, and only an admissibility rule mined from the demonstrations may demote them. The paper says what that submission does and does not show.</p></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="grid2">
+    <div>
+      <div style="color:var(--fg);font-weight:600">Likely and Allowed: The Joint State of Prediction and Admissibility</div>
+      <div>Joshua Matthew Carter · Independent researcher · Version 1.0, November 2026</div>
+      <p>Paper text and figures: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Code: MIT-0.<br><a href="paper.html">Paper</a> · <a href="Likely_and_Allowed.pdf">PDF</a> · <a href="https://github.com/ivybe1337/survival-mechanics">Repository</a></p>
+    </div>
+    <div>
+      <div class="row" style="justify-content:space-between"><span>Cite</span><button class="small" id="copyBib">Copy BibTeX</button></div>
+<pre id="bib">@misc{carter2026likely,
+  author       = {Joshua Matthew Carter},
+  title        = {Likely and Allowed: The Joint State of
+                  Prediction and Admissibility},
+  year         = {2026},
+  howpublished = {\url{https://ivybe1337.github.io/Survival-Mechanics/}}
+}</pre>
+    </div>
+  </div>
+</div></footer>
+
+<script>
+"use strict";
+/* ---------- exact rationals ---------- */
+const gcd=(a,b)=>{a=a<0n?-a:a;b=b<0n?-b:b;while(b){[a,b]=[b,a%b]}return a};
+class Q{constructor(n,d=1n){n=BigInt(n);d=BigInt(d);if(d<0n){n=-n;d=-d}const g=gcd(n,d)||1n;this.n=n/g;this.d=d/g}
+  add(o){return new Q(this.n*o.d+o.n*this.d,this.d*o.d)} sub(o){return new Q(this.n*o.d-o.n*this.d,this.d*o.d)}
+  mul(o){return new Q(this.n*o.n,this.d*o.d)} div(o){return new Q(this.n*o.d,this.d*o.n)}
+  eq(o){return this.n===o.n&&this.d===o.d} zero(){return this.n===0n}
+  key(){return this.n+"/"+this.d}
+  dec(p=6){const s=this.n<0n?"-":"";const n=this.n<0n?-this.n:this.n;const sc=10n**BigInt(p);let q=(n*sc*2n+this.d)/(2n*this.d);const i=q/sc,f=(q%sc).toString().padStart(p,"0");return s+i+"."+f}
+  str(){return this.d===1n?""+this.n:this.n+"/"+this.d}}
+const ONE=new Q(1),ZERO=new Q(0);
+const halfAbs=(x,y)=>{const d=x.sub(y);return new Q(d.n<0n?-d.n:d.n,d.d*2n)};
+
+/* ---------- the running example ---------- */
+let PA=new Q(3,10),PB=new Q(7,10);
+const qx=(t,x)=>{const p=(t%2===0)?PA:PB;return x==="a"?p:ONE.sub(p)};
+// residual DFA for "no bb": A = alive, last symbol not b; B = alive, last symbol b; D = dead
+const KS=["A","B","D"];
+const kstep=(k,x)=>k==="D"?"D":(x==="a"?"A":(k==="B"?"D":"B"));
+const kap=w=>{let k="A";for(const x of w)k=kstep(k,x);return k};
+const Vrule=w=>!w.includes("bb");
+const KDESC={A:"alive, last symbol not b",B:"alive, last symbol b",D:"dead"};
+let memo=new Map();
+function S(n,t,k){ // survival probability: n more symbols from position t in residual state k
+  if(k==="D")return ZERO; if(n===0)return ONE;
+  const key=n+"|"+(t%2)+"|"+k; if(memo.has(key))return memo.get(key);
+  const v=qx(t,"a").mul(S(n-1,t+1,kstep(k,"a"))).add(qx(t,"b").mul(S(n-1,t+1,kstep(k,"b"))));
+  memo.set(key,v);return v}
+function Qa(n,t,k){const s=S(n,t,k);if(s.zero())return null;return qx(t,"a").mul(S(n-1,t+1,kstep(k,"a"))).div(s)}
+
+/* ---------- lattice ---------- */
+function buildLattice(el){
+  el.innerHTML='<div></div>'+KS.map(k=>`<div class="h">κ=${k}</div>`).join("")+
+   [0,1].map(e=>`<div class="r">ε=${e?"odd":"even"}</div>`+KS.map(k=>`<div class="cell${k==="D"?" dead":""}" data-c="${e}${k}" title="ε=${e?"odd":"even"}, κ=${k} (${KDESC[k]})"><span class="v">${e}${k}</span></div>`).join("")).join("");
+}
+function lightLattice(el,e,k){el.querySelectorAll(".cell").forEach(c=>c.classList.toggle("on",c.dataset.c===`${e}${k}`))}
+
+/* ---------- hero stream ---------- */
+const heroL=document.getElementById("heroLattice"),heroT=document.getElementById("heroTape");buildLattice(heroL);
+let hw="",tape=[];const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+function heroTick(){
+  if(kap(hw)==="D"){hw="";tape.push('<span style="opacity:.35">|</span>')}
+  else{const x=Math.random()<Number(qx(hw.length,"a").dec(8))?"a":"b";hw+=x;const k=kap(hw);tape.push(k==="D"?'<span class="x">b</span>':(x==="b"?'<span class="b">b</span>':"a"))}
+  tape=tape.slice(-40);heroT.innerHTML=tape.join("");lightLattice(heroL,hw.length%2,kap(hw))}
+heroTick();if(!reduce)setInterval(heroTick,700);
+
+/* ---------- simulator ---------- */
+const simL=document.getElementById("simLattice");buildLattice(simL);
+let H="";const histEl=document.getElementById("hist"),ro=document.getElementById("readout"),hn=document.getElementById("hn"),hnv=document.getElementById("hnv");
+const fracs=[1,2,3,4,5,6,7,8,9].map(i=>[i,10]);
+for(const id of["pa","pb"]){const s=document.getElementById(id);fracs.forEach(([n,d])=>{const o=document.createElement("option");o.value=n+"/"+d;o.textContent=n+"/"+d;s.appendChild(o)})}
+document.getElementById("pa").value="3/10";document.getElementById("pb").value="7/10";
+const parseQ=s=>{const[n,d]=s.split("/");return new Q(n,d)};
+function num(q){if(q===null)return'<span title="undefined: survival probability is 0">undefined</span>';const s=q.str();return`<span title="${s}">${q.dec(6)}</span><span class="exact">${s.length>28?"exact fraction: hover":s}</span>`}
+function render(){
+  memo=new Map();const t=H.length,k=kap(H),n=+hn.value;hnv.textContent=n;
+  histEl.innerHTML=H?H.split("").map((x,i)=>{const dead=kap(H.slice(0,i+1))==="D"&&kap(H.slice(0,i))!=="D";return dead?`<span class="k-dead">${x}</span>`:(x==="b"?`<span class="k-kap">${x}</span>`:x)}).join(""):'<span class="empty">empty history Λ</span>';
+  lightLattice(simL,t%2,k);
+  const Sn=S(n,t,k),q=Qa(n,t,k);
+  ro.innerHTML=`
+   <dt><span class="k-eps">Predictive state ε</span></dt><dd>${t%2?"odd":"even"} length</dd>
+   <dt><span class="k-kap">Residual state κ</span></dt><dd>${k} · ${KDESC[k]}</dd>
+   <dt><span class="k-joint">Joint state J</span></dt><dd>(${t%2?"odd":"even"}, ${k})</dd>
+   <dt>Ordinary forecast P(next = a)</dt><dd>${num(qx(t,"a"))}</dd>
+   <dt>Survival probability S<sub>${n}</sub>(h)</dt><dd>${num(Sn)}</dd>
+   <dt>Conditioned forecast Q<sub>${n}</sub>(next = a | survive)</dt><dd>${num(q)}</dd>
+   <dt>Gap between likely and allowed</dt><dd>${q===null?"history is dead":num(halfAbs(qx(t,"a"),q).mul(new Q(2)))}</dd>`;
+  // separation bars
+  const bars=document.getElementById("bars");const rows=[];
+  const qA=Qa(n,t,"A"),qB=Qa(n,t,"B");
+  if(qA&&qB)rows.push(["Forecaster that sees only ε (fixes parity, cannot tell κ = A from κ = B)",halfAbs(qA,qB),"k-eps"]);
+  if(k!=="D"){const q0=Qa(n,0,k),q1=Qa(n,1,k);if(q0&&q1)rows.push([`Forecaster that sees only κ (fixes κ = ${k}, cannot tell even from odd)`,halfAbs(q0,q1),"k-kap"])}
+  bars.innerHTML=rows.map(([lab,v,c])=>{const w=Math.min(100,Number(v.dec(6))*200);return`<div class="bar"><div class="lab"><span>${lab}</span><span class="mono">forced error ≥ ${v.dec(4)}</span></div><div class="track"><div class="fill" style="width:${w}%;background:var(--${c==="k-eps"?"eps":"kap"})"></div><div class="mark" style="left:100%" title="1/2"></div></div></div>`}).join("")+`<div class="hint" style="margin:0">Scale ends at 1/2, the binary ceiling. Try α = 1/10, β = 9/10.</div>`;
+}
+document.querySelectorAll(".sym").forEach(b=>b.onclick=()=>{H+=b.dataset.x;render()});
+document.getElementById("undo").onclick=()=>{H=H.slice(0,-1);render()};
+document.getElementById("reset").onclick=()=>{H="";render()};
+document.getElementById("sample").onclick=()=>{if(kap(H)==="D")return;H+=Math.random()<Number(qx(H.length,"a").dec(8))?"a":"b";render()};
+for(const id of["pa","pb"])document.getElementById(id).onchange=()=>{PA=parseQ(document.getElementById("pa").value);PB=parseQ(document.getElementById("pb").value);render()};
+hn.oninput=render;render();
+
+/* ---------- layer 1: independent brute-force checks ---------- */
+function words(maxLen){const out=[""];let lvl=[""];for(let L=1;L<=maxLen;L++){lvl=lvl.flatMap(w=>[w+"a",w+"b"]);out.push(...lvl)}return out}
+const wordsN=n=>words(n).filter(w=>w.length===n);
+const P=(w,z)=>{let p=ONE;for(let i=0;i<z.length;i++)p=p.mul(qx(w.length+i,z[i]));return p};
+function bruteS(w,n){let s=ZERO;for(const z of wordsN(n))if(Vrule(w+z))s=s.add(P(w,z));return s}
+function bruteQ(w,n){const s=bruteS(w,n);if(s.zero())return null;return wordsN(n).map(z=>Vrule(w+z)?P(w,z).div(s).key():"0")}
+function groups(items,keyf){const m=new Map();for(const it of items){const k=keyf(it);if(!m.has(k))m.set(k,[]);m.get(k).push(it)}return m}
+function sameParts(a,b){ // two partitions of the same items, given as maps key->items
+  const ia=new Map(),ib=new Map();a.forEach((v,k)=>v.forEach(x=>ia.set(x,k)));b.forEach((v,k)=>v.forEach(x=>ib.set(x,k)));
+  for(const x of ia.keys())for(const y of ia.keys())if((ia.get(x)===ia.get(y))!==(ib.get(x)===ib.get(y)))return false;return true}
+const checks=[
+ ["κ is a right congruence with exactly 3 classes",()=>{const W=words(7),Z=words(5);const res=groups(W,w=>Z.map(z=>Vrule(w+z)?1:0).join(""));return[res.size===3&&sameParts(res,groups(W,kap)),`${W.length} histories × ${Z.length} continuations, ${res.size} residual classes`]}],
+ ["ε has exactly 2 classes, the length parity",()=>{const W=words(6),Z=words(4);const pr=groups(W,w=>Z.map(z=>P(w,z).key()).join(","));const want=PA.eq(PB)?1:2;return[pr.size===want&&(want===1||sameParts(pr,groups(W,w=>w.length%2))),`${pr.size} predictive classes${PA.eq(PB)?" (α = β, so ε is trivial)":""}`]}],
+ ["All six joint states occur (Theorem 4.1)",()=>{const reps=["","a","b","ab","bb","abb"];const s=new Set(reps.map(w=>(w.length%2)+kap(w)));return[s.size===6&&!PA.eq(PB),`representatives Λ, a, b, ab, bb, abb give ${s.size} distinct joint states`]}],
+ ["Equal J ⇒ equal S_n and Q_n (Proposition 5.3)",()=>{const W=words(6);let cmp=0,ok=true;const byJ=groups(W,w=>(w.length%2)+kap(w));for(const [,ws] of byJ){const r=ws[0];for(let n=0;n<=5;n++){const s0=bruteS(r,n).key(),q0=JSON.stringify(bruteQ(r,n));for(const w of ws.slice(1)){cmp++;if(bruteS(w,n).key()!==s0||JSON.stringify(bruteQ(w,n))!==q0)ok=false}}}return[ok,`${cmp} exact comparisons`]}],
+ ["Forecasts to horizon 1 recover J exactly (Theorem 5.4, H* = max(3−2, 2−1) = 1)",()=>{if(PA.eq(PB))return[false,"needs α ≠ β"];const W=words(6);const sig=w=>[P(w,"a").key(),bruteS(w,0).key(),bruteS(w,1).key(),JSON.stringify(bruteQ(w,1))].join("|");const ok=sameParts(groups(W,sig),groups(W,w=>(w.length%2)+kap(w)));return[ok,`${W.length*(W.length-1)/2} pairs of histories`]}],
+];
+document.getElementById("runChecks").onclick=async()=>{const ul=document.getElementById("checks");ul.innerHTML="";for(const [name,f] of checks){const li=document.createElement("li");li.innerHTML=`<span class="st wait">…</span><span>${name}</span><span class="d"></span>`;ul.appendChild(li);await new Promise(r=>setTimeout(r,20));const t0=performance.now();let ok,det;try{[ok,det]=f()}catch(e){ok=false;det=String(e)}li.children[0].className="st "+(ok?"pass":"fail");li.children[0].textContent=ok?"✓":"✗";li.children[2].textContent=det+` · ${Math.round(performance.now()-t0)} ms`}};
+
+/* ---------- layer 2: Python receipts via Pyodide ---------- */
+const RECEIPTS=[["base/proof_calculations.py","base/la_synthetic_receipt.json","base"],["base/sperner_receipt.py","base/sperner_receipt.json","base"],["base/lipschitz_receipt.py","base/lipschitz_receipt.json","base"],["base/presentation_receipt.py","base/presentation_receipt.json","base"],["base/mixed_objective_receipt.py","base/mixed_objective_receipt.json","base"],["base/value_function_receipt.py","base/value_function_receipt.json","base"],["base/nfa_noncanonicity_receipt.py","base/nfa_noncanonicity_receipt.json","base"],["r1_joint_state.py","r1_joint_state.json","."],["r3_approximate_value.py","r3_approximate_value.json","."],["r4_certificate_dimension.py","r4_certificate_dimension.json","."],["r5_presentations.py","r5_presentations.json","."],["r6_feasible_sets_and_hmm.py","r6_feasible_sets_and_hmm.json","."],["r7_visited_futures.py","r7_visited_futures.json","."]];
+const R2=["r2_survival_conditioned.py","r2_survival_conditioned.json","."];
+document.getElementById("runPy").onclick=async e=>{
+  const btn=e.target;btn.disabled=true;const ul=document.getElementById("pyList");ul.innerHTML="";
+  const jobs=RECEIPTS.concat(document.getElementById("withR2").checked?[R2]:[]);
+  const note=document.createElement("li");note.innerHTML='<span class="st wait">…</span><span>Loading Python runtime</span><span class="d"></span>';ul.appendChild(note);
+  try{
+    if(!window.loadPyodide)await new Promise((res,rej)=>{const s=document.createElement("script");s.src="https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js";s.onload=res;s.onerror=rej;document.head.appendChild(s)});
+    const py=await loadPyodide();py.setStdout({batched:()=>{}});py.setStderr({batched:()=>{}});
+    const manifest=await (await fetch("verify/receipts/MANIFEST.json")).json();
+    py.FS.mkdirTree("/r/base");
+    for(const f of["la_core.py",...jobs.map(j=>j[0])]){const txt=await (await fetch("verify/receipts/"+f)).text();py.FS.writeFile("/r/"+f,txt)}
+    note.children[0].className="st pass";note.children[0].textContent="✓";note.children[1].textContent="Python runtime ready";
+    let all=true;
+    for(const [script,receipt,dir] of jobs){
+      const li=document.createElement("li");li.innerHTML=`<span class="st wait">…</span><span class="mono">${script}</span><span class="d">running</span>`;ul.appendChild(li);await new Promise(r=>setTimeout(r,30));
+      const t0=performance.now();
+      const out=await py.runPythonAsync(`
+import os, sys, json, runpy
+for p in ('/r', '/r/base'):
+    if p not in sys.path: sys.path.insert(0, p)
+os.chdir('/r/${dir}')
+code = 0
+try:
+    runpy.run_path('/r/${script}', run_name='__main__')
+except SystemExit as e:
+    code = e.code if isinstance(e.code, int) else (0 if e.code is None else 1)
+d = json.load(open('/r/${receipt}'))
+flags, viol = [], []
+def walk(o):
+    if isinstance(o, dict):
+        for k, v in o.items():
+            kl = k.lower()
+            if isinstance(v, bool) and ('pass' in kl or kl.endswith('_ok') or 'match' in kl): flags.append(v)
+            if isinstance(v, int) and not isinstance(v, bool) and 'violation' in kl: viol.append(v)
+            walk(v)
+    elif isinstance(o, list):
+        for v in o: walk(v)
+walk(d)
+json.dumps({'code': code, 'pass': code == 0 and all(flags) and all(v == 0 for v in viol) and len(flags) + len(viol) > 0, 'sha': d.get('receipt_sha256_without_hash_field', '')})`);
+      const r=JSON.parse(out),want=manifest.receipts[script].sha256,match=r.sha===want,ok=r.pass&&match;all&&=ok;
+      li.children[0].className="st "+(ok?"pass":"fail");li.children[0].textContent=ok?"✓":"✗";
+      li.children[2].textContent=`${match?"digest matches":"digest differs"} ${r.sha.slice(0,12)}… · ${((performance.now()-t0)/1000).toFixed(1)} s`;
+    }
+    const fin=document.createElement("li");fin.innerHTML=`<span class="st ${all?"pass":"fail"}">${all?"✓":"✗"}</span><span>${all?"Every receipt reproduced its published digest.":"At least one receipt did not reproduce."}</span><span class="d"></span>`;ul.appendChild(fin);
+  }catch(err){const li=document.createElement("li");li.innerHTML=`<span class="st fail">✗</span><span>Could not run: ${String(err).slice(0,160)}</span><span class="d"></span>`;ul.appendChild(li)}
+  btn.disabled=false};
+
+/* ---------- layer 3: Lean audit ---------- */
+fetch("verify/audit.out").then(r=>r.text()).then(t=>{
+  const lines=t.split("\n").filter(l=>l.startsWith("'"));document.getElementById("leanCount").textContent=lines.length;
+  const g=new Map();for(const l of lines){const m=l.match(/axioms: \[([^\]]*)\]/);const k=m?m[1]:"no axioms";g.set(k,(g.get(k)||0)+1)}
+  const std=new Set(["propext","Classical.choice","Quot.sound"]);let extra=0;for(const k of g.keys())if(k!=="no axioms")for(const a of k.split(", "))if(!std.has(a))extra++;
+  document.getElementById("leanAx").innerHTML=[...g.entries()].sort((a,b)=>b[1]-a[1]).map(([k,v])=>`<div><span class="mono">${k}</span><span class="mono" style="text-align:right">${v}</span></div>`).join("")+`<div><span class="${extra?"fail":"pass"}">${extra?"non-standard axiom found":"✓ nothing beyond the three standard axioms; no sorryAx"}</span><span></span></div>`;
+}).catch(()=>{document.getElementById("leanCount").textContent="unavailable"});
+
+/* ---------- misc ---------- */
+document.getElementById("copyBib").onclick=e=>{navigator.clipboard?.writeText(document.getElementById("bib").textContent);e.target.textContent="Copied"};
+document.getElementById("theme").onclick=()=>{const r=document.documentElement,cur=r.dataset.theme||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");r.dataset.theme=cur==="dark"?"light":"dark";try{localStorage.setItem("theme",r.dataset.theme)}catch(_){}};
+try{const s=localStorage.getItem("theme");if(s)document.documentElement.dataset.theme=s}catch(_){}
+</script>
+</body>
+</html>

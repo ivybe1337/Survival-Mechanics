@@ -1,0 +1,47 @@
+{
+  "receipt_G_mixed_objective_T17": {
+    "all_checks_pass": true,
+    "alphabet": [
+      "a",
+      "b"
+    ],
+    "distinct_kappa_classes_in_test_set": 3,
+    "epsilon_definition": "epsilon(h) := len(h) mod 2",
+    "feasibility_cross_check": {
+      "feasibility_matches_kappa_alone": true,
+      "violations": []
+    },
+    "history_length_tested": 5,
+    "part_a_sufficiency": {
+      "pairs_checked": 395,
+      "sufficiency_holds": true,
+      "violations": []
+    },
+    "part_b_necessity_witness": {
+      "A_h": [
+        "a",
+        "b"
+      ],
+      "A_hp": [
+        "a",
+        "b"
+      ],
+      "J_h_equals_J_hp": true,
+      "astar_differs": true,
+      "astar_h": [
+        "a"
+      ],
+      "astar_hp": [
+        "b"
+      ],
+      "confirms_necessity": true,
+      "epsilon_h": 0,
+      "epsilon_hp": 0,
+      "feasible_sets_equal": true,
+      "h": "",
+      "hp": "aa"
+    },
+    "survival_rule": "trace survives iff substring 'bb' never occurs"
+  },
+  "receipt_sha256_without_hash_field": "03676fa2c3b3f56dbfd4a794ad8380207447f66599f71579146eb8e77704c94b"
+}

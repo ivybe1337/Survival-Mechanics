@@ -1,0 +1,173 @@
+{
+  "example_A_residual_language": {
+    "alphabet": [
+      "a",
+      "b"
+    ],
+    "counterexample": null,
+    "distinct_rows": 3,
+    "history_count": 31,
+    "representative_classes": [
+      [
+        "aabb",
+        "abb",
+        "abba",
+        "abbb",
+        "babb",
+        "bb",
+        "bba",
+        "bbaa",
+        "bbab",
+        "bbb",
+        "bbba",
+        "bbbb"
+      ],
+      [
+        "aaab",
+        "aab",
+        "ab",
+        "abab",
+        "b",
+        "baab",
+        "bab"
+      ],
+      [
+        "",
+        "a",
+        "aa",
+        "aaa",
+        "aaaa",
+        "aaba",
+        "aba",
+        "abaa",
+        "ba",
+        "baa",
+        "baaa",
+        "baba"
+      ]
+    ],
+    "right_congruence_checks": 66,
+    "right_congruence_ok": true,
+    "suffix_count": 31,
+    "survival_rule": "trace survives iff substring 'bb' never occurs"
+  },
+  "example_B_epsilon_kappa_incomparability": {
+    "epsilon_partition": [
+      [
+        "p"
+      ],
+      [
+        "q"
+      ],
+      [
+        "r",
+        "s"
+      ]
+    ],
+    "futures": [
+      "x",
+      "y"
+    ],
+    "joint_partition": [
+      [
+        "p"
+      ],
+      [
+        "q"
+      ],
+      [
+        "r"
+      ],
+      [
+        "s"
+      ]
+    ],
+    "kappa_partition": [
+      [
+        "p",
+        "q"
+      ],
+      [
+        "r"
+      ],
+      [
+        "s"
+      ]
+    ],
+    "predictive_distributions": {
+      "p": [
+        "9/10",
+        "1/10"
+      ],
+      "q": [
+        "1/10",
+        "9/10"
+      ],
+      "r": [
+        "1/2",
+        "1/2"
+      ],
+      "s": [
+        "1/2",
+        "1/2"
+      ]
+    },
+    "survival_rows": {
+      "p": [
+        1,
+        1
+      ],
+      "q": [
+        1,
+        1
+      ],
+      "r": [
+        1,
+        0
+      ],
+      "s": [
+        0,
+        1
+      ]
+    },
+    "witness_epsilon_same_kappa_different": [
+      "r",
+      "s"
+    ],
+    "witness_kappa_same_epsilon_different": [
+      "p",
+      "q"
+    ]
+  },
+  "example_C_minimal_nogoods": {
+    "admissible_count": 9,
+    "declared_minimal_nogoods": [
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "exact_reconstruction": true,
+    "recovered_minimal_nonfaces": [
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "universe": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "receipt_sha256_without_hash_field": "291bb70391a0fc0b7e71f3b90d6ec82d82fa1c0f283a3ac0a5f40369792b2486"
+}

@@ -1,0 +1,415 @@
+{
+  "all_checks_pass": true,
+  "checks": {
+    "L_3_no_exact_universal_presentation_with_3_states": {
+      "detail": {
+        "candidates": 470596
+      },
+      "pass": true
+    },
+    "avoid_bb_fooling_set_size_3": {
+      "pass": true
+    },
+    "avoid_bb_no_exact_universal_presentation_with_1_states": {
+      "detail": {
+        "candidates": 1
+      },
+      "pass": true
+    },
+    "avoid_bb_no_exact_universal_presentation_with_2_states": {
+      "detail": {
+        "candidates": 162
+      },
+      "pass": true
+    },
+    "hankel_rank_is_2": {
+      "pass": true
+    },
+    "hmm_family_boundary": {
+      "pass": true
+    },
+    "hmm_family_member_valid[t=-1/2]": {
+      "pass": true
+    },
+    "hmm_family_member_valid[t=-1/4]": {
+      "pass": true
+    },
+    "hmm_family_member_valid[t=0]": {
+      "pass": true
+    },
+    "hmm_family_member_valid[t=1/10]": {
+      "pass": true
+    },
+    "hmm_family_member_valid[t=1/4]": {
+      "pass": true
+    },
+    "hmm_family_member_valid[t=1/5]": {
+      "pass": true
+    },
+    "hmm_family_pairwise_non_isomorphic": {
+      "pass": true
+    },
+    "succinctness[n=10]": {
+      "detail": {
+        "all_states_used": true,
+        "exact": true,
+        "fooling_set_ok": true,
+        "kappa_index": 513,
+        "predicted": 513,
+        "subset_lower_bound": 10,
+        "universal_states": 11
+      },
+      "pass": true
+    },
+    "succinctness[n=2]": {
+      "detail": {
+        "all_states_used": true,
+        "exact": true,
+        "fooling_set_ok": true,
+        "kappa_index": 3,
+        "predicted": 3,
+        "subset_lower_bound": 2,
+        "universal_states": 3
+      },
+      "pass": true
+    },
+    "succinctness[n=3]": {
+      "detail": {
+        "all_states_used": true,
+        "exact": true,
+        "fooling_set_ok": true,
+        "kappa_index": 5,
+        "predicted": 5,
+        "subset_lower_bound": 3,
+        "universal_states": 4
+      },
+      "pass": true
+    },
+    "succinctness[n=4]": {
+      "detail": {
+        "all_states_used": true,
+        "exact": true,
+        "fooling_set_ok": true,
+        "kappa_index": 9,
+        "predicted": 9,
+        "subset_lower_bound": 4,
+        "universal_states": 5
+      },
+      "pass": true
+    },
+    "succinctness[n=5]": {
+      "detail": {
+        "all_states_used": true,
+        "exact": true,
+        "fooling_set_ok": true,
+        "kappa_index": 17,
+        "predicted": 17,
+        "subset_lower_bound": 5,
+        "universal_states": 6
+      },
+      "pass": true
+    },
+    "succinctness[n=6]": {
+      "detail": {
+        "all_states_used": true,
+        "exact": true,
+        "fooling_set_ok": true,
+        "kappa_index": 33,
+        "predicted": 33,
+        "subset_lower_bound": 6,
+        "universal_states": 7
+      },
+      "pass": true
+    },
+    "succinctness[n=7]": {
+      "detail": {
+        "all_states_used": true,
+        "exact": true,
+        "fooling_set_ok": true,
+        "kappa_index": 65,
+        "predicted": 65,
+        "subset_lower_bound": 7,
+        "universal_states": 8
+      },
+      "pass": true
+    },
+    "succinctness[n=8]": {
+      "detail": {
+        "all_states_used": true,
+        "exact": true,
+        "fooling_set_ok": true,
+        "kappa_index": 129,
+        "predicted": 129,
+        "subset_lower_bound": 8,
+        "universal_states": 9
+      },
+      "pass": true
+    },
+    "succinctness[n=9]": {
+      "detail": {
+        "all_states_used": true,
+        "exact": true,
+        "fooling_set_ok": true,
+        "kappa_index": 257,
+        "predicted": 257,
+        "subset_lower_bound": 9,
+        "universal_states": 10
+      },
+      "pass": true
+    },
+    "universal_size_can_exceed_nfa_size_by_one": {
+      "detail": {
+        "m2_candidates": 162
+      },
+      "pass": true
+    }
+  },
+  "hmm_family": {
+    "-1/2": {
+      "Ta": [
+        [
+          "3/8",
+          "3/8"
+        ],
+        [
+          "1/6",
+          "1/4"
+        ]
+      ],
+      "Tb": [
+        [
+          "1/16",
+          "3/16"
+        ],
+        [
+          "1/48",
+          "9/16"
+        ]
+      ],
+      "pi": [
+        "1/4",
+        "3/4"
+      ],
+      "same_process": true
+    },
+    "-1/4": {
+      "Ta": [
+        [
+          "7/16",
+          "5/16"
+        ],
+        [
+          "13/80",
+          "3/16"
+        ]
+      ],
+      "Tb": [
+        [
+          "3/32",
+          "5/32"
+        ],
+        [
+          "19/160",
+          "17/32"
+        ]
+      ],
+      "pi": [
+        "3/8",
+        "5/8"
+      ],
+      "same_process": true
+    },
+    "0": {
+      "Ta": [
+        [
+          "1/2",
+          "1/4"
+        ],
+        [
+          "1/8",
+          "1/8"
+        ]
+      ],
+      "Tb": [
+        [
+          "1/8",
+          "1/8"
+        ],
+        [
+          "1/4",
+          "1/2"
+        ]
+      ],
+      "pi": [
+        "1/2",
+        "1/2"
+      ],
+      "same_process": true
+    },
+    "1/10": {
+      "Ta": [
+        [
+          "21/40",
+          "9/40"
+        ],
+        [
+          "17/180",
+          "1/10"
+        ]
+      ],
+      "Tb": [
+        [
+          "11/80",
+          "9/80"
+        ],
+        [
+          "229/720",
+          "39/80"
+        ]
+      ],
+      "pi": [
+        "11/20",
+        "9/20"
+      ],
+      "same_process": true
+    },
+    "1/4": {
+      "Ta": [
+        [
+          "9/16",
+          "3/16"
+        ],
+        [
+          "1/48",
+          "1/16"
+        ]
+      ],
+      "Tb": [
+        [
+          "5/32",
+          "3/32"
+        ],
+        [
+          "43/96",
+          "15/32"
+        ]
+      ],
+      "pi": [
+        "5/8",
+        "3/8"
+      ],
+      "same_process": true
+    },
+    "1/5": {
+      "Ta": [
+        [
+          "11/20",
+          "1/5"
+        ],
+        [
+          "1/20",
+          "3/40"
+        ]
+      ],
+      "Tb": [
+        [
+          "3/20",
+          "1/10"
+        ],
+        [
+          "2/5",
+          "19/40"
+        ]
+      ],
+      "pi": [
+        "3/5",
+        "2/5"
+      ],
+      "same_process": true
+    }
+  },
+  "receipt_sha256_without_hash_field": "310f0c24563c1c690a3065e24cf288dc798155ccd915d995d368e76b836bd2d5",
+  "succinctness_family": {
+    "10": {
+      "all_states_used": true,
+      "exact": true,
+      "fooling_set_ok": true,
+      "kappa_index": 513,
+      "predicted": 513,
+      "subset_lower_bound": 10,
+      "universal_states": 11
+    },
+    "2": {
+      "all_states_used": true,
+      "exact": true,
+      "fooling_set_ok": true,
+      "kappa_index": 3,
+      "predicted": 3,
+      "subset_lower_bound": 2,
+      "universal_states": 3
+    },
+    "3": {
+      "all_states_used": true,
+      "exact": true,
+      "fooling_set_ok": true,
+      "kappa_index": 5,
+      "predicted": 5,
+      "subset_lower_bound": 3,
+      "universal_states": 4
+    },
+    "4": {
+      "all_states_used": true,
+      "exact": true,
+      "fooling_set_ok": true,
+      "kappa_index": 9,
+      "predicted": 9,
+      "subset_lower_bound": 4,
+      "universal_states": 5
+    },
+    "5": {
+      "all_states_used": true,
+      "exact": true,
+      "fooling_set_ok": true,
+      "kappa_index": 17,
+      "predicted": 17,
+      "subset_lower_bound": 5,
+      "universal_states": 6
+    },
+    "6": {
+      "all_states_used": true,
+      "exact": true,
+      "fooling_set_ok": true,
+      "kappa_index": 33,
+      "predicted": 33,
+      "subset_lower_bound": 6,
+      "universal_states": 7
+    },
+    "7": {
+      "all_states_used": true,
+      "exact": true,
+      "fooling_set_ok": true,
+      "kappa_index": 65,
+      "predicted": 65,
+      "subset_lower_bound": 7,
+      "universal_states": 8
+    },
+    "8": {
+      "all_states_used": true,
+      "exact": true,
+      "fooling_set_ok": true,
+      "kappa_index": 129,
+      "predicted": 129,
+      "subset_lower_bound": 8,
+      "universal_states": 9
+    },
+    "9": {
+      "all_states_used": true,
+      "exact": true,
+      "fooling_set_ok": true,
+      "kappa_index": 257,
+      "predicted": 257,
+      "subset_lower_bound": 9,
+      "universal_states": 10
+    }
+  }
+}

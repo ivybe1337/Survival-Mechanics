@@ -1,0 +1,16 @@
+{
+  "all_checks_pass": true,
+  "checks": {
+    "blind_spot_is_realized (pairs with equal Psi but different Res exist)": {
+      "pass": true
+    },
+    "psi_equal_iff_eps_equal_and_visited_residual_equal": {
+      "pass": true
+    }
+  },
+  "horizon": 3,
+  "pairs_checked": 2327,
+  "pairs_with_nonempty_blind_spot": 10,
+  "receipt_sha256_without_hash_field": "3330534131a568f12990262803c9230843b314dda0d05257305158f18cf988a9",
+  "seeds": 60
+}
