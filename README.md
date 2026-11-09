@@ -55,4 +55,4 @@ My ARC Prize 2026 entry for the ARC-AGI-2 track is the Kaggle notebook `netphant
 
 ## License
 
-The paper text and figures are licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/) (CC BY-SA 4.0). The code in `lean/` and `receipts/` is licensed under the Apache License 2.0; see `LICENSE`.
+The paper text and figures are licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/) (CC BY-SA 4.0). The code in `lean/` and `receipts/` is licensed under MIT-0 (MIT No Attribution); see `LICENSE`.
