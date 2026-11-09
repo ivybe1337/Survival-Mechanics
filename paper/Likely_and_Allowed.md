@@ -83,7 +83,7 @@ The motivation is search by elimination. Instead of asking what a solution is, a
 
 ## The linked code submission
 
-FATE, my ARC Prize 2026 code submission for the ARC-AGI-2 track (Kaggle notebook `netphantom17/fate-ssm-final`, submission 57913192), was built and documented under this theory's working name, *Survival State Mechanics* (SSM). It does not test the theorems of this paper. Its candidate answers come from a public open-weights pipeline that is not mine. My part is the selection layer: the model's likelihood may only order candidates, and only an admissibility rule mined from the demonstrations may demote them. That is the division between likely and allowed that this paper makes exact. The submission's score belongs to the pipeline and the layer together, and I claim nothing about it here. The notebook's terms translate as follows.
+FATE, my ARC Prize 2026 code submission for the ARC-AGI-2 track (Kaggle notebook `netphantom17/fate-ssm-final`, submission 57677356), was built and documented under this theory's working name, *Survival State Mechanics* (SSM). It does not test the theorems of this paper. Its candidate answers come from a public open-weights pipeline that is not mine. My part is the selection layer: the model's likelihood may only order candidates, and only an admissibility rule mined from the demonstrations may demote them. That is the division between likely and allowed that this paper makes exact. The submission's score belongs to the pipeline and the layer together, and I claim nothing about it here. The notebook's terms translate as follows.
 
 | Notebook | This paper |
 |---|---|

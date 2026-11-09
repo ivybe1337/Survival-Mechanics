@@ -106,7 +106,7 @@ footer{padding:48px 0 80px;border-top:1px solid var(--rule);color:var(--muted);f
 <section id="arc2"><div class="wrap">
   <div class="eyebrow">ARC-AGI-2 · official public-evaluation run</div>
   <h2>Where the accuracy goes</h2>
-  <p class="sub">The generator is the open NVARC pipeline (Qwen3-4B with per-task test-time training), unchanged. Each test output gets a pool of decoded candidates and two attempts. Every number in this section comes from notebook <a href="https://www.kaggle.com/code/netphantom17/fate-ssm-final?scriptVersionId=362418669">Version 1</a>, the full 120-task public-evaluation run of the same code as the linked submission. Accuracy factors exactly into two numbers: how often the right answer was generated at all, and how often selection then put it in the top two.</p>
+  <p class="sub">The generator is the open NVARC pipeline (Qwen3-4B with per-task test-time training), unchanged. Each test output gets a pool of decoded candidates and two attempts. Every number in this section comes from notebook <a href="https://www.kaggle.com/code/netphantom17/fate-ssm-final?scriptVersionId=362418669">Version 1</a>, the full 120-task public-evaluation run of the linked submission. Accuracy factors exactly into two numbers: how often the right answer was generated at all, and how often selection then put it in the top two.</p>
   <div class="panel">
     <div class="funnel" id="funnel"></div>
     <div class="eq" id="eq"></div>
@@ -201,9 +201,9 @@ const fmt=(x,d=1)=>Number(x).toFixed(d);
 /* ---------- Kaggle scoreboard ---------- */
 Promise.all([fetch(D+"kaggle_submissions_arc-agi-2.csv").then(r=>r.text()),fetch(D+"kaggle_submissions_arc-agi-3.csv").then(r=>r.text())]).then(([a2,a3])=>{
   const take=t=>{const r=parseCSV(t.replace(/^﻿/,"")).filter(x=>x.length>5);const h=r[0];return r.slice(1).map(x=>Object.fromEntries(h.map((k,i)=>[k,x[i]])))};
-  const s2=take(a2),s3=take(a3);const fin=s2[0],rep=s2[1],f3=s3[0];
+  const s2=take(a2),s3=take(a3);const fin=s2[1],rep=s2[0],f3=s3[0];
   $("scores").innerHTML=[
-   [fin.publicScore,"ARC-AGI-2 · final",`Submission <a href="https://www.kaggle.com/code/netphantom17/fate-ssm-final?scriptVersionId=364917380">${fin.ref}</a> (notebook Version 3) · ${fin.date.slice(0,10)}. Same code as <a href="https://www.kaggle.com/code/netphantom17/fate-ssm-final?scriptVersionId=362418669">${rep.ref}</a> (Version 1), which scored ${rep.publicScore}.`],
+   [fin.publicScore,"ARC-AGI-2 · linked submission",`Submission <a href="https://www.kaggle.com/code/netphantom17/fate-ssm-final?scriptVersionId=362418669">${fin.ref}</a> (notebook Version 1) · ${fin.date.slice(0,10)}. A later rerun of identical code, <a href="https://www.kaggle.com/code/netphantom17/fate-ssm-final?scriptVersionId=364917380">${rep.ref}</a> (Version 3), scored ${rep.publicScore}.`],
    [s2.length-1+" runs","ARC-AGI-2 · history",s2.map(x=>`${x.ref}: ${x.publicScore}`).join(" · ")],
    [f3.publicScore,"ARC-AGI-3 · hidden",`Submission ${f3.ref} · ${f3.date.slice(0,10)}. The wrong notebook; see below.`]
   ].map(([n,l,d])=>`<div class="panel score"><span class="lab">${l}</span><span class="n">${n}</span><span class="d">${d}</span></div>`).join("");
@@ -293,7 +293,7 @@ fetch(D+"public_leaderboard_2026-11-08.csv").then(r=>r.text()).then(t=>{
   const band=teams.filter(x=>x.s>=25&&x.s<=35),few=band.filter(x=>x.c<=2),many=band.filter(x=>x.c>=10);
   const mean=a=>a.reduce((p,x)=>p+x.s,0)/a.length,sd=a=>{const m=mean(a);return Math.sqrt(a.reduce((p,x)=>p+(x.s-m)**2,0)/(a.length-1))};
   const top=Math.max(...teams.map(x=>x.s));
-  $("lbstats").innerHTML=[[`${teams.length}`,"teams on the board",`top score ${top}`],[`${fmt(mean(few),2)} ± ${fmt(sd(few),2)}`,"band 25–35, ≤ 2 submissions",`${few.length} teams; 29.72 sits at z = ${fmt((29.72-mean(few))/sd(few),2)}`],[`${fmt(mean(many),2)}`,"band 25–35, ≥ 10 submissions",`${many.length} teams: the band rises with re-rolls`]].map(([n,l,d])=>`<div class="score"><span class="lab">${l}</span><span class="n" style="font-size:30px">${n}</span><span class="d">${d}</span></div>`).join("");
+  $("lbstats").innerHTML=[[`${teams.length}`,"teams on the board",`top score ${top}`],[`${fmt(mean(few),2)} ± ${fmt(sd(few),2)}`,"band 25–35, ≤ 2 submissions",`${few.length} teams; 28.06 sits at z = ${fmt((28.06-mean(few))/sd(few),2)}`],[`${fmt(mean(many),2)}`,"band 25–35, ≥ 10 submissions",`${many.length} teams: the band rises with re-rolls`]].map(([n,l,d])=>`<div class="score"><span class="lab">${l}</span><span class="n" style="font-size:30px">${n}</span><span class="d">${d}</span></div>`).join("");
 });
 
 /* ---------- ARC-AGI-3 ---------- */

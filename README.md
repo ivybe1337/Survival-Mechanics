@@ -44,7 +44,7 @@ The full report on every submission built on this work, ARC-AGI-2 and ARC-AGI-3,
 
 ## Linked code submission
 
-My ARC Prize 2026 entry for the ARC-AGI-2 track is the Kaggle notebook `netphantom17/fate-ssm-final` (submission 57913192). The paper says what it does and does not show, and gives a legend from the notebook's terms to the paper's.
+My ARC Prize 2026 entry for the ARC-AGI-2 track is the Kaggle notebook `netphantom17/fate-ssm-final` (submission 57677356). The paper says what it does and does not show, and gives a legend from the notebook's terms to the paper's.
 
 ## Citation
 

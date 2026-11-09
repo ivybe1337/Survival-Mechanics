@@ -196,9 +196,9 @@ idea from my theory: what a model finds likely and what the task allows
 are different states, and they should be allowed to do different things.
 A learned score may order candidates. Only evidence that a candidate
 breaks a law of the task may push it down. On ARC-AGI-2 I added a
-pre-registered selection layer to the open NVARC pipeline. My final
-submission, 57913192, scored 29.72 on the public leaderboard, and a
-same-code replicate, 57677356, scored 28.06. Replayed on the identical
+pre-registered selection layer to the open NVARC pipeline. My linked
+submission, 57677356, scored 28.06 on the public leaderboard, and a
+later rerun of identical code, 57913192, scored 29.72. Replayed on the identical
 candidate pools of the official public-evaluation run, the layer gains
 one test output of 157 and loses none, while a control that deletes by
 likelihood loses two. I show exactly why one is the right size: the
@@ -254,15 +254,15 @@ the public leaderboard snapshot. Section 8 lists them.</p>
 <td>ARC-AGI-2</td>
 <td>57913192</td>
 <td>Nov 2, 2026</td>
-<td><strong>29.72</strong></td>
-<td>Final: V1 admissibility selection over open NVARC</td>
+<td>29.72</td>
+<td>Same code, later rerun</td>
 </tr>
 <tr class="even">
 <td>ARC-AGI-2</td>
 <td>57677356</td>
 <td>Oct 26, 2026</td>
-<td>28.06</td>
-<td>Same code, earlier run</td>
+<td><strong>28.06</strong></td>
+<td>Linked submission: V1 admissibility selection over open NVARC; full run analysed</td>
 </tr>
 <tr class="odd">
 <td>ARC-AGI-2</td>
@@ -671,8 +671,8 @@ cannot promote them. The run used 5.4 of its 12 hours
 <h3 id="noise">6.7 Noise</h3>
 <p>My two identical-code runs differ by 1.66 points. The leaderboard
 agrees with that scale. Among teams scoring 25 to 35 with at most two
-submissions, the mean is 29.48 with standard deviation 1.40, so 29.72
-sits at z = +0.17. Teams in the same band with ten or more submissions
+submissions, the mean is 29.48 with standard deviation 1.40, so 28.06
+sits at z = −1.01. Teams in the same band with ten or more submissions
 average 31.31: the band rises with re-rolls. To detect a one-task effect
 (0.83 points) at a two-sided 5% level with 80% power takes <span
 class="math inline">\(n = 2(1.96+0.84)^2\sigma^2/\delta^2\)</span> runs
