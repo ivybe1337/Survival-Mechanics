@@ -1,0 +1,172 @@
+{
+  "all_checks_pass": true,
+  "checks": {
+    "predictive_state_count_grows": {
+      "detail": {
+        "0": 1,
+        "1": 3,
+        "2": 7,
+        "3": 15,
+        "4": 31,
+        "5": 63,
+        "6": 127,
+        "7": 255,
+        "8": 511
+      },
+      "pass": true
+    },
+    "predictive_states_after_a^k_pairwise_distinct_k<=40": {
+      "pass": true
+    },
+    "sharpened_bound[avoid_bb,k=0]": {
+      "detail": {
+        "pairs": 16129,
+        "pairs_with_equality": 0,
+        "violations": 0
+      },
+      "pass": true
+    },
+    "sharpened_bound[avoid_bb,k=1]": {
+      "detail": {
+        "pairs": 16129,
+        "pairs_with_equality": 9164,
+        "violations": 0
+      },
+      "pass": true
+    },
+    "sharpened_bound[avoid_bb,k=2]": {
+      "detail": {
+        "pairs": 16129,
+        "pairs_with_equality": 4884,
+        "violations": 0
+      },
+      "pass": true
+    },
+    "sharpened_bound[avoid_bb,k=3]": {
+      "detail": {
+        "pairs": 16129,
+        "pairs_with_equality": 4884,
+        "violations": 0
+      },
+      "pass": true
+    },
+    "sharpened_bound[avoid_bb,k=4]": {
+      "detail": {
+        "pairs": 16129,
+        "pairs_with_equality": 4884,
+        "violations": 0
+      },
+      "pass": true
+    },
+    "sharpened_bound[even_b,k=0]": {
+      "detail": {
+        "pairs": 16129,
+        "pairs_with_equality": 0,
+        "violations": 0
+      },
+      "pass": true
+    },
+    "sharpened_bound[even_b,k=1]": {
+      "detail": {
+        "pairs": 16129,
+        "pairs_with_equality": 8064,
+        "violations": 0
+      },
+      "pass": true
+    },
+    "sharpened_bound[even_b,k=2]": {
+      "detail": {
+        "pairs": 16129,
+        "pairs_with_equality": 0,
+        "violations": 0
+      },
+      "pass": true
+    },
+    "sharpened_bound[even_b,k=3]": {
+      "detail": {
+        "pairs": 16129,
+        "pairs_with_equality": 0,
+        "violations": 0
+      },
+      "pass": true
+    },
+    "sharpened_bound[even_b,k=4]": {
+      "detail": {
+        "pairs": 16129,
+        "pairs_with_equality": 0,
+        "violations": 0
+      },
+      "pass": true
+    },
+    "tight_nonsaturating(h='',h'='b',k=1)": {
+      "pass": true
+    },
+    "tight_saturating(h='',h'='bb',k=1..4)": {
+      "pass": true
+    }
+  },
+  "distinct_predictive_states_among_histories_up_to_length": {
+    "0": 1,
+    "1": 3,
+    "2": 7,
+    "3": 15,
+    "4": 31,
+    "5": 63,
+    "6": 127,
+    "7": 255,
+    "8": 511
+  },
+  "receipt_sha256_without_hash_field": "b795be5091e01d302e2f61f0741adfbd564a459f18f3068942d4d3760fc6fa90",
+  "sharpened_bound": {
+    "avoid_bb,k=0": {
+      "pairs": 16129,
+      "pairs_with_equality": 0,
+      "violations": 0
+    },
+    "avoid_bb,k=1": {
+      "pairs": 16129,
+      "pairs_with_equality": 9164,
+      "violations": 0
+    },
+    "avoid_bb,k=2": {
+      "pairs": 16129,
+      "pairs_with_equality": 4884,
+      "violations": 0
+    },
+    "avoid_bb,k=3": {
+      "pairs": 16129,
+      "pairs_with_equality": 4884,
+      "violations": 0
+    },
+    "avoid_bb,k=4": {
+      "pairs": 16129,
+      "pairs_with_equality": 4884,
+      "violations": 0
+    },
+    "even_b,k=0": {
+      "pairs": 16129,
+      "pairs_with_equality": 0,
+      "violations": 0
+    },
+    "even_b,k=1": {
+      "pairs": 16129,
+      "pairs_with_equality": 8064,
+      "violations": 0
+    },
+    "even_b,k=2": {
+      "pairs": 16129,
+      "pairs_with_equality": 0,
+      "violations": 0
+    },
+    "even_b,k=3": {
+      "pairs": 16129,
+      "pairs_with_equality": 0,
+      "violations": 0
+    },
+    "even_b,k=4": {
+      "pairs": 16129,
+      "pairs_with_equality": 0,
+      "violations": 0
+    }
+  }
+}

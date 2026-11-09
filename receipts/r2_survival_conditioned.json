@@ -1,0 +1,276 @@
+{
+  "all_checks_pass": true,
+  "checks": {
+    "S_monotone[parity_9_10|avoid_aab]": {
+      "pass": true
+    },
+    "S_monotone[parity_9_10|avoid_bb]": {
+      "pass": true
+    },
+    "S_monotone[three_state|avoid_aab]": {
+      "pass": true
+    },
+    "cassini_identity_n<=35": {
+      "pass": true
+    },
+    "conditioned_law_factors_through_J[parity_9_10|avoid_aab]": {
+      "detail": {
+        "J_classes": 8
+      },
+      "pass": true
+    },
+    "conditioned_law_factors_through_J[parity_9_10|avoid_bb]": {
+      "detail": {
+        "J_classes": 6
+      },
+      "pass": true
+    },
+    "conditioned_law_factors_through_J[three_state|avoid_aab]": {
+      "detail": {
+        "J_classes": 511
+      },
+      "pass": true
+    },
+    "eps_blind_gap[rho=1/1000]": {
+      "pass": true
+    },
+    "eps_blind_gap[rho=1/100]": {
+      "pass": true
+    },
+    "eps_blind_gap[rho=1/10]": {
+      "pass": true
+    },
+    "eps_insufficient: eps(a)=eps(b) but Q_1 differ": {
+      "detail": {
+        "Q1(a)": [
+          "1",
+          [
+            [
+              "a",
+              "1/10"
+            ],
+            [
+              "b",
+              "9/10"
+            ]
+          ]
+        ],
+        "Q1(b)": [
+          "1/10",
+          [
+            [
+              "a",
+              "1"
+            ]
+          ]
+        ]
+      },
+      "pass": true
+    },
+    "finite_horizon_exactness[parity_9_10|avoid_aab]": {
+      "detail": {
+        "J": 8,
+        "horizon": 2,
+        "kappa_index": 4,
+        "process_dim": 2,
+        "sigma_trunc": 8
+      },
+      "pass": true
+    },
+    "finite_horizon_exactness[parity_9_10|avoid_bb]": {
+      "detail": {
+        "J": 6,
+        "horizon": 1,
+        "kappa_index": 3,
+        "process_dim": 2,
+        "sigma_trunc": 6
+      },
+      "pass": true
+    },
+    "finite_horizon_exactness[three_state|avoid_aab]": {
+      "detail": {
+        "J": 255,
+        "horizon": 2,
+        "kappa_index": 4,
+        "process_dim": 3,
+        "sigma_trunc": 255
+      },
+      "pass": true
+    },
+    "full_support[parity_9_10|avoid_aab]": {
+      "pass": true
+    },
+    "full_support[parity_9_10|avoid_bb]": {
+      "pass": true
+    },
+    "full_support[three_state|avoid_aab]": {
+      "pass": true
+    },
+    "full_support_needed: sigma(Lambda)=sigma(a) but kappa differs": {
+      "pass": true
+    },
+    "kappa_blind_gap[delta=1/1000]": {
+      "pass": true
+    },
+    "kappa_blind_gap[delta=1/100]": {
+      "pass": true
+    },
+    "kappa_blind_gap[delta=1/10]": {
+      "pass": true
+    },
+    "kappa_insufficient: kappa('')=kappa(a) but Q_1 differ": {
+      "detail": {
+        "Q1()": [
+          "1",
+          [
+            [
+              "a",
+              "9/10"
+            ],
+            [
+              "b",
+              "1/10"
+            ]
+          ]
+        ],
+        "Q1(a)": [
+          "1",
+          [
+            [
+              "a",
+              "1/10"
+            ],
+            [
+              "b",
+              "9/10"
+            ]
+          ]
+        ]
+      },
+      "pass": true
+    },
+    "kappa_part_of_H*_cannot_be_lowered_k=3..7": {
+      "pass": true
+    },
+    "monotone_semantics[parity_9_10|avoid_aab]": {
+      "pass": true
+    },
+    "monotone_semantics[parity_9_10|avoid_bb]": {
+      "pass": true
+    },
+    "monotone_semantics[three_state|avoid_aab]": {
+      "pass": true
+    },
+    "regime_S_n_closed_form": {
+      "pass": true
+    },
+    "regime_doob_forecast_collapses_to_a": {
+      "detail": {
+        "P(a)": "3/4",
+        "P(b)": "1/4",
+        "Q_inf(a)": "1",
+        "Q_inf(b)": "0"
+      },
+      "pass": true
+    },
+    "regime_unconditioned_forecast": {
+      "pass": true
+    },
+    "sigma_partition_equals_J[parity_9_10|avoid_aab]": {
+      "detail": {
+        "J": 8,
+        "sigma": 8
+      },
+      "pass": true
+    },
+    "sigma_partition_equals_J[parity_9_10|avoid_bb]": {
+      "detail": {
+        "J": 6,
+        "sigma": 6
+      },
+      "pass": true
+    },
+    "sigma_partition_equals_J[three_state|avoid_aab]": {
+      "detail": {
+        "J": 511,
+        "sigma": 511
+      },
+      "pass": true
+    },
+    "survival_data_alone_do_not_determine_eps": {
+      "pass": true
+    },
+    "yaglom_first_symbol_law_F(n+1)/F(n+2)": {
+      "pass": true
+    }
+  },
+  "finite_horizon_exactness": {
+    "parity_9_10|avoid_aab": {
+      "J": 8,
+      "horizon": 2,
+      "kappa_index": 4,
+      "process_dim": 2,
+      "sigma_trunc": 8
+    },
+    "parity_9_10|avoid_bb": {
+      "J": 6,
+      "horizon": 1,
+      "kappa_index": 3,
+      "process_dim": 2,
+      "sigma_trunc": 6
+    },
+    "three_state|avoid_aab": {
+      "J": 255,
+      "horizon": 2,
+      "kappa_index": 4,
+      "process_dim": 3,
+      "sigma_trunc": 255
+    }
+  },
+  "infinite_horizon_regime": {
+    "S_inf(a^0)": "1/2",
+    "S_inf(a^1)": "2/3",
+    "S_inf(a^2)": "4/5",
+    "S_inf(a^3)": "8/9",
+    "S_inf(a^4)": "16/17"
+  },
+  "parity_9_10|avoid_aab": {
+    "J_classes_observed": 8,
+    "sigma_classes_observed": 8
+  },
+  "parity_9_10|avoid_bb": {
+    "J_classes_observed": 6,
+    "sigma_classes_observed": 6
+  },
+  "receipt_sha256_without_hash_field": "289a58b1cc475c634f2160fa0e28cdcfd1b3e1929eed30fcd50b7794a7c454c0",
+  "separation": {
+    "eps_blind_rho=1/10": {
+      "S1(a)": "1",
+      "S1(b)": "1/10",
+      "TV": "9/10"
+    },
+    "eps_blind_rho=1/100": {
+      "S1(a)": "1",
+      "S1(b)": "1/100",
+      "TV": "99/100"
+    },
+    "eps_blind_rho=1/1000": {
+      "S1(a)": "1",
+      "S1(b)": "1/1000",
+      "TV": "999/1000"
+    },
+    "kappa_blind_delta=1/10": {
+      "TV": "4/5"
+    },
+    "kappa_blind_delta=1/100": {
+      "TV": "49/50"
+    },
+    "kappa_blind_delta=1/1000": {
+      "TV": "499/500"
+    }
+  },
+  "three_state|avoid_aab": {
+    "J_classes_observed": 511,
+    "sigma_classes_observed": 511
+  }
+}

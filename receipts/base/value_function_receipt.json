@@ -1,0 +1,25 @@
+{
+  "receipt_H_value_function_sufficiency_T18": {
+    "all_checks_pass": true,
+    "alphabet": [
+      "a",
+      "b"
+    ],
+    "delta_epsilon_definition": "delta_epsilon(eps, e) := (eps + 1) mod 3, independent of e",
+    "epsilon_definition": "epsilon(h) := len(h) mod 3",
+    "epsilon_standing_hypothesis_check": {
+      "holds": true,
+      "violations": []
+    },
+    "history_length_tested": 5,
+    "max_horizon_tested": 6,
+    "survival_rule": "trace survives iff substring 'bb' never occurs",
+    "value_function_sufficiency": {
+      "pairs_checked_across_all_horizons": 616,
+      "policy_errors": [],
+      "sufficiency_holds": true,
+      "violations": []
+    }
+  },
+  "receipt_sha256_without_hash_field": "5ec829df595a1a5e75acf37899320cd3edd71f8c12fd864851fb61f460a8e097"
+}

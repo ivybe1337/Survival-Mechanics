@@ -1,0 +1,859 @@
+{
+  "all_checks_pass": true,
+  "checks": {
+    "planning_bound[avoid_aab|r_one|gamma=1/2]": {
+      "detail": {
+        "D_le_bound_violations": 0,
+        "W_le_D_violations": 0,
+        "pairs": 40
+      },
+      "pass": true
+    },
+    "planning_bound[avoid_aab|r_one|gamma=3/4]": {
+      "detail": {
+        "D_le_bound_violations": 0,
+        "W_le_D_violations": 0,
+        "pairs": 40
+      },
+      "pass": true
+    },
+    "planning_bound[avoid_aab|r_phase|gamma=1/2]": {
+      "detail": {
+        "D_le_bound_violations": 0,
+        "W_le_D_violations": 0,
+        "pairs": 40
+      },
+      "pass": true
+    },
+    "planning_bound[avoid_aab|r_phase|gamma=3/4]": {
+      "detail": {
+        "D_le_bound_violations": 0,
+        "W_le_D_violations": 0,
+        "pairs": 40
+      },
+      "pass": true
+    },
+    "planning_bound[avoid_bb|r_one|gamma=1/2]": {
+      "detail": {
+        "D_le_bound_violations": 0,
+        "W_le_D_violations": 0,
+        "pairs": 20
+      },
+      "pass": true
+    },
+    "planning_bound[avoid_bb|r_one|gamma=3/4]": {
+      "detail": {
+        "D_le_bound_violations": 0,
+        "W_le_D_violations": 0,
+        "pairs": 20
+      },
+      "pass": true
+    },
+    "planning_bound[avoid_bb|r_phase|gamma=1/2]": {
+      "detail": {
+        "D_le_bound_violations": 0,
+        "W_le_D_violations": 0,
+        "pairs": 20
+      },
+      "pass": true
+    },
+    "planning_bound[avoid_bb|r_phase|gamma=3/4]": {
+      "detail": {
+        "D_le_bound_violations": 0,
+        "W_le_D_violations": 0,
+        "pairs": 20
+      },
+      "pass": true
+    },
+    "planning_bound[countdown_3|r_one|gamma=1/2]": {
+      "detail": {
+        "D_le_bound_violations": 0,
+        "W_le_D_violations": 0,
+        "pairs": 104
+      },
+      "pass": true
+    },
+    "planning_bound[countdown_3|r_one|gamma=3/4]": {
+      "detail": {
+        "D_le_bound_violations": 0,
+        "W_le_D_violations": 0,
+        "pairs": 104
+      },
+      "pass": true
+    },
+    "planning_bound[countdown_3|r_phase|gamma=1/2]": {
+      "detail": {
+        "D_le_bound_violations": 0,
+        "W_le_D_violations": 0,
+        "pairs": 104
+      },
+      "pass": true
+    },
+    "planning_bound[countdown_3|r_phase|gamma=3/4]": {
+      "detail": {
+        "D_le_bound_violations": 0,
+        "W_le_D_violations": 0,
+        "pairs": 104
+      },
+      "pass": true
+    },
+    "planning_tight[N=1,gamma=1/2]": {
+      "pass": true
+    },
+    "planning_tight[N=1,gamma=3/4]": {
+      "pass": true
+    },
+    "planning_tight[N=2,gamma=1/2]": {
+      "pass": true
+    },
+    "planning_tight[N=2,gamma=3/4]": {
+      "pass": true
+    },
+    "planning_tight[N=3,gamma=1/2]": {
+      "pass": true
+    },
+    "planning_tight[N=3,gamma=3/4]": {
+      "pass": true
+    },
+    "planning_tight[N=4,gamma=1/2]": {
+      "pass": true
+    },
+    "planning_tight[N=4,gamma=3/4]": {
+      "pass": true
+    },
+    "planning_tight[N=5,gamma=1/2]": {
+      "pass": true
+    },
+    "planning_tight[N=5,gamma=3/4]": {
+      "pass": true
+    },
+    "planning_tight[N=6,gamma=1/2]": {
+      "pass": true
+    },
+    "planning_tight[N=6,gamma=3/4]": {
+      "pass": true
+    },
+    "restricted_family_bound[cautious|avoid_aab|r_one]": {
+      "detail": {
+        "pairs": 676,
+        "pairs_where_N_Pi_exceeds_N_kappa": 266,
+        "violations": 0
+      },
+      "pass": true
+    },
+    "restricted_family_bound[cautious|avoid_aab|r_phase]": {
+      "detail": {
+        "pairs": 676,
+        "pairs_where_N_Pi_exceeds_N_kappa": 266,
+        "violations": 0
+      },
+      "pass": true
+    },
+    "restricted_family_bound[cautious|avoid_bb|r_one]": {
+      "detail": {
+        "pairs": 361,
+        "pairs_where_N_Pi_exceeds_N_kappa": 168,
+        "violations": 0
+      },
+      "pass": true
+    },
+    "restricted_family_bound[cautious|avoid_bb|r_phase]": {
+      "detail": {
+        "pairs": 361,
+        "pairs_where_N_Pi_exceeds_N_kappa": 168,
+        "violations": 0
+      },
+      "pass": true
+    },
+    "restricted_family_bound[cautious|countdown_3|r_one]": {
+      "detail": {
+        "pairs": 529,
+        "pairs_where_N_Pi_exceeds_N_kappa": 30,
+        "violations": 0
+      },
+      "pass": true
+    },
+    "restricted_family_bound[cautious|countdown_3|r_phase]": {
+      "detail": {
+        "pairs": 529,
+        "pairs_where_N_Pi_exceeds_N_kappa": 30,
+        "violations": 0
+      },
+      "pass": true
+    },
+    "restricted_family_bound[mixed|avoid_aab|r_one]": {
+      "detail": {
+        "pairs": 676,
+        "pairs_where_N_Pi_exceeds_N_kappa": 0,
+        "violations": 0
+      },
+      "pass": true
+    },
+    "restricted_family_bound[mixed|avoid_aab|r_phase]": {
+      "detail": {
+        "pairs": 676,
+        "pairs_where_N_Pi_exceeds_N_kappa": 0,
+        "violations": 0
+      },
+      "pass": true
+    },
+    "restricted_family_bound[mixed|avoid_bb|r_one]": {
+      "detail": {
+        "pairs": 361,
+        "pairs_where_N_Pi_exceeds_N_kappa": 0,
+        "violations": 0
+      },
+      "pass": true
+    },
+    "restricted_family_bound[mixed|avoid_bb|r_phase]": {
+      "detail": {
+        "pairs": 361,
+        "pairs_where_N_Pi_exceeds_N_kappa": 0,
+        "violations": 0
+      },
+      "pass": true
+    },
+    "restricted_family_bound[mixed|countdown_3|r_one]": {
+      "detail": {
+        "pairs": 529,
+        "pairs_where_N_Pi_exceeds_N_kappa": 0,
+        "violations": 0
+      },
+      "pass": true
+    },
+    "restricted_family_bound[mixed|countdown_3|r_phase]": {
+      "detail": {
+        "pairs": 529,
+        "pairs_where_N_Pi_exceeds_N_kappa": 0,
+        "violations": 0
+      },
+      "pass": true
+    },
+    "restriction_strictly_delays_detection_somewhere": {
+      "pass": true
+    },
+    "stochastic_bounds[avoid_aab|r_one|biases=['1', '1/2']]": {
+      "detail": {
+        "coupling_violations": 0,
+        "diagonal_zero": true,
+        "time_to_distinguish_violations": 0
+      },
+      "pass": true
+    },
+    "stochastic_bounds[avoid_aab|r_one|biases=['1/2']]": {
+      "detail": {
+        "coupling_violations": 0,
+        "diagonal_zero": true,
+        "time_to_distinguish_violations": 0
+      },
+      "pass": true
+    },
+    "stochastic_bounds[avoid_aab|r_one|biases=['1/3', '0']]": {
+      "detail": {
+        "coupling_violations": 0,
+        "diagonal_zero": true,
+        "time_to_distinguish_violations": 0
+      },
+      "pass": true
+    },
+    "stochastic_bounds[avoid_aab|r_one|biases=['2/3', '1/5']]": {
+      "detail": {
+        "coupling_violations": 0,
+        "diagonal_zero": true,
+        "time_to_distinguish_violations": 0
+      },
+      "pass": true
+    },
+    "stochastic_bounds[avoid_aab|r_one|biases=['9/10', '1/10']]": {
+      "detail": {
+        "coupling_violations": 0,
+        "diagonal_zero": true,
+        "time_to_distinguish_violations": 0
+      },
+      "pass": true
+    },
+    "stochastic_bounds[avoid_aab|r_phase|biases=['1', '1/2']]": {
+      "detail": {
+        "coupling_violations": 0,
+        "diagonal_zero": true,
+        "time_to_distinguish_violations": 0
+      },
+      "pass": true
+    },
+    "stochastic_bounds[avoid_aab|r_phase|biases=['1/2']]": {
+      "detail": {
+        "coupling_violations": 0,
+        "diagonal_zero": true,
+        "time_to_distinguish_violations": 0
+      },
+      "pass": true
+    },
+    "stochastic_bounds[avoid_aab|r_phase|biases=['1/3', '0']]": {
+      "detail": {
+        "coupling_violations": 0,
+        "diagonal_zero": true,
+        "time_to_distinguish_violations": 0
+      },
+      "pass": true
+    },
+    "stochastic_bounds[avoid_aab|r_phase|biases=['2/3', '1/5']]": {
+      "detail": {
+        "coupling_violations": 0,
+        "diagonal_zero": true,
+        "time_to_distinguish_violations": 0
+      },
+      "pass": true
+    },
+    "stochastic_bounds[avoid_aab|r_phase|biases=['9/10', '1/10']]": {
+      "detail": {
+        "coupling_violations": 0,
+        "diagonal_zero": true,
+        "time_to_distinguish_violations": 0
+      },
+      "pass": true
+    },
+    "stochastic_bounds[avoid_bb|r_one|biases=['1', '1/2']]": {
+      "detail": {
+        "coupling_violations": 0,
+        "diagonal_zero": true,
+        "time_to_distinguish_violations": 0
+      },
+      "pass": true
+    },
+    "stochastic_bounds[avoid_bb|r_one|biases=['1/2']]": {
+      "detail": {
+        "coupling_violations": 0,
+        "diagonal_zero": true,
+        "time_to_distinguish_violations": 0
+      },
+      "pass": true
+    },
+    "stochastic_bounds[avoid_bb|r_one|biases=['1/3', '0']]": {
+      "detail": {
+        "coupling_violations": 0,
+        "diagonal_zero": true,
+        "time_to_distinguish_violations": 0
+      },
+      "pass": true
+    },
+    "stochastic_bounds[avoid_bb|r_one|biases=['2/3', '1/5']]": {
+      "detail": {
+        "coupling_violations": 0,
+        "diagonal_zero": true,
+        "time_to_distinguish_violations": 0
+      },
+      "pass": true
+    },
+    "stochastic_bounds[avoid_bb|r_one|biases=['9/10', '1/10']]": {
+      "detail": {
+        "coupling_violations": 0,
+        "diagonal_zero": true,
+        "time_to_distinguish_violations": 0
+      },
+      "pass": true
+    },
+    "stochastic_bounds[avoid_bb|r_phase|biases=['1', '1/2']]": {
+      "detail": {
+        "coupling_violations": 0,
+        "diagonal_zero": true,
+        "time_to_distinguish_violations": 0
+      },
+      "pass": true
+    },
+    "stochastic_bounds[avoid_bb|r_phase|biases=['1/2']]": {
+      "detail": {
+        "coupling_violations": 0,
+        "diagonal_zero": true,
+        "time_to_distinguish_violations": 0
+      },
+      "pass": true
+    },
+    "stochastic_bounds[avoid_bb|r_phase|biases=['1/3', '0']]": {
+      "detail": {
+        "coupling_violations": 0,
+        "diagonal_zero": true,
+        "time_to_distinguish_violations": 0
+      },
+      "pass": true
+    },
+    "stochastic_bounds[avoid_bb|r_phase|biases=['2/3', '1/5']]": {
+      "detail": {
+        "coupling_violations": 0,
+        "diagonal_zero": true,
+        "time_to_distinguish_violations": 0
+      },
+      "pass": true
+    },
+    "stochastic_bounds[avoid_bb|r_phase|biases=['9/10', '1/10']]": {
+      "detail": {
+        "coupling_violations": 0,
+        "diagonal_zero": true,
+        "time_to_distinguish_violations": 0
+      },
+      "pass": true
+    },
+    "stochastic_bounds[countdown_3|r_one|biases=['1', '1/2']]": {
+      "detail": {
+        "coupling_violations": 0,
+        "diagonal_zero": true,
+        "time_to_distinguish_violations": 0
+      },
+      "pass": true
+    },
+    "stochastic_bounds[countdown_3|r_one|biases=['1/2']]": {
+      "detail": {
+        "coupling_violations": 0,
+        "diagonal_zero": true,
+        "time_to_distinguish_violations": 0
+      },
+      "pass": true
+    },
+    "stochastic_bounds[countdown_3|r_one|biases=['1/3', '0']]": {
+      "detail": {
+        "coupling_violations": 0,
+        "diagonal_zero": true,
+        "time_to_distinguish_violations": 0
+      },
+      "pass": true
+    },
+    "stochastic_bounds[countdown_3|r_one|biases=['2/3', '1/5']]": {
+      "detail": {
+        "coupling_violations": 0,
+        "diagonal_zero": true,
+        "time_to_distinguish_violations": 0
+      },
+      "pass": true
+    },
+    "stochastic_bounds[countdown_3|r_one|biases=['9/10', '1/10']]": {
+      "detail": {
+        "coupling_violations": 0,
+        "diagonal_zero": true,
+        "time_to_distinguish_violations": 0
+      },
+      "pass": true
+    },
+    "stochastic_bounds[countdown_3|r_phase|biases=['1', '1/2']]": {
+      "detail": {
+        "coupling_violations": 0,
+        "diagonal_zero": true,
+        "time_to_distinguish_violations": 0
+      },
+      "pass": true
+    },
+    "stochastic_bounds[countdown_3|r_phase|biases=['1/2']]": {
+      "detail": {
+        "coupling_violations": 0,
+        "diagonal_zero": true,
+        "time_to_distinguish_violations": 0
+      },
+      "pass": true
+    },
+    "stochastic_bounds[countdown_3|r_phase|biases=['1/3', '0']]": {
+      "detail": {
+        "coupling_violations": 0,
+        "diagonal_zero": true,
+        "time_to_distinguish_violations": 0
+      },
+      "pass": true
+    },
+    "stochastic_bounds[countdown_3|r_phase|biases=['2/3', '1/5']]": {
+      "detail": {
+        "coupling_violations": 0,
+        "diagonal_zero": true,
+        "time_to_distinguish_violations": 0
+      },
+      "pass": true
+    },
+    "stochastic_bounds[countdown_3|r_phase|biases=['9/10', '1/10']]": {
+      "detail": {
+        "coupling_violations": 0,
+        "diagonal_zero": true,
+        "time_to_distinguish_violations": 0
+      },
+      "pass": true
+    },
+    "stochastic_tight[N=1]": {
+      "pass": true
+    },
+    "stochastic_tight[N=2]": {
+      "pass": true
+    },
+    "stochastic_tight[N=3]": {
+      "pass": true
+    },
+    "stochastic_tight[N=4]": {
+      "pass": true
+    },
+    "stochastic_tight[N=5]": {
+      "pass": true
+    },
+    "stochastic_tight[N=6]": {
+      "pass": true
+    }
+  },
+  "plan_family": {
+    "cautious|avoid_aab|r_one": {
+      "pairs": 676,
+      "pairs_where_N_Pi_exceeds_N_kappa": 266,
+      "violations": 0
+    },
+    "cautious|avoid_aab|r_phase": {
+      "pairs": 676,
+      "pairs_where_N_Pi_exceeds_N_kappa": 266,
+      "violations": 0
+    },
+    "cautious|avoid_bb|r_one": {
+      "pairs": 361,
+      "pairs_where_N_Pi_exceeds_N_kappa": 168,
+      "violations": 0
+    },
+    "cautious|avoid_bb|r_phase": {
+      "pairs": 361,
+      "pairs_where_N_Pi_exceeds_N_kappa": 168,
+      "violations": 0
+    },
+    "cautious|countdown_3|r_one": {
+      "pairs": 529,
+      "pairs_where_N_Pi_exceeds_N_kappa": 30,
+      "violations": 0
+    },
+    "cautious|countdown_3|r_phase": {
+      "pairs": 529,
+      "pairs_where_N_Pi_exceeds_N_kappa": 30,
+      "violations": 0
+    },
+    "mixed|avoid_aab|r_one": {
+      "pairs": 676,
+      "pairs_where_N_Pi_exceeds_N_kappa": 0,
+      "violations": 0
+    },
+    "mixed|avoid_aab|r_phase": {
+      "pairs": 676,
+      "pairs_where_N_Pi_exceeds_N_kappa": 0,
+      "violations": 0
+    },
+    "mixed|avoid_bb|r_one": {
+      "pairs": 361,
+      "pairs_where_N_Pi_exceeds_N_kappa": 0,
+      "violations": 0
+    },
+    "mixed|avoid_bb|r_phase": {
+      "pairs": 361,
+      "pairs_where_N_Pi_exceeds_N_kappa": 0,
+      "violations": 0
+    },
+    "mixed|countdown_3|r_one": {
+      "pairs": 529,
+      "pairs_where_N_Pi_exceeds_N_kappa": 0,
+      "violations": 0
+    },
+    "mixed|countdown_3|r_phase": {
+      "pairs": 529,
+      "pairs_where_N_Pi_exceeds_N_kappa": 0,
+      "violations": 0
+    }
+  },
+  "planning": {
+    "avoid_aab|r_one|gamma=1/2": {
+      "D_le_bound_violations": 0,
+      "W_le_D_violations": 0,
+      "pairs": 40
+    },
+    "avoid_aab|r_one|gamma=3/4": {
+      "D_le_bound_violations": 0,
+      "W_le_D_violations": 0,
+      "pairs": 40
+    },
+    "avoid_aab|r_phase|gamma=1/2": {
+      "D_le_bound_violations": 0,
+      "W_le_D_violations": 0,
+      "pairs": 40
+    },
+    "avoid_aab|r_phase|gamma=3/4": {
+      "D_le_bound_violations": 0,
+      "W_le_D_violations": 0,
+      "pairs": 40
+    },
+    "avoid_bb|r_one|gamma=1/2": {
+      "D_le_bound_violations": 0,
+      "W_le_D_violations": 0,
+      "pairs": 20
+    },
+    "avoid_bb|r_one|gamma=3/4": {
+      "D_le_bound_violations": 0,
+      "W_le_D_violations": 0,
+      "pairs": 20
+    },
+    "avoid_bb|r_phase|gamma=1/2": {
+      "D_le_bound_violations": 0,
+      "W_le_D_violations": 0,
+      "pairs": 20
+    },
+    "avoid_bb|r_phase|gamma=3/4": {
+      "D_le_bound_violations": 0,
+      "W_le_D_violations": 0,
+      "pairs": 20
+    },
+    "countdown_3|r_one|gamma=1/2": {
+      "D_le_bound_violations": 0,
+      "W_le_D_violations": 0,
+      "pairs": 104
+    },
+    "countdown_3|r_one|gamma=3/4": {
+      "D_le_bound_violations": 0,
+      "W_le_D_violations": 0,
+      "pairs": 104
+    },
+    "countdown_3|r_phase|gamma=1/2": {
+      "D_le_bound_violations": 0,
+      "W_le_D_violations": 0,
+      "pairs": 104
+    },
+    "countdown_3|r_phase|gamma=3/4": {
+      "D_le_bound_violations": 0,
+      "W_le_D_violations": 0,
+      "pairs": 104
+    }
+  },
+  "planning_tightness": {
+    "N=1,gamma=1/2": {
+      "N_kappa": 1,
+      "bound": "2",
+      "gap": "2"
+    },
+    "N=1,gamma=3/4": {
+      "N_kappa": 1,
+      "bound": "4",
+      "gap": "4"
+    },
+    "N=2,gamma=1/2": {
+      "N_kappa": 2,
+      "bound": "1",
+      "gap": "1"
+    },
+    "N=2,gamma=3/4": {
+      "N_kappa": 2,
+      "bound": "3",
+      "gap": "3"
+    },
+    "N=3,gamma=1/2": {
+      "N_kappa": 3,
+      "bound": "1/2",
+      "gap": "1/2"
+    },
+    "N=3,gamma=3/4": {
+      "N_kappa": 3,
+      "bound": "9/4",
+      "gap": "9/4"
+    },
+    "N=4,gamma=1/2": {
+      "N_kappa": 4,
+      "bound": "1/4",
+      "gap": "1/4"
+    },
+    "N=4,gamma=3/4": {
+      "N_kappa": 4,
+      "bound": "27/16",
+      "gap": "27/16"
+    },
+    "N=5,gamma=1/2": {
+      "N_kappa": 5,
+      "bound": "1/8",
+      "gap": "1/8"
+    },
+    "N=5,gamma=3/4": {
+      "N_kappa": 5,
+      "bound": "81/64",
+      "gap": "81/64"
+    },
+    "N=6,gamma=1/2": {
+      "N_kappa": 6,
+      "bound": "1/16",
+      "gap": "1/16"
+    },
+    "N=6,gamma=3/4": {
+      "N_kappa": 6,
+      "bound": "243/256",
+      "gap": "243/256"
+    }
+  },
+  "receipt_sha256_without_hash_field": "18779a8008ad7284525194561c6deca935ef851cc841a925edf30d155cf5ec7a",
+  "stochastic": {
+    "avoid_aab|r_one|biases=['1', '1/2']": {
+      "coupling_violations": 0,
+      "diagonal_zero": true,
+      "time_to_distinguish_violations": 0
+    },
+    "avoid_aab|r_one|biases=['1/2']": {
+      "coupling_violations": 0,
+      "diagonal_zero": true,
+      "time_to_distinguish_violations": 0
+    },
+    "avoid_aab|r_one|biases=['1/3', '0']": {
+      "coupling_violations": 0,
+      "diagonal_zero": true,
+      "time_to_distinguish_violations": 0
+    },
+    "avoid_aab|r_one|biases=['2/3', '1/5']": {
+      "coupling_violations": 0,
+      "diagonal_zero": true,
+      "time_to_distinguish_violations": 0
+    },
+    "avoid_aab|r_one|biases=['9/10', '1/10']": {
+      "coupling_violations": 0,
+      "diagonal_zero": true,
+      "time_to_distinguish_violations": 0
+    },
+    "avoid_aab|r_phase|biases=['1', '1/2']": {
+      "coupling_violations": 0,
+      "diagonal_zero": true,
+      "time_to_distinguish_violations": 0
+    },
+    "avoid_aab|r_phase|biases=['1/2']": {
+      "coupling_violations": 0,
+      "diagonal_zero": true,
+      "time_to_distinguish_violations": 0
+    },
+    "avoid_aab|r_phase|biases=['1/3', '0']": {
+      "coupling_violations": 0,
+      "diagonal_zero": true,
+      "time_to_distinguish_violations": 0
+    },
+    "avoid_aab|r_phase|biases=['2/3', '1/5']": {
+      "coupling_violations": 0,
+      "diagonal_zero": true,
+      "time_to_distinguish_violations": 0
+    },
+    "avoid_aab|r_phase|biases=['9/10', '1/10']": {
+      "coupling_violations": 0,
+      "diagonal_zero": true,
+      "time_to_distinguish_violations": 0
+    },
+    "avoid_bb|r_one|biases=['1', '1/2']": {
+      "coupling_violations": 0,
+      "diagonal_zero": true,
+      "time_to_distinguish_violations": 0
+    },
+    "avoid_bb|r_one|biases=['1/2']": {
+      "coupling_violations": 0,
+      "diagonal_zero": true,
+      "time_to_distinguish_violations": 0
+    },
+    "avoid_bb|r_one|biases=['1/3', '0']": {
+      "coupling_violations": 0,
+      "diagonal_zero": true,
+      "time_to_distinguish_violations": 0
+    },
+    "avoid_bb|r_one|biases=['2/3', '1/5']": {
+      "coupling_violations": 0,
+      "diagonal_zero": true,
+      "time_to_distinguish_violations": 0
+    },
+    "avoid_bb|r_one|biases=['9/10', '1/10']": {
+      "coupling_violations": 0,
+      "diagonal_zero": true,
+      "time_to_distinguish_violations": 0
+    },
+    "avoid_bb|r_phase|biases=['1', '1/2']": {
+      "coupling_violations": 0,
+      "diagonal_zero": true,
+      "time_to_distinguish_violations": 0
+    },
+    "avoid_bb|r_phase|biases=['1/2']": {
+      "coupling_violations": 0,
+      "diagonal_zero": true,
+      "time_to_distinguish_violations": 0
+    },
+    "avoid_bb|r_phase|biases=['1/3', '0']": {
+      "coupling_violations": 0,
+      "diagonal_zero": true,
+      "time_to_distinguish_violations": 0
+    },
+    "avoid_bb|r_phase|biases=['2/3', '1/5']": {
+      "coupling_violations": 0,
+      "diagonal_zero": true,
+      "time_to_distinguish_violations": 0
+    },
+    "avoid_bb|r_phase|biases=['9/10', '1/10']": {
+      "coupling_violations": 0,
+      "diagonal_zero": true,
+      "time_to_distinguish_violations": 0
+    },
+    "countdown_3|r_one|biases=['1', '1/2']": {
+      "coupling_violations": 0,
+      "diagonal_zero": true,
+      "time_to_distinguish_violations": 0
+    },
+    "countdown_3|r_one|biases=['1/2']": {
+      "coupling_violations": 0,
+      "diagonal_zero": true,
+      "time_to_distinguish_violations": 0
+    },
+    "countdown_3|r_one|biases=['1/3', '0']": {
+      "coupling_violations": 0,
+      "diagonal_zero": true,
+      "time_to_distinguish_violations": 0
+    },
+    "countdown_3|r_one|biases=['2/3', '1/5']": {
+      "coupling_violations": 0,
+      "diagonal_zero": true,
+      "time_to_distinguish_violations": 0
+    },
+    "countdown_3|r_one|biases=['9/10', '1/10']": {
+      "coupling_violations": 0,
+      "diagonal_zero": true,
+      "time_to_distinguish_violations": 0
+    },
+    "countdown_3|r_phase|biases=['1', '1/2']": {
+      "coupling_violations": 0,
+      "diagonal_zero": true,
+      "time_to_distinguish_violations": 0
+    },
+    "countdown_3|r_phase|biases=['1/2']": {
+      "coupling_violations": 0,
+      "diagonal_zero": true,
+      "time_to_distinguish_violations": 0
+    },
+    "countdown_3|r_phase|biases=['1/3', '0']": {
+      "coupling_violations": 0,
+      "diagonal_zero": true,
+      "time_to_distinguish_violations": 0
+    },
+    "countdown_3|r_phase|biases=['2/3', '1/5']": {
+      "coupling_violations": 0,
+      "diagonal_zero": true,
+      "time_to_distinguish_violations": 0
+    },
+    "countdown_3|r_phase|biases=['9/10', '1/10']": {
+      "coupling_violations": 0,
+      "diagonal_zero": true,
+      "time_to_distinguish_violations": 0
+    }
+  },
+  "stochastic_tightness": {
+    "N=1": {
+      "bound": "4",
+      "gap": "4"
+    },
+    "N=2": {
+      "bound": "3",
+      "gap": "3"
+    },
+    "N=3": {
+      "bound": "9/4",
+      "gap": "9/4"
+    },
+    "N=4": {
+      "bound": "27/16",
+      "gap": "27/16"
+    },
+    "N=5": {
+      "bound": "81/64",
+      "gap": "81/64"
+    },
+    "N=6": {
+      "bound": "243/256",
+      "gap": "243/256"
+    }
+  }
+}

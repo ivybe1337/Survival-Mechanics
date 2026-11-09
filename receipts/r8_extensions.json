@@ -1,0 +1,222 @@
+{
+  "partition_support_and_novelty_mechanisms": {
+    "partition_pairs": 1296,
+    "reachable_product": [
+      "(0, 'A')",
+      "(0, 'B')",
+      "(0, 'D')",
+      "(1, 'A')",
+      "(1, 'B')",
+      "(1, 'D')"
+    ]
+  },
+  "sharp_joint_horizon": {
+    "prior_clock_cases": 7,
+    "exact_dimension_and_rule_index_cases": 36,
+    "joint_reports_actual_m_k_cases": 40
+  },
+  "multitarget_minimax": [
+    {
+      "alphabet": 2,
+      "epsilon_only_radius": "1/2",
+      "kappa_only_radius_at_eta_1_100": "99/200"
+    },
+    {
+      "alphabet": 3,
+      "epsilon_only_radius": "2/3",
+      "kappa_only_radius_at_eta_1_100": "33/50"
+    },
+    {
+      "alphabet": 4,
+      "epsilon_only_radius": "3/4",
+      "kappa_only_radius_at_eta_1_100": "297/400"
+    },
+    {
+      "alphabet": 5,
+      "epsilon_only_radius": "4/5",
+      "kappa_only_radius_at_eta_1_100": "99/125"
+    },
+    {
+      "alphabet": 6,
+      "epsilon_only_radius": "5/6",
+      "kappa_only_radius_at_eta_1_100": "33/40"
+    },
+    {
+      "alphabet": 7,
+      "epsilon_only_radius": "6/7",
+      "kappa_only_radius_at_eta_1_100": "297/350"
+    },
+    {
+      "alphabet": 8,
+      "epsilon_only_radius": "7/8",
+      "kappa_only_radius_at_eta_1_100": "693/800"
+    },
+    {
+      "alphabet": 9,
+      "epsilon_only_radius": "8/9",
+      "kappa_only_radius_at_eta_1_100": "22/25"
+    }
+  ],
+  "killed_series_minimality": {
+    "words_checked": 1093,
+    "survival_at_n": "(1/2)^n",
+    "different_ordinary_b_forecasts": [
+      "1/3",
+      "1/6"
+    ]
+  },
+  "stability_probability_margin": {
+    "mask_probability_cases": 576,
+    "discounted_predictive_bound": true,
+    "tight_geometric_tail_cases": 24,
+    "rare_rule_residual_count": 4,
+    "mixture_rank_two_determinants": true
+  },
+  "rare_word_obstruction": [
+    {
+      "horizon": 1,
+      "survival_and_conditional_TV_gap": "1/1000000"
+    },
+    {
+      "horizon": 2,
+      "survival_and_conditional_TV_gap": "1999999/1000000000000"
+    },
+    {
+      "horizon": 3,
+      "survival_and_conditional_TV_gap": "2999997000001/1000000000000000000"
+    },
+    {
+      "horizon": 4,
+      "survival_and_conditional_TV_gap": "3999994000003999999/1000000000000000000000000"
+    },
+    {
+      "horizon": 5,
+      "survival_and_conditional_TV_gap": "4999990000009999995000001/1000000000000000000000000000000"
+    },
+    {
+      "horizon": 6,
+      "survival_and_conditional_TV_gap": "5999985000019999985000005999999/1000000000000000000000000000000000000"
+    }
+  ],
+  "infinite_future_obstruction": {
+    "component_bias_difference": "1/500",
+    "history_length": 10000,
+    "infinite_future_TV_lower_bound": "999/1000",
+    "max_tested_horizon": 4,
+    "finite_horizon_TV_upper_bound": "H/500"
+  },
+  "observable_inverse_and_positive_HMM": {
+    "distinct_posteriors_through_length_8": 511,
+    "stationary_initial_distribution": true,
+    "basis_test_determinant": "7/96",
+    "C_observation": "263/7",
+    "finite_inverse_bound_pairs": 225
+  },
+  "unifilar_genericity": {
+    "incomparable_product_pairs": 6,
+    "synchronized_product_pairs": 2
+  },
+  "destination_tilt": {
+    "exact_row_TV": [
+      "3/20",
+      "1/4"
+    ],
+    "predictive_row_equality_cases": 49
+  },
+  "Q_process_and_QSD": {
+    "positive_destination_tilt": [
+      [
+        "9/10",
+        "1/10"
+      ],
+      [
+        "1/2",
+        "1/2"
+      ]
+    ],
+    "continuous_time_Doob_generator": [
+      [
+        "-1/2",
+        "1/2"
+      ],
+      [
+        "2",
+        "-2"
+      ]
+    ],
+    "sampled_Doob_transition": [
+      [
+        "9/10",
+        "1/10"
+      ],
+      [
+        "2/5",
+        "3/5"
+      ]
+    ],
+    "QSD": [
+      "1/2",
+      "1/2"
+    ],
+    "Q_process_stationary": [
+      "2/3",
+      "1/3"
+    ],
+    "Q_process_first_row": [
+      "3/4",
+      "1/4"
+    ],
+    "spectral_power_identities": 17,
+    "tilted_initial_law": [
+      "1/2",
+      "1/2"
+    ],
+    "generator_grid_cases": 5
+  },
+  "reciprocal_forecast_sensitivity": {
+    "implicit_differential_cases": 81,
+    "single_successor_response": "0"
+  },
+  "neutral_persistence_and_commutator_cycle": {
+    "neutral_orbit_steps": 12,
+    "cycle": [
+      [
+        "2/3",
+        "2/3"
+      ],
+      [
+        "-1/3",
+        "7/6"
+      ]
+    ],
+    "determinant": "1",
+    "Gram_matrix": [
+      [
+        "5/9",
+        "1/18"
+      ],
+      [
+        "1/18",
+        "65/36"
+      ]
+    ]
+  },
+  "symmetric_coupling_value_bound": [
+    {
+      "gamma": "1/3",
+      "D_s_01": "525/284",
+      "D_s_10": "2355/1048",
+      "D_star_01": "1473/1142"
+    },
+    {
+      "gamma": "2/3",
+      "D_s_01": "95/22",
+      "D_s_10": "609/88",
+      "D_star_01": "63/23"
+    }
+  ],
+  "inputs_sha256": {
+    "r8_helper.py": "b5acc953e7f240d5e3aa942fa405aafcd59ddf052293804696af7bd0c2a80652",
+    "r8_extensions.py": "24ce97bba2e906f8a5d28a7b849c6fc08fa4fca658916c0db619118401b1e7d5"
+  }
+}
