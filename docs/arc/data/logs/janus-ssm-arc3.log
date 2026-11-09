@@ -1,0 +1,163 @@
+[{"stream_name":"stderr","time":5.674861886,"data":"/usr/local/lib/python3.13/dist-packages/nbformat/validator.py:434: MissingIDFieldWarning: Cell is missing an id field, this will become a hard error in future nbformat versions. You may want to use `normalize()` on your notebooks before validations (available since nbformat 5.1.4). Previous versions of nbformat are fixing this issue transparently, and will stop doing so in the future.\n"}
+,{"stream_name":"stderr","time":5.674913565,"data":"  _validate(nbdict, ref, version, version_minor, relax_add_props)\n"}
+,{"stream_name":"stderr","time":6.498572933,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.498599503,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.498604889,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.498609215,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":7.082303935,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":7.082333337,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":7.082348355,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":7.082351705,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":10.706089391999999,"data":"name, memory.total [MiB]\n"}
+,{"stream_name":"stdout","time":10.706121759,"data":"Tesla T4, 15360 MiB\n"}
+,{"stream_name":"stdout","time":10.706126379,"data":"Tesla T4, 15360 MiB\n"}
+,{"stream_name":"stdout","time":10.706135993,"data":"\n"}
+,{"stream_name":"stdout","time":10.706138792,"data":"disk free GB (/kaggle/tmp): 1038.2\n"}
+,{"stream_name":"stdout","time":10.732261292,"data":"agent files: ['jagent.py', 'llm.py', 'my_agent.py']\n"}
+,{"stream_name":"stdout","time":16.106632922,"data":"GPUs 2 ['Tesla T4', 'Tesla T4'], VRAM 31 GB, disk free 1038 GB at /tmp\n"}
+,{"stream_name":"stdout","time":16.106667749,"data":"Not enough GPU memory or disk for local Lightning on this machine; the J+LLM arm is skipped (logged, not hidden)\n"}
+,{"stream_name":"stdout","time":17.767895266,"data":"INFO:arc_agi.scorecard:Initialized ScorecardManager with idle_for=0:15:00 and max_open_for=3 days, 0:00:00\n"}
+,{"stream_name":"stdout","time":18.047218698000002,"data":"2026-11-02 21:37:49 | INFO | Created new scorecard: 615f7498-077f-4f6a-a59b-42d1e8ce962d\n"}
+,{"stream_name":"stderr","time":18.048440312,"data":"INFO:arc_agi.base:Created new scorecard: 615f7498-077f-4f6a-a59b-42d1e8ce962d\n"}
+,{"stream_name":"stderr","time":18.048462055,"data":"\n"}
+,{"stream_name":"stderr","time":18.048466203,"data":"INFO:arc_agi.base:Created new scorecard: 615f7498-077f-4f6a-a59b-42d1e8ce962d\n"}
+,{"stream_name":"stdout","time":18.082420868,"data":"2026-11-02 21:37:49 | INFO | Successfully loaded game class Ar25 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/ar25/0c556536/ar25.py\n"}
+,{"stream_name":"stderr","time":18.087150122,"data":"INFO:arc_agi.base:Successfully loaded game class Ar25 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/ar25/0c556536/ar25.py\n"}
+,{"stream_name":"stderr","time":18.087168865,"data":"\n"}
+,{"stream_name":"stderr","time":18.087174255,"data":"INFO:arc_agi.base:Successfully loaded game class Ar25 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/ar25/0c556536/ar25.py\n"}
+,{"stream_name":"stdout","time":18.153193959,"data":"2026-11-02 21:37:49 | INFO | Successfully loaded game class Bp35 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/bp35/0a0ad940/bp35.py\n"}
+,{"stream_name":"stderr","time":18.154106818,"data":"INFO:arc_agi.base:Successfully loaded game class Bp35 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/bp35/0a0ad940/bp35.py\n"}
+,{"stream_name":"stderr","time":18.154125692,"data":"\n"}
+,{"stream_name":"stderr","time":18.154129827,"data":"INFO:arc_agi.base:Successfully loaded game class Bp35 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/bp35/0a0ad940/bp35.py\n"}
+,{"stream_name":"stdout","time":18.201566617,"data":"2026-11-02 21:37:49 | INFO | Successfully loaded game class Cd82 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/cd82/fb555c5d/cd82.py\n"}
+,{"stream_name":"stderr","time":18.202534169,"data":"INFO:arc_agi.base:Successfully loaded game class Cd82 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/cd82/fb555c5d/cd82.py\n"}
+,{"stream_name":"stderr","time":18.202573027,"data":"\n"}
+,{"stream_name":"stderr","time":18.202577471,"data":"INFO:arc_agi.base:Successfully loaded game class Cd82 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/cd82/fb555c5d/cd82.py\n"}
+,{"stream_name":"stdout","time":18.272580924,"data":"2026-11-02 21:37:49 | INFO | Successfully loaded game class Cn04 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/cn04/2fe56bfb/cn04.py\n"}
+,{"stream_name":"stderr","time":18.291648316,"data":"INFO:arc_agi.base:Successfully loaded game class Cn04 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/cn04/2fe56bfb/cn04.py\n"}
+,{"stream_name":"stderr","time":18.291675238,"data":"\n"}
+,{"stream_name":"stderr","time":18.291681291,"data":"INFO:arc_agi.base:Successfully loaded game class Cn04 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/cn04/2fe56bfb/cn04.py\n"}
+,{"stream_name":"stdout","time":18.419496509,"data":"2026-11-02 21:37:49 | INFO | Successfully loaded game class Dc22 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/dc22/fdcac232/dc22.py\n"}
+,{"stream_name":"stderr","time":18.43125273,"data":"INFO:arc_agi.base:Successfully loaded game class Dc22 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/dc22/fdcac232/dc22.py\n"}
+,{"stream_name":"stderr","time":18.431276015,"data":"\n"}
+,{"stream_name":"stderr","time":18.431280513,"data":"INFO:arc_agi.base:Successfully loaded game class Dc22 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/dc22/fdcac232/dc22.py\n"}
+,{"stream_name":"stdout","time":18.506856837,"data":"2026-11-02 21:37:49 | INFO | Successfully loaded game class Ft09 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/ft09/0d8bbf25/ft09.py\n"}
+,{"stream_name":"stderr","time":18.507884908,"data":"INFO:arc_agi.base:Successfully loaded game class Ft09 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/ft09/0d8bbf25/ft09.py\n"}
+,{"stream_name":"stderr","time":18.507906574,"data":"\n"}
+,{"stream_name":"stderr","time":18.507911366,"data":"INFO:arc_agi.base:Successfully loaded game class Ft09 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/ft09/0d8bbf25/ft09.py\n"}
+,{"stream_name":"stdout","time":18.640995884,"data":"2026-11-02 21:37:49 | INFO | Successfully loaded game class G50t from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/g50t/5849a774/g50t.py\n"}
+,{"stream_name":"stderr","time":18.664611669,"data":"INFO:arc_agi.base:Successfully loaded game class G50t from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/g50t/5849a774/g50t.py\n"}
+,{"stream_name":"stderr","time":18.664650982,"data":"\n"}
+,{"stream_name":"stderr","time":18.664656635,"data":"INFO:arc_agi.base:Successfully loaded game class G50t from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/g50t/5849a774/g50t.py\n"}
+,{"stream_name":"stdout","time":18.839232755,"data":"2026-11-02 21:37:49 | INFO | Successfully loaded game class Ka59 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/ka59/38d34dbb/ka59.py\n"}
+,{"stream_name":"stderr","time":18.849718693,"data":"INFO:arc_agi.base:Successfully loaded game class Ka59 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/ka59/38d34dbb/ka59.py\n"}
+,{"stream_name":"stderr","time":18.849754928,"data":"\n"}
+,{"stream_name":"stderr","time":18.849759733,"data":"INFO:arc_agi.base:Successfully loaded game class Ka59 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/ka59/38d34dbb/ka59.py\n"}
+,{"stream_name":"stdout","time":18.954197794,"data":"2026-11-02 21:37:50 | INFO | Successfully loaded game class Lf52 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/lf52/271a04aa/lf52.py\n"}
+,{"stream_name":"stderr","time":18.977672494,"data":"INFO:arc_agi.base:Successfully loaded game class Lf52 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/lf52/271a04aa/lf52.py\n"}
+,{"stream_name":"stderr","time":18.977698155,"data":"\n"}
+,{"stream_name":"stderr","time":18.97770381,"data":"INFO:arc_agi.base:Successfully loaded game class Lf52 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/lf52/271a04aa/lf52.py\n"}
+,{"stream_name":"stdout","time":19.139102908,"data":"2026-11-02 21:37:50 | INFO | Successfully loaded game class Lp85 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/lp85/305b61c3/lp85.py\n"}
+,{"stream_name":"stderr","time":19.160533414,"data":"INFO:arc_agi.base:Successfully loaded game class Lp85 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/lp85/305b61c3/lp85.py\n"}
+,{"stream_name":"stderr","time":19.160557103,"data":"\n"}
+,{"stream_name":"stderr","time":19.160561939,"data":"INFO:arc_agi.base:Successfully loaded game class Lp85 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/lp85/305b61c3/lp85.py\n"}
+,{"stream_name":"stdout","time":19.277918635,"data":"2026-11-02 21:37:50 | INFO | Successfully loaded game class Ls20 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/ls20/9607627b/ls20.py\n"}
+,{"stream_name":"stderr","time":19.283562592,"data":"INFO:arc_agi.base:Successfully loaded game class Ls20 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/ls20/9607627b/ls20.py\n"}
+,{"stream_name":"stderr","time":19.283583072,"data":"\n"}
+,{"stream_name":"stderr","time":19.283589052,"data":"INFO:arc_agi.base:Successfully loaded game class Ls20 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/ls20/9607627b/ls20.py\n"}
+,{"stream_name":"stdout","time":19.348586963,"data":"2026-11-02 21:37:50 | INFO | Successfully loaded game class M0r0 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/m0r0/492f87ba/m0r0.py\n"}
+,{"stream_name":"stderr","time":19.362689284,"data":"INFO:arc_agi.base:Successfully loaded game class M0r0 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/m0r0/492f87ba/m0r0.py\n"}
+,{"stream_name":"stderr","time":19.362709812,"data":"\n"}
+,{"stream_name":"stderr","time":19.362715177,"data":"INFO:arc_agi.base:Successfully loaded game class M0r0 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/m0r0/492f87ba/m0r0.py\n"}
+,{"stream_name":"stdout","time":19.509503324,"data":"2026-11-02 21:37:50 | INFO | Successfully loaded game class R11l from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/r11l/495a7899/r11l.py\n"}
+,{"stream_name":"stderr","time":19.515599002,"data":"INFO:arc_agi.base:Successfully loaded game class R11l from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/r11l/495a7899/r11l.py\n"}
+,{"stream_name":"stderr","time":19.5156411,"data":"\n"}
+,{"stream_name":"stderr","time":19.515647875,"data":"INFO:arc_agi.base:Successfully loaded game class R11l from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/r11l/495a7899/r11l.py\n"}
+,{"stream_name":"stdout","time":19.702523335,"data":"2026-11-02 21:37:50 | INFO | Successfully loaded game class Re86 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/re86/8af5384d/re86.py\n"}
+,{"stream_name":"stderr","time":19.71095523,"data":"INFO:arc_agi.base:Successfully loaded game class Re86 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/re86/8af5384d/re86.py\n"}
+,{"stream_name":"stderr","time":19.71097793,"data":"\n"}
+,{"stream_name":"stderr","time":19.710983365,"data":"INFO:arc_agi.base:Successfully loaded game class Re86 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/re86/8af5384d/re86.py\n"}
+,{"stream_name":"stdout","time":19.863208085,"data":"2026-11-02 21:37:50 | INFO | Successfully loaded game class S5i5 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/s5i5/18d95033/s5i5.py\n"}
+,{"stream_name":"stderr","time":19.868048857,"data":"INFO:arc_agi.base:Successfully loaded game class S5i5 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/s5i5/18d95033/s5i5.py\n"}
+,{"stream_name":"stderr","time":19.868072198,"data":"\n"}
+,{"stream_name":"stderr","time":19.86807697,"data":"INFO:arc_agi.base:Successfully loaded game class S5i5 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/s5i5/18d95033/s5i5.py\n"}
+,{"stream_name":"stdout","time":19.979964805,"data":"2026-11-02 21:37:51 | INFO | Successfully loaded game class Sb26 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/sb26/7fbdac44/sb26.py\n"}
+,{"stream_name":"stderr","time":19.984072369,"data":"INFO:arc_agi.base:Successfully loaded game class Sb26 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/sb26/7fbdac44/sb26.py\n"}
+,{"stream_name":"stderr","time":19.984095784,"data":"\n"}
+,{"stream_name":"stderr","time":19.984101509,"data":"INFO:arc_agi.base:Successfully loaded game class Sb26 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/sb26/7fbdac44/sb26.py\n"}
+,{"stream_name":"stdout","time":20.143694836,"data":"2026-11-02 21:37:51 | INFO | Successfully loaded game class Sc25 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/sc25/635fd71a/sc25.py\n"}
+,{"stream_name":"stderr","time":20.156368205,"data":"INFO:arc_agi.base:Successfully loaded game class Sc25 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/sc25/635fd71a/sc25.py\n"}
+,{"stream_name":"stderr","time":20.15639279,"data":"\n"}
+,{"stream_name":"stderr","time":20.156397877,"data":"INFO:arc_agi.base:Successfully loaded game class Sc25 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/sc25/635fd71a/sc25.py\n"}
+,{"stream_name":"stdout","time":20.235956214,"data":"2026-11-02 21:37:51 | INFO | Successfully loaded game class Sk48 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/sk48/d8078629/sk48.py\n"}
+,{"stream_name":"stderr","time":20.250607594,"data":"INFO:arc_agi.base:Successfully loaded game class Sk48 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/sk48/d8078629/sk48.py\n"}
+,{"stream_name":"stderr","time":20.250643085,"data":"\n"}
+,{"stream_name":"stderr","time":20.250647819,"data":"INFO:arc_agi.base:Successfully loaded game class Sk48 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/sk48/d8078629/sk48.py\n"}
+,{"stream_name":"stdout","time":20.324345775,"data":"2026-11-02 21:37:51 | INFO | Successfully loaded game class Sp80 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/sp80/589a99af/sp80.py\n"}
+,{"stream_name":"stderr","time":20.325813089,"data":"INFO:arc_agi.base:Successfully loaded game class Sp80 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/sp80/589a99af/sp80.py\n"}
+,{"stream_name":"stderr","time":20.325839757,"data":"\n"}
+,{"stream_name":"stderr","time":20.325845412,"data":"INFO:arc_agi.base:Successfully loaded game class Sp80 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/sp80/589a99af/sp80.py\n"}
+,{"stream_name":"stdout","time":20.406612173,"data":"2026-11-02 21:37:51 | INFO | Successfully loaded game class Su15 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/su15/1944f8ab/su15.py\n"}
+,{"stream_name":"stderr","time":20.409239058,"data":"INFO:arc_agi.base:Successfully loaded game class Su15 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/su15/1944f8ab/su15.py\n"}
+,{"stream_name":"stderr","time":20.409259231,"data":"\n"}
+,{"stream_name":"stderr","time":20.409287358,"data":"INFO:arc_agi.base:Successfully loaded game class Su15 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/su15/1944f8ab/su15.py\n"}
+,{"stream_name":"stdout","time":20.576010373,"data":"2026-11-02 21:37:51 | INFO | Successfully loaded game class Tn36 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/tn36/ef4dde99/tn36.py\n"}
+,{"stream_name":"stderr","time":20.594451389,"data":"INFO:arc_agi.base:Successfully loaded game class Tn36 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/tn36/ef4dde99/tn36.py\n"}
+,{"stream_name":"stderr","time":20.594475203000002,"data":"\n"}
+,{"stream_name":"stderr","time":20.594480734,"data":"INFO:arc_agi.base:Successfully loaded game class Tn36 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/tn36/ef4dde99/tn36.py\n"}
+,{"stream_name":"stdout","time":20.695173936,"data":"2026-11-02 21:37:51 | INFO | Successfully loaded game class Tr87 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/tr87/cd924810/tr87.py\n"}
+,{"stream_name":"stderr","time":20.696111421,"data":"INFO:arc_agi.base:Successfully loaded game class Tr87 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/tr87/cd924810/tr87.py\n"}
+,{"stream_name":"stderr","time":20.696128683,"data":"\n"}
+,{"stream_name":"stderr","time":20.696132896,"data":"INFO:arc_agi.base:Successfully loaded game class Tr87 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/tr87/cd924810/tr87.py\n"}
+,{"stream_name":"stdout","time":20.787636916,"data":"2026-11-02 21:37:51 | INFO | Successfully loaded game class Tu93 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/tu93/0768757b/tu93.py\n"}
+,{"stream_name":"stderr","time":20.788806265,"data":"INFO:arc_agi.base:Successfully loaded game class Tu93 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/tu93/0768757b/tu93.py\n"}
+,{"stream_name":"stderr","time":20.788823254,"data":"\n"}
+,{"stream_name":"stderr","time":20.788828698,"data":"INFO:arc_agi.base:Successfully loaded game class Tu93 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/tu93/0768757b/tu93.py\n"}
+,{"stream_name":"stdout","time":20.868954644,"data":"2026-11-02 21:37:51 | INFO | Successfully loaded game class Vc33 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/vc33/5430563c/vc33.py\n"}
+,{"stream_name":"stderr","time":20.882402779,"data":"INFO:arc_agi.base:Successfully loaded game class Vc33 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/vc33/5430563c/vc33.py\n"}
+,{"stream_name":"stderr","time":20.882426835,"data":"\n"}
+,{"stream_name":"stderr","time":20.8824316,"data":"INFO:arc_agi.base:Successfully loaded game class Vc33 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/vc33/5430563c/vc33.py\n"}
+,{"stream_name":"stdout","time":20.977504898,"data":"2026-11-02 21:37:52 | INFO | Successfully loaded game class Wa30 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/wa30/ee6fef47/wa30.py\n"}
+,{"stream_name":"stderr","time":20.982292145,"data":"INFO:arc_agi.base:Successfully loaded game class Wa30 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/wa30/ee6fef47/wa30.py\n"}
+,{"stream_name":"stderr","time":20.982317924,"data":"\n"}
+,{"stream_name":"stderr","time":20.982323691,"data":"INFO:arc_agi.base:Successfully loaded game class Wa30 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/wa30/ee6fef47/wa30.py\n"}
+,{"stream_name":"stdout","time":46.587150207,"data":"J_only cd82-fb555c5d {'levels': 0, 'actions': 500, 'llm_calls': 0, 'llm_plans_adopted': 0, 'error': None}\n"}
+,{"stream_name":"stdout","time":47.972516689,"data":"J_only cn04-2fe56bfb {'levels': 0, 'actions': 500, 'llm_calls': 0, 'llm_plans_adopted': 0, 'error': None}\n"}
+,{"stream_name":"stdout","time":58.466783232,"data":"J_only ar25-0c556536 {'levels': 0, 'actions': 500, 'llm_calls': 0, 'llm_plans_adopted': 0, 'error': None}\n"}
+,{"stream_name":"stdout","time":66.285795899,"data":"J_only ft09-0d8bbf25 {'levels': 0, 'actions': 500, 'llm_calls': 0, 'llm_plans_adopted': 0, 'error': None}\n"}
+,{"stream_name":"stdout","time":66.599776467,"data":"J_only bp35-0a0ad940 {'levels': 0, 'actions': 500, 'llm_calls': 0, 'llm_plans_adopted': 0, 'error': None}\n"}
+,{"stream_name":"stdout","time":70.868363194,"data":"J_only dc22-fdcac232 {'levels': 0, 'actions': 500, 'llm_calls': 0, 'llm_plans_adopted': 0, 'error': None}\n"}
+,{"stream_name":"stdout","time":81.476538777,"data":"J_only lp85-305b61c3 {'levels': 1, 'actions': 500, 'llm_calls': 0, 'llm_plans_adopted': 0, 'error': None}\n"}
+,{"stream_name":"stdout","time":87.548993444,"data":"J_only ka59-38d34dbb {'levels': 0, 'actions': 500, 'llm_calls': 0, 'llm_plans_adopted': 0, 'error': None}\n"}
+,{"stream_name":"stdout","time":90.824879233,"data":"J_only g50t-5849a774 {'levels': 0, 'actions': 500, 'llm_calls': 0, 'llm_plans_adopted': 0, 'error': None}\n"}
+,{"stream_name":"stdout","time":104.665294441,"data":"J_only ls20-9607627b {'levels': 1, 'actions': 500, 'llm_calls': 0, 'llm_plans_adopted': 0, 'error': None}\n"}
+,{"stream_name":"stdout","time":111.226255358,"data":"J_only m0r0-492f87ba {'levels': 0, 'actions': 500, 'llm_calls': 0, 'llm_plans_adopted': 0, 'error': None}\n"}
+,{"stream_name":"stdout","time":130.987352939,"data":"J_only s5i5-18d95033 {'levels': 0, 'actions': 500, 'llm_calls': 0, 'llm_plans_adopted': 0, 'error': None}\n"}
+,{"stream_name":"stdout","time":131.227428865,"data":"J_only r11l-495a7899 {'levels': 1, 'actions': 500, 'llm_calls': 0, 'llm_plans_adopted': 0, 'error': None}\n"}
+,{"stream_name":"stdout","time":136.688475584,"data":"J_only re86-8af5384d {'levels': 0, 'actions': 500, 'llm_calls': 0, 'llm_plans_adopted': 0, 'error': None}\n"}
+,{"stream_name":"stdout","time":148.785998413,"data":"J_only lf52-271a04aa {'levels': 0, 'actions': 500, 'llm_calls': 0, 'llm_plans_adopted': 0, 'error': None}\n"}
+,{"stream_name":"stdout","time":154.485857658,"data":"J_only sc25-635fd71a {'levels': 0, 'actions': 500, 'llm_calls': 0, 'llm_plans_adopted': 0, 'error': None}\n"}
+,{"stream_name":"stdout","time":161.694568461,"data":"J_only sk48-d8078629 {'levels': 0, 'actions': 500, 'llm_calls': 0, 'llm_plans_adopted': 0, 'error': None}\n"}
+,{"stream_name":"stdout","time":168.341117037,"data":"J_only sp80-589a99af {'levels': 0, 'actions': 500, 'llm_calls': 0, 'llm_plans_adopted': 0, 'error': None}\n"}
+,{"stream_name":"stdout","time":184.138306525,"data":"J_only tr87-cd924810 {'levels': 0, 'actions': 500, 'llm_calls': 0, 'llm_plans_adopted': 0, 'error': None}\n"}
+,{"stream_name":"stdout","time":194.070200568,"data":"J_only su15-1944f8ab {'levels': 0, 'actions': 500, 'llm_calls': 0, 'llm_plans_adopted': 0, 'error': None}\n"}
+,{"stream_name":"stdout","time":206.44015417,"data":"J_only tn36-ef4dde99 {'levels': 1, 'actions': 500, 'llm_calls': 0, 'llm_plans_adopted': 0, 'error': None}\n"}
+,{"stream_name":"stdout","time":208.665614072,"data":"J_only sb26-7fbdac44 {'levels': 0, 'actions': 500, 'llm_calls': 0, 'llm_plans_adopted': 0, 'error': None}\n"}
+,{"stream_name":"stdout","time":210.172578496,"data":"J_only tu93-0768757b {'levels': 2, 'actions': 500, 'llm_calls': 0, 'llm_plans_adopted': 0, 'error': None}\n"}
+,{"stream_name":"stdout","time":213.091905631,"data":"J_only vc33-5430563c {'levels': 1, 'actions': 500, 'llm_calls': 0, 'llm_plans_adopted': 0, 'error': None}\n"}
+,{"stream_name":"stdout","time":214.070003318,"data":"J_only wa30-ee6fef47 {'levels': 0, 'actions': 500, 'llm_calls': 0, 'llm_plans_adopted': 0, 'error': None}\n"}
+,{"stream_name":"stdout","time":214.072228236,"data":"2026-11-02 21:41:05 | INFO | Closed scorecard: 615f7498-077f-4f6a-a59b-42d1e8ce962d\n"}
+,{"stream_name":"stderr","time":214.073095999,"data":"INFO:arc_agi.base:Closed scorecard: 615f7498-077f-4f6a-a59b-42d1e8ce962d\n"}
+,{"stream_name":"stderr","time":214.073116005,"data":"\n"}
+,{"stream_name":"stderr","time":214.073121187,"data":"INFO:arc_agi.base:Closed scorecard: 615f7498-077f-4f6a-a59b-42d1e8ce962d\n"}
+,{"stream_name":"stdout","time":214.074246427,"data":"*** J_only: levels 7 | scorecard 0.14580593675640452 | 196s\n"}
+,{"stream_name":"stdout","time":214.076044296,"data":"COMMIT RUN: placeholder submission.parquet written; public-25 evaluation saved to public25_eval.json\n"}
+,{"stream_name":"stderr","time":219.968745648,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":219.968776789,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":220.126838447,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":220.126863894,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":220.929210607,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":221.021278484,"data":"[NbConvertApp] Writing 43727 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":223.689084112,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":224.241433366,"data":"[NbConvertApp] Writing 352233 bytes to __results__.html\n"}
+]

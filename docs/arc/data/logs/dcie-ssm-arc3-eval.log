@@ -1,0 +1,413 @@
+[{"stream_name":"stderr","time":8.082422185,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.082470917,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.08247606,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.082483171,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":8.722142895,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.722177064,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.722182529,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.722186386,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":10.795510376,"data":"Looking in links: /kaggle/input/competitions/arc-prize-2026-arc-agi-3/arc_agi_3_wheels\n"}
+,{"stream_name":"stdout","time":10.816871251,"data":"Processing /kaggle/input/competitions/arc-prize-2026-arc-agi-3/arc_agi_3_wheels/arc_agi-0.9.8-py3-none-any.whl\n"}
+,{"stream_name":"stdout","time":10.826707587,"data":"Requirement already satisfied: python-dotenv in /usr/local/lib/python3.13/dist-packages (1.2.3)\n"}
+,{"stream_name":"stdout","time":10.828914753,"data":"Processing /kaggle/input/competitions/arc-prize-2026-arc-agi-3/arc_agi_3_wheels/arcengine-0.9.3-py3-none-any.whl (from arc-agi)\n"}
+,{"stream_name":"stdout","time":10.838005465,"data":"Requirement already satisfied: flask\u003e=3.1.0 in /usr/local/lib/python3.13/dist-packages (from arc-agi) (3.1.3)\n"}
+,{"stream_name":"stdout","time":10.838620412000001,"data":"Requirement already satisfied: matplotlib\u003e=3.7.0 in /usr/local/lib/python3.13/dist-packages (from arc-agi) (3.10.0)\n"}
+,{"stream_name":"stdout","time":10.839263652,"data":"Requirement already satisfied: pydantic\u003e=2.0.0 in /usr/local/lib/python3.13/dist-packages (from arc-agi) (2.13.5)\n"}
+,{"stream_name":"stdout","time":10.839970414,"data":"Requirement already satisfied: pillow\u003e=12.1.1 in /usr/local/lib/python3.13/dist-packages (from arc-agi) (13.0.0)\n"}
+,{"stream_name":"stdout","time":10.840596877,"data":"Requirement already satisfied: requests\u003e=2.31.0 in /usr/local/lib/python3.13/dist-packages (from arc-agi) (2.34.2)\n"}
+,{"stream_name":"stdout","time":10.84401853,"data":"Requirement already satisfied: numpy\u003e=1.24.0 in /usr/local/lib/python3.13/dist-packages (from arcengine\u003e=0.9.3-\u003earc-agi) (2.1.3)\n"}
+,{"stream_name":"stdout","time":10.846366344,"data":"Requirement already satisfied: blinker\u003e=1.9.0 in /usr/local/lib/python3.13/dist-packages (from flask\u003e=3.1.0-\u003earc-agi) (1.9.0)\n"}
+,{"stream_name":"stdout","time":10.847077566,"data":"Requirement already satisfied: click\u003e=8.1.3 in /usr/local/lib/python3.13/dist-packages (from flask\u003e=3.1.0-\u003earc-agi) (8.5.0)\n"}
+,{"stream_name":"stdout","time":10.847915785,"data":"Requirement already satisfied: itsdangerous\u003e=2.2.0 in /usr/local/lib/python3.13/dist-packages (from flask\u003e=3.1.0-\u003earc-agi) (2.2.0)\n"}
+,{"stream_name":"stdout","time":10.848639541,"data":"Requirement already satisfied: jinja2\u003e=3.1.2 in /usr/local/lib/python3.13/dist-packages (from flask\u003e=3.1.0-\u003earc-agi) (3.1.6)\n"}
+,{"stream_name":"stdout","time":10.84935408,"data":"Requirement already satisfied: markupsafe\u003e=2.1.1 in /usr/local/lib/python3.13/dist-packages (from flask\u003e=3.1.0-\u003earc-agi) (3.0.3)\n"}
+,{"stream_name":"stdout","time":10.850043133,"data":"Requirement already satisfied: werkzeug\u003e=3.1.0 in /usr/local/lib/python3.13/dist-packages (from flask\u003e=3.1.0-\u003earc-agi) (3.1.8)\n"}
+,{"stream_name":"stdout","time":10.860392458,"data":"Requirement already satisfied: contourpy\u003e=1.0.1 in /usr/local/lib/python3.13/dist-packages (from matplotlib\u003e=3.7.0-\u003earc-agi) (1.3.3)\n"}
+,{"stream_name":"stdout","time":10.861046214,"data":"Requirement already satisfied: cycler\u003e=0.10 in /usr/local/lib/python3.13/dist-packages (from matplotlib\u003e=3.7.0-\u003earc-agi) (0.12.1)\n"}
+,{"stream_name":"stdout","time":10.861690857,"data":"Requirement already satisfied: fonttools\u003e=4.22.0 in /usr/local/lib/python3.13/dist-packages (from matplotlib\u003e=3.7.0-\u003earc-agi) (4.64.0)\n"}
+,{"stream_name":"stdout","time":10.862391704,"data":"Requirement already satisfied: kiwisolver\u003e=1.3.1 in /usr/local/lib/python3.13/dist-packages (from matplotlib\u003e=3.7.0-\u003earc-agi) (1.5.1)\n"}
+,{"stream_name":"stdout","time":10.863192009,"data":"Requirement already satisfied: packaging\u003e=20.0 in /usr/local/lib/python3.13/dist-packages (from matplotlib\u003e=3.7.0-\u003earc-agi) (26.3)\n"}
+,{"stream_name":"stdout","time":10.863995504,"data":"Requirement already satisfied: pyparsing\u003e=2.3.1 in /usr/local/lib/python3.13/dist-packages (from matplotlib\u003e=3.7.0-\u003earc-agi) (3.3.2)\n"}
+,{"stream_name":"stdout","time":10.864699173,"data":"Requirement already satisfied: python-dateutil\u003e=2.7 in /usr/local/lib/python3.13/dist-packages (from matplotlib\u003e=3.7.0-\u003earc-agi) (2.9.0.post0)\n"}
+,{"stream_name":"stdout","time":10.904011935,"data":"Requirement already satisfied: annotated-types\u003e=0.6.0 in /usr/local/lib/python3.13/dist-packages (from pydantic\u003e=2.0.0-\u003earc-agi) (0.8.0)\n"}
+,{"stream_name":"stdout","time":10.905357772,"data":"Requirement already satisfied: pydantic-core==2.46.5 in /usr/local/lib/python3.13/dist-packages (from pydantic\u003e=2.0.0-\u003earc-agi) (2.46.5)\n"}
+,{"stream_name":"stdout","time":10.906299886,"data":"Requirement already satisfied: typing-extensions\u003e=4.14.1 in /usr/local/lib/python3.13/dist-packages (from pydantic\u003e=2.0.0-\u003earc-agi) (4.16.0)\n"}
+,{"stream_name":"stdout","time":10.907165321,"data":"Requirement already satisfied: typing-inspection\u003e=0.4.2 in /usr/local/lib/python3.13/dist-packages (from pydantic\u003e=2.0.0-\u003earc-agi) (0.4.4)\n"}
+,{"stream_name":"stdout","time":10.919435487,"data":"Requirement already satisfied: six\u003e=1.5 in /usr/local/lib/python3.13/dist-packages (from python-dateutil\u003e=2.7-\u003ematplotlib\u003e=3.7.0-\u003earc-agi) (1.17.0)\n"}
+,{"stream_name":"stdout","time":10.925033808,"data":"Requirement already satisfied: charset_normalizer\u003c4,\u003e=2 in /usr/local/lib/python3.13/dist-packages (from requests\u003e=2.31.0-\u003earc-agi) (3.4.9)\n"}
+,{"stream_name":"stdout","time":10.925901623,"data":"Requirement already satisfied: idna\u003c4,\u003e=2.5 in /usr/local/lib/python3.13/dist-packages (from requests\u003e=2.31.0-\u003earc-agi) (3.19)\n"}
+,{"stream_name":"stdout","time":10.926820355,"data":"Requirement already satisfied: urllib3\u003c3,\u003e=1.26 in /usr/local/lib/python3.13/dist-packages (from requests\u003e=2.31.0-\u003earc-agi) (2.8.0)\n"}
+,{"stream_name":"stdout","time":10.927652831,"data":"Requirement already satisfied: certifi\u003e=2023.5.7 in /usr/local/lib/python3.13/dist-packages (from requests\u003e=2.31.0-\u003earc-agi) (2026.10.19)\n"}
+,{"stream_name":"stdout","time":10.998202384,"data":"Looking in links: /kaggle/input/competitions/arc-prize-2026-arc-agi-3/arc_agi_3_wheels\n"}
+,{"stream_name":"stdout","time":10.998221672,"data":"Processing /kaggle/input/competitions/arc-prize-2026-arc-agi-3/arc_agi_3_wheels/arc_agi-0.9.8-py3-none-any.whl\n"}
+,{"stream_name":"stdout","time":10.998235875,"data":"Requirement already satisfied: python-dotenv in /usr/local/lib/python3.13/dist-packages (1.2.3)\n"}
+,{"stream_name":"stdout","time":10.998240282,"data":"Processing /kaggle/input/competitions/arc-prize-2026-arc-agi-3/arc_agi_3_wheels/arcengine-0.9.3-py3-none-any.whl (from arc-agi)\n"}
+,{"stream_name":"stdout","time":10.99824389,"data":"Requirement already satisfied: flask\u003e=3.1.0 in /usr/local/lib/python3.13/dist-packages (from arc-agi) (3.1.3)\n"}
+,{"stream_name":"stdout","time":10.998248192,"data":"Requirement already satisfied: matplotlib\u003e=3.7.0 in /usr/local/lib/python3.13/dist-packages (from arc-agi) (3.10.0)\n"}
+,{"stream_name":"stdout","time":10.998252442,"data":"Requirement already satisfied: pydantic\u003e=2.0.0 in /usr/local/lib/python3.13/dist-packages (from arc-agi) (2.13.5)\n"}
+,{"stream_name":"stdout","time":10.998257146,"data":"Requirement already satisfied: pillow\u003e=12.1.1 in /usr/local/lib/python3.13/dist-packages (from arc-agi) (13.0.0)\n"}
+,{"stream_name":"stdout","time":10.998261244,"data":"Requirement already satisfied: requests\u003e=2.31.0 in /usr/local/lib/python3.13/dist-packages (from arc-agi) (2.34.2)\n"}
+,{"stream_name":"stdout","time":10.998265261,"data":"Requirement already satisfied: numpy\u003e=1.24.0 in /usr/local/lib/python3.13/dist-packages (from arcengine\u003e=0.9.3-\u003earc-agi) (2.1.3)\n"}
+,{"stream_name":"stdout","time":10.998269474,"data":"Requirement already satisfied: blinker\u003e=1.9.0 in /usr/local/lib/python3.13/dist-packages (from flask\u003e=3.1.0-\u003earc-agi) (1.9.0)\n"}
+,{"stream_name":"stdout","time":10.998279568,"data":"Requirement already satisfied: click\u003e=8.1.3 in /usr/local/lib/python3.13/dist-packages (from flask\u003e=3.1.0-\u003earc-agi) (8.5.0)\n"}
+,{"stream_name":"stdout","time":10.998283436,"data":"Requirement already satisfied: itsdangerous\u003e=2.2.0 in /usr/local/lib/python3.13/dist-packages (from flask\u003e=3.1.0-\u003earc-agi) (2.2.0)\n"}
+,{"stream_name":"stdout","time":10.998286224,"data":"Requirement already satisfied: jinja2\u003e=3.1.2 in /usr/local/lib/python3.13/dist-packages (from flask\u003e=3.1.0-\u003earc-agi) (3.1.6)\n"}
+,{"stream_name":"stdout","time":10.998288904,"data":"Requirement already satisfied: markupsafe\u003e=2.1.1 in /usr/local/lib/python3.13/dist-packages (from flask\u003e=3.1.0-\u003earc-agi) (3.0.3)\n"}
+,{"stream_name":"stdout","time":10.998291651,"data":"Requirement already satisfied: werkzeug\u003e=3.1.0 in /usr/local/lib/python3.13/dist-packages (from flask\u003e=3.1.0-\u003earc-agi) (3.1.8)\n"}
+,{"stream_name":"stdout","time":10.998294326,"data":"Requirement already satisfied: contourpy\u003e=1.0.1 in /usr/local/lib/python3.13/dist-packages (from matplotlib\u003e=3.7.0-\u003earc-agi) (1.3.3)\n"}
+,{"stream_name":"stdout","time":10.998297897,"data":"Requirement already satisfied: cycler\u003e=0.10 in /usr/local/lib/python3.13/dist-packages (from matplotlib\u003e=3.7.0-\u003earc-agi) (0.12.1)\n"}
+,{"stream_name":"stdout","time":10.99830089,"data":"Requirement already satisfied: fonttools\u003e=4.22.0 in /usr/local/lib/python3.13/dist-packages (from matplotlib\u003e=3.7.0-\u003earc-agi) (4.64.0)\n"}
+,{"stream_name":"stdout","time":10.998303618,"data":"Requirement already satisfied: kiwisolver\u003e=1.3.1 in /usr/local/lib/python3.13/dist-packages (from matplotlib\u003e=3.7.0-\u003earc-agi) (1.5.1)\n"}
+,{"stream_name":"stdout","time":10.998306395,"data":"Requirement already satisfied: packaging\u003e=20.0 in /usr/local/lib/python3.13/dist-packages (from matplotlib\u003e=3.7.0-\u003earc-agi) (26.3)\n"}
+,{"stream_name":"stdout","time":10.998309474,"data":"Requirement already satisfied: pyparsing\u003e=2.3.1 in /usr/local/lib/python3.13/dist-packages (from matplotlib\u003e=3.7.0-\u003earc-agi) (3.3.2)\n"}
+,{"stream_name":"stdout","time":10.998316294,"data":"Requirement already satisfied: python-dateutil\u003e=2.7 in /usr/local/lib/python3.13/dist-packages (from matplotlib\u003e=3.7.0-\u003earc-agi) (2.9.0.post0)\n"}
+,{"stream_name":"stdout","time":10.998319248,"data":"Requirement already satisfied: annotated-types\u003e=0.6.0 in /usr/local/lib/python3.13/dist-packages (from pydantic\u003e=2.0.0-\u003earc-agi) (0.8.0)\n"}
+,{"stream_name":"stdout","time":10.998321899,"data":"Requirement already satisfied: pydantic-core==2.46.5 in /usr/local/lib/python3.13/dist-packages (from pydantic\u003e=2.0.0-\u003earc-agi) (2.46.5)\n"}
+,{"stream_name":"stdout","time":10.998324569,"data":"Requirement already satisfied: typing-extensions\u003e=4.14.1 in /usr/local/lib/python3.13/dist-packages (from pydantic\u003e=2.0.0-\u003earc-agi) (4.16.0)\n"}
+,{"stream_name":"stdout","time":10.998327265,"data":"Requirement already satisfied: typing-inspection\u003e=0.4.2 in /usr/local/lib/python3.13/dist-packages (from pydantic\u003e=2.0.0-\u003earc-agi) (0.4.4)\n"}
+,{"stream_name":"stdout","time":10.998330206,"data":"Requirement already satisfied: six\u003e=1.5 in /usr/local/lib/python3.13/dist-packages (from python-dateutil\u003e=2.7-\u003ematplotlib\u003e=3.7.0-\u003earc-agi) (1.17.0)\n"}
+,{"stream_name":"stdout","time":10.998333036,"data":"Requirement already satisfied: charset_normalizer\u003c4,\u003e=2 in /usr/local/lib/python3.13/dist-packages (from requests\u003e=2.31.0-\u003earc-agi) (3.4.9)\n"}
+,{"stream_name":"stdout","time":10.998335827,"data":"Requirement already satisfied: idna\u003c4,\u003e=2.5 in /usr/local/lib/python3.13/dist-packages (from requests\u003e=2.31.0-\u003earc-agi) (3.19)\n"}
+,{"stream_name":"stdout","time":10.998338618,"data":"Requirement already satisfied: urllib3\u003c3,\u003e=1.26 in /usr/local/lib/python3.13/dist-packages (from requests\u003e=2.31.0-\u003earc-agi) (2.8.0)\n"}
+,{"stream_name":"stdout","time":10.998341358,"data":"Requirement already satisfied: certifi\u003e=2023.5.7 in /usr/local/lib/python3.13/dist-packages (from requests\u003e=2.31.0-\u003earc-agi) (2026.10.19)\n"}
+,{"stream_name":"stdout","time":12.869564176,"data":"Installing collected packages: arcengine, arc-agi\n"}
+,{"stream_name":"stdout","time":12.95112251,"data":"\n"}
+,{"stream_name":"stdout","time":13.023288214,"data":"Successfully installed arc-agi-0.9.8 arcengine-0.9.3\n"}
+,{"stream_name":"stdout","time":13.072520944,"data":"Installing collected packages: arcengine, arc-agi\n"}
+,{"stream_name":"stdout","time":13.072555328,"data":"\n"}
+,{"stream_name":"stdout","time":13.072563405,"data":"Successfully installed arc-agi-0.9.8 arcengine-0.9.3\n"}
+,{"stream_name":"stdout","time":21.475176282,"data":"torch= 2.11.0+cu128 GPU available= True device= Tesla T4\n"}
+,{"stream_name":"stdout","time":21.497856102,"data":"Embedded FARSEER runtime verified: 13181 bytes, sha256: c3a0b7c4144b52a57b583d50115edcaa656a271d45210c05d32c6d41ce84be3a\n"}
+,{"stream_name":"stdout","time":21.515270665,"data":"Writing /tmp/dcie_arc3_runtime/dcie_cognition.py\n"}
+,{"stream_name":"stdout","time":21.530777941,"data":"Writing /tmp/dcie_arc3_runtime/my_agent.py\n"}
+,{"stream_name":"stdout","time":22.874906084,"data":"COMMIT ONLY: placeholder submission.parquet. Submit to Competition to run actual ARC-3 games.\n"}
+,{"stream_name":"stdout","time":23.702817951,"data":"INFO:arc_agi.scorecard:Initialized ScorecardManager with idle_for=0:15:00 and max_open_for=3 days, 0:00:00\n"}
+,{"stream_name":"stdout","time":23.946515391,"data":"public games: 25\n"}
+,{"stream_name":"stdout","time":23.948047132,"data":"2026-11-02 16:01:54 | INFO | Created new scorecard: 90c787bf-251f-434d-9c08-4d1148d5baf5\n"}
+,{"stream_name":"stderr","time":23.949313325,"data":"INFO:arc_agi.base:Created new scorecard: 90c787bf-251f-434d-9c08-4d1148d5baf5\n"}
+,{"stream_name":"stderr","time":23.949342894,"data":"\n"}
+,{"stream_name":"stderr","time":23.949349704,"data":"INFO:arc_agi.base:Created new scorecard: 90c787bf-251f-434d-9c08-4d1148d5baf5\n"}
+,{"stream_name":"stdout","time":23.984674195,"data":"2026-11-02 16:01:54 | INFO | Successfully loaded game class Ar25 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/ar25/0c556536/ar25.py\n"}
+,{"stream_name":"stderr","time":23.989393216,"data":"INFO:arc_agi.base:Successfully loaded game class Ar25 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/ar25/0c556536/ar25.py\n"}
+,{"stream_name":"stderr","time":23.989411386,"data":"\n"}
+,{"stream_name":"stderr","time":23.989416908,"data":"INFO:arc_agi.base:Successfully loaded game class Ar25 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/ar25/0c556536/ar25.py\n"}
+,{"stream_name":"stdout","time":24.0482706,"data":"2026-11-02 16:01:54 | INFO | Successfully loaded game class Bp35 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/bp35/0a0ad940/bp35.py\n"}
+,{"stream_name":"stderr","time":24.049356333,"data":"INFO:arc_agi.base:Successfully loaded game class Bp35 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/bp35/0a0ad940/bp35.py\n"}
+,{"stream_name":"stderr","time":24.0493892,"data":"\n"}
+,{"stream_name":"stderr","time":24.04939405,"data":"INFO:arc_agi.base:Successfully loaded game class Bp35 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/bp35/0a0ad940/bp35.py\n"}
+,{"stream_name":"stdout","time":24.093211703,"data":"2026-11-02 16:01:54 | INFO | Successfully loaded game class Cd82 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/cd82/fb555c5d/cd82.py\n"}
+,{"stream_name":"stderr","time":24.095264521,"data":"INFO:arc_agi.base:Successfully loaded game class Cd82 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/cd82/fb555c5d/cd82.py\n"}
+,{"stream_name":"stderr","time":24.095282438,"data":"\n"}
+,{"stream_name":"stderr","time":24.095286643,"data":"INFO:arc_agi.base:Successfully loaded game class Cd82 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/cd82/fb555c5d/cd82.py\n"}
+,{"stream_name":"stdout","time":24.119173827,"data":"2026-11-02 16:01:54 | INFO | Successfully loaded game class Cn04 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/cn04/2fe56bfb/cn04.py\n"}
+,{"stream_name":"stderr","time":24.120297873,"data":"INFO:arc_agi.base:Successfully loaded game class Cn04 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/cn04/2fe56bfb/cn04.py\n"}
+,{"stream_name":"stderr","time":24.120323856,"data":"\n"}
+,{"stream_name":"stderr","time":24.120328424,"data":"INFO:arc_agi.base:Successfully loaded game class Cn04 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/cn04/2fe56bfb/cn04.py\n"}
+,{"stream_name":"stdout","time":24.187371054,"data":"2026-11-02 16:01:54 | INFO | Successfully loaded game class Dc22 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/dc22/fdcac232/dc22.py\n"}
+,{"stream_name":"stderr","time":24.188384406,"data":"INFO:arc_agi.base:Successfully loaded game class Dc22 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/dc22/fdcac232/dc22.py\n"}
+,{"stream_name":"stderr","time":24.188404139,"data":"\n"}
+,{"stream_name":"stderr","time":24.188409183,"data":"INFO:arc_agi.base:Successfully loaded game class Dc22 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/dc22/fdcac232/dc22.py\n"}
+,{"stream_name":"stdout","time":24.226674463,"data":"2026-11-02 16:01:54 | INFO | Successfully loaded game class Ft09 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/ft09/0d8bbf25/ft09.py\n"}
+,{"stream_name":"stderr","time":24.227777024,"data":"INFO:arc_agi.base:Successfully loaded game class Ft09 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/ft09/0d8bbf25/ft09.py\n"}
+,{"stream_name":"stderr","time":24.227799982,"data":"\n"}
+,{"stream_name":"stderr","time":24.227805398,"data":"INFO:arc_agi.base:Successfully loaded game class Ft09 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/ft09/0d8bbf25/ft09.py\n"}
+,{"stream_name":"stdout","time":24.577151878,"data":"2026-11-02 16:01:54 | INFO | Successfully loaded game class G50t from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/g50t/5849a774/g50t.py\n"}
+,{"stream_name":"stderr","time":24.579744722,"data":"INFO:arc_agi.base:Successfully loaded game class G50t from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/g50t/5849a774/g50t.py\n"}
+,{"stream_name":"stderr","time":24.579767635,"data":"\n"}
+,{"stream_name":"stderr","time":24.579772709,"data":"INFO:arc_agi.base:Successfully loaded game class G50t from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/g50t/5849a774/g50t.py\n"}
+,{"stream_name":"stdout","time":24.69695549,"data":"2026-11-02 16:01:55 | INFO | Successfully loaded game class Ka59 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/ka59/38d34dbb/ka59.py\n"}
+,{"stream_name":"stderr","time":24.701981459,"data":"INFO:arc_agi.base:Successfully loaded game class Ka59 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/ka59/38d34dbb/ka59.py\n"}
+,{"stream_name":"stderr","time":24.702001209,"data":"\n"}
+,{"stream_name":"stderr","time":24.702005717,"data":"INFO:arc_agi.base:Successfully loaded game class Ka59 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/ka59/38d34dbb/ka59.py\n"}
+,{"stream_name":"stdout","time":24.781670626,"data":"2026-11-02 16:01:55 | INFO | Successfully loaded game class Lf52 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/lf52/271a04aa/lf52.py\n"}
+,{"stream_name":"stderr","time":24.782818262,"data":"INFO:arc_agi.base:Successfully loaded game class Lf52 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/lf52/271a04aa/lf52.py\n"}
+,{"stream_name":"stderr","time":24.782835678,"data":"\n"}
+,{"stream_name":"stderr","time":24.782840707,"data":"INFO:arc_agi.base:Successfully loaded game class Lf52 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/lf52/271a04aa/lf52.py\n"}
+,{"stream_name":"stdout","time":24.88486682,"data":"2026-11-02 16:01:55 | INFO | Successfully loaded game class Lp85 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/lp85/305b61c3/lp85.py\n"}
+,{"stream_name":"stderr","time":24.894973425,"data":"INFO:arc_agi.base:Successfully loaded game class Lp85 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/lp85/305b61c3/lp85.py\n"}
+,{"stream_name":"stderr","time":24.894993059,"data":"\n"}
+,{"stream_name":"stderr","time":24.894997329,"data":"INFO:arc_agi.base:Successfully loaded game class Lp85 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/lp85/305b61c3/lp85.py\n"}
+,{"stream_name":"stdout","time":24.994001094,"data":"2026-11-02 16:01:55 | INFO | Successfully loaded game class Ls20 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/ls20/9607627b/ls20.py\n"}
+,{"stream_name":"stderr","time":24.99503294,"data":"INFO:arc_agi.base:Successfully loaded game class Ls20 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/ls20/9607627b/ls20.py\n"}
+,{"stream_name":"stderr","time":24.99507305,"data":"\n"}
+,{"stream_name":"stderr","time":24.995094379,"data":"INFO:arc_agi.base:Successfully loaded game class Ls20 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/ls20/9607627b/ls20.py\n"}
+,{"stream_name":"stdout","time":25.037097555,"data":"2026-11-02 16:01:55 | INFO | Successfully loaded game class M0r0 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/m0r0/492f87ba/m0r0.py\n"}
+,{"stream_name":"stderr","time":25.0381691,"data":"INFO:arc_agi.base:Successfully loaded game class M0r0 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/m0r0/492f87ba/m0r0.py\n"}
+,{"stream_name":"stderr","time":25.038185176,"data":"\n"}
+,{"stream_name":"stderr","time":25.038189378,"data":"INFO:arc_agi.base:Successfully loaded game class M0r0 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/m0r0/492f87ba/m0r0.py\n"}
+,{"stream_name":"stdout","time":25.189440402,"data":"2026-11-02 16:01:55 | INFO | Successfully loaded game class R11l from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/r11l/495a7899/r11l.py\n"}
+,{"stream_name":"stderr","time":25.196296077,"data":"INFO:arc_agi.base:Successfully loaded game class R11l from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/r11l/495a7899/r11l.py\n"}
+,{"stream_name":"stderr","time":25.196317582,"data":"\n"}
+,{"stream_name":"stderr","time":25.196321724,"data":"INFO:arc_agi.base:Successfully loaded game class R11l from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/r11l/495a7899/r11l.py\n"}
+,{"stream_name":"stdout","time":25.37904004,"data":"2026-11-02 16:01:55 | INFO | Successfully loaded game class Re86 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/re86/8af5384d/re86.py\n"}
+,{"stream_name":"stderr","time":25.380022148,"data":"INFO:arc_agi.base:Successfully loaded game class Re86 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/re86/8af5384d/re86.py\n"}
+,{"stream_name":"stderr","time":25.380035688,"data":"\n"}
+,{"stream_name":"stderr","time":25.380039734,"data":"INFO:arc_agi.base:Successfully loaded game class Re86 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/re86/8af5384d/re86.py\n"}
+,{"stream_name":"stdout","time":25.471631166,"data":"2026-11-02 16:01:55 | INFO | Successfully loaded game class S5i5 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/s5i5/18d95033/s5i5.py\n"}
+,{"stream_name":"stderr","time":25.475745135,"data":"INFO:arc_agi.base:Successfully loaded game class S5i5 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/s5i5/18d95033/s5i5.py\n"}
+,{"stream_name":"stderr","time":25.475770165,"data":"\n"}
+,{"stream_name":"stderr","time":25.475774929,"data":"INFO:arc_agi.base:Successfully loaded game class S5i5 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/s5i5/18d95033/s5i5.py\n"}
+,{"stream_name":"stdout","time":25.517411514,"data":"2026-11-02 16:01:55 | INFO | Successfully loaded game class Sb26 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/sb26/7fbdac44/sb26.py\n"}
+,{"stream_name":"stderr","time":25.518252223,"data":"INFO:arc_agi.base:Successfully loaded game class Sb26 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/sb26/7fbdac44/sb26.py\n"}
+,{"stream_name":"stderr","time":25.518269719,"data":"\n"}
+,{"stream_name":"stderr","time":25.518274117,"data":"INFO:arc_agi.base:Successfully loaded game class Sb26 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/sb26/7fbdac44/sb26.py\n"}
+,{"stream_name":"stdout","time":25.633091862,"data":"2026-11-02 16:01:56 | INFO | Successfully loaded game class Sc25 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/sc25/635fd71a/sc25.py\n"}
+,{"stream_name":"stderr","time":25.634216443,"data":"INFO:arc_agi.base:Successfully loaded game class Sc25 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/sc25/635fd71a/sc25.py\n"}
+,{"stream_name":"stderr","time":25.634232521,"data":"\n"}
+,{"stream_name":"stderr","time":25.634237401,"data":"INFO:arc_agi.base:Successfully loaded game class Sc25 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/sc25/635fd71a/sc25.py\n"}
+,{"stream_name":"stdout","time":25.666807311,"data":"2026-11-02 16:01:56 | INFO | Successfully loaded game class Sk48 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/sk48/d8078629/sk48.py\n"}
+,{"stream_name":"stderr","time":25.670931957,"data":"INFO:arc_agi.base:Successfully loaded game class Sk48 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/sk48/d8078629/sk48.py\n"}
+,{"stream_name":"stderr","time":25.670950376,"data":"\n"}
+,{"stream_name":"stderr","time":25.670954976,"data":"INFO:arc_agi.base:Successfully loaded game class Sk48 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/sk48/d8078629/sk48.py\n"}
+,{"stream_name":"stdout","time":25.700998274,"data":"2026-11-02 16:01:56 | INFO | Successfully loaded game class Sp80 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/sp80/589a99af/sp80.py\n"}
+,{"stream_name":"stderr","time":25.705261861,"data":"INFO:arc_agi.base:Successfully loaded game class Sp80 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/sp80/589a99af/sp80.py\n"}
+,{"stream_name":"stderr","time":25.705278536,"data":"\n"}
+,{"stream_name":"stderr","time":25.70528343,"data":"INFO:arc_agi.base:Successfully loaded game class Sp80 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/sp80/589a99af/sp80.py\n"}
+,{"stream_name":"stdout","time":25.752970158,"data":"2026-11-02 16:01:56 | INFO | Successfully loaded game class Su15 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/su15/1944f8ab/su15.py\n"}
+,{"stream_name":"stderr","time":25.757967274,"data":"INFO:arc_agi.base:Successfully loaded game class Su15 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/su15/1944f8ab/su15.py\n"}
+,{"stream_name":"stderr","time":25.75798647,"data":"\n"}
+,{"stream_name":"stderr","time":25.757991805,"data":"INFO:arc_agi.base:Successfully loaded game class Su15 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/su15/1944f8ab/su15.py\n"}
+,{"stream_name":"stdout","time":25.867440828,"data":"2026-11-02 16:01:56 | INFO | Successfully loaded game class Tn36 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/tn36/ef4dde99/tn36.py\n"}
+,{"stream_name":"stderr","time":25.877790613,"data":"INFO:arc_agi.base:Successfully loaded game class Tn36 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/tn36/ef4dde99/tn36.py\n"}
+,{"stream_name":"stderr","time":25.877814519,"data":"\n"}
+,{"stream_name":"stderr","time":25.87781931,"data":"INFO:arc_agi.base:Successfully loaded game class Tn36 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/tn36/ef4dde99/tn36.py\n"}
+,{"stream_name":"stdout","time":25.9473631,"data":"2026-11-02 16:01:56 | INFO | Successfully loaded game class Tr87 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/tr87/cd924810/tr87.py\n"}
+,{"stream_name":"stderr","time":25.956031744,"data":"INFO:arc_agi.base:Successfully loaded game class Tr87 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/tr87/cd924810/tr87.py\n"}
+,{"stream_name":"stderr","time":25.956066856,"data":"\n"}
+,{"stream_name":"stderr","time":25.95608346,"data":"INFO:arc_agi.base:Successfully loaded game class Tr87 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/tr87/cd924810/tr87.py\n"}
+,{"stream_name":"stdout","time":25.988064913,"data":"2026-11-02 16:01:56 | INFO | Successfully loaded game class Tu93 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/tu93/0768757b/tu93.py\n"}
+,{"stream_name":"stderr","time":25.989148802,"data":"INFO:arc_agi.base:Successfully loaded game class Tu93 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/tu93/0768757b/tu93.py\n"}
+,{"stream_name":"stderr","time":25.989167446,"data":"\n"}
+,{"stream_name":"stderr","time":25.989171829,"data":"INFO:arc_agi.base:Successfully loaded game class Tu93 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/tu93/0768757b/tu93.py\n"}
+,{"stream_name":"stdout","time":26.029325533,"data":"2026-11-02 16:01:56 | INFO | Successfully loaded game class Vc33 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/vc33/5430563c/vc33.py\n"}
+,{"stream_name":"stderr","time":26.030593094,"data":"INFO:arc_agi.base:Successfully loaded game class Vc33 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/vc33/5430563c/vc33.py\n"}
+,{"stream_name":"stderr","time":26.030610918,"data":"\n"}
+,{"stream_name":"stderr","time":26.030615611,"data":"INFO:arc_agi.base:Successfully loaded game class Vc33 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/vc33/5430563c/vc33.py\n"}
+,{"stream_name":"stdout","time":26.066046106,"data":"2026-11-02 16:01:56 | INFO | Successfully loaded game class Wa30 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/wa30/ee6fef47/wa30.py\n"}
+,{"stream_name":"stderr","time":26.080928703,"data":"INFO:arc_agi.base:Successfully loaded game class Wa30 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/wa30/ee6fef47/wa30.py\n"}
+,{"stream_name":"stderr","time":26.080949173,"data":"\n"}
+,{"stream_name":"stderr","time":26.080954346,"data":"INFO:arc_agi.base:Successfully loaded game class Wa30 from /kaggle/input/competitions/arc-prize-2026-arc-agi-3/environment_files/wa30/ee6fef47/wa30.py\n"}
+,{"stream_name":"stdout","time":31.709894611,"data":"[DCIE/SSM] game=lp85-305b61c3 model_device=cuda causal_params=47414 survival_params=41142\n"}
+,{"stream_name":"stdout","time":31.717416518,"data":"[DCIE/SSM] game=sp80-589a99af model_device=cuda causal_params=47414 survival_params=41142\n"}
+,{"stream_name":"stdout","time":31.721754431,"data":"[DCIE/SSM] game=tu93-0768757b model_device=cuda causal_params=47414 survival_params=41142\n"}
+,{"stream_name":"stdout","time":31.721772205,"data":"[DCIE/SSM] game=re86-8af5384d model_device=cuda causal_params=47414 survival_params=41142\n"}
+,{"stream_name":"stdout","time":31.721776902,"data":"[DCIE/SSM] game=r11l-495a7899 model_device=cuda causal_params=47414 survival_params=41142\n"}
+,{"stream_name":"stdout","time":31.732802428,"data":"[DCIE/SSM] game=m0r0-492f87ba model_device=cuda causal_params=47414 survival_params=41142\n"}
+,{"stream_name":"stdout","time":31.737026034,"data":"[DCIE/SSM] game=tr87-cd924810 model_device=cuda causal_params=47414 survival_params=41142[DCIE/SSM] game=vc33-5430563c model_device=cuda causal_params=47414 survival_params=41142\n"}
+,{"stream_name":"stdout","time":31.73704472,"data":"\n"}
+,{"stream_name":"stdout","time":31.739750432,"data":"[DCIE/SSM] game=ka59-38d34dbb model_device=cuda causal_params=47414 survival_params=41142[DCIE/SSM] game=sc25-635fd71a model_device=cuda causal_params=47414 survival_params=41142\n"}
+,{"stream_name":"stdout","time":31.744727205,"data":"[DCIE/SSM] game=bp35-0a0ad940 model_device=cuda causal_params=47414 survival_params=41142\n"}
+,{"stream_name":"stdout","time":31.74475528,"data":"\n"}
+,{"stream_name":"stdout","time":31.752356123,"data":"[DCIE/SSM] game=ar25-0c556536 model_device=cuda causal_params=47414 survival_params=41142[DCIE/SSM] game=ls20-9607627b model_device=cuda causal_params=47414 survival_params=41142\n"}
+,{"stream_name":"stdout","time":31.752374685,"data":"[DCIE/SSM] game=tn36-ef4dde99 model_device=cuda causal_params=47414 survival_params=41142\n"}
+,{"stream_name":"stdout","time":31.760612289,"data":"[DCIE/SSM] game=su15-1944f8ab model_device=cuda causal_params=47414 survival_params=41142\n"}
+,{"stream_name":"stdout","time":31.760630242,"data":"[DCIE/SSM] game=cn04-2fe56bfb model_device=cuda causal_params=47414 survival_params=41142\n"}
+,{"stream_name":"stdout","time":31.760635291,"data":"[DCIE/SSM] game=sk48-d8078629 model_device=cuda causal_params=47414 survival_params=41142\n"}
+,{"stream_name":"stdout","time":31.760639923,"data":"\n"}
+,{"stream_name":"stdout","time":31.77550342,"data":"[DCIE/SSM] game=dc22-fdcac232 model_device=cuda causal_params=47414 survival_params=41142\n"}
+,{"stream_name":"stdout","time":31.811919187,"data":"[DCIE/SSM] game=s5i5-18d95033 model_device=cuda causal_params=47414 survival_params=41142\n"}
+,{"stream_name":"stdout","time":31.81193598,"data":"[DCIE/SSM] game=lf52-271a04aa model_device=cuda causal_params=47414 survival_params=41142\n"}
+,{"stream_name":"stdout","time":31.820720908,"data":"[DCIE/SSM] game=g50t-5849a774 model_device=cuda causal_params=47414 survival_params=41142\n"}
+,{"stream_name":"stdout","time":31.825766791,"data":"[DCIE/SSM] game=ft09-0d8bbf25 model_device=cuda causal_params=47414 survival_params=41142[DCIE/SSM] game=cd82-fb555c5d model_device=cuda causal_params=47414 survival_params=41142\n"}
+,{"stream_name":"stdout","time":31.825783415,"data":"\n"}
+,{"stream_name":"stdout","time":31.825787829,"data":"[DCIE/SSM] game=sb26-7fbdac44 model_device=cuda causal_params=47414 survival_params=41142\n"}
+,{"stream_name":"stdout","time":31.825792025,"data":"[DCIE/SSM] game=wa30-ee6fef47 model_device=cuda causal_params=47414 survival_params=41142\n"}
+,{"stream_name":"stdout","time":103.408428148,"data":"[DCIE/SSM] game=tr87-cd924810 action=30 causal_training=29 survival_training=29 survival_rows=29\n"}
+,{"stream_name":"stdout","time":103.4448982,"data":"[DCIE/SSM] game=ls20-9607627b action=30 causal_training=29 survival_training=29 survival_rows=29\n"}
+,{"stream_name":"stdout","time":104.816596633,"data":"[DCIE/SSM] game=tu93-0768757b action=30 causal_training=29 survival_training=29 survival_rows=29\n"}
+,{"stream_name":"stdout","time":126.221636783,"data":"[DCIE/SSM] game=s5i5-18d95033 action=30 causal_training=29 survival_training=29 survival_rows=29\n"}
+,{"stream_name":"stdout","time":126.845044315,"data":"[DCIE/SSM] game=vc33-5430563c action=30 causal_training=29 survival_training=29 survival_rows=29\n"}
+,{"stream_name":"stdout","time":127.065995477,"data":"[DCIE/SSM] game=lp85-305b61c3 action=30 causal_training=29 survival_training=29 survival_rows=29\n"}
+,{"stream_name":"stdout","time":127.84868009,"data":"[DCIE/SSM] game=tn36-ef4dde99 action=30 causal_training=29 survival_training=29 survival_rows=29\n"}
+,{"stream_name":"stdout","time":128.469933398,"data":"[DCIE/SSM] game=r11l-495a7899 action=30 causal_training=29 survival_training=29 survival_rows=29\n"}
+,{"stream_name":"stdout","time":128.938275519,"data":"[DCIE/SSM] game=ft09-0d8bbf25 action=30 causal_training=29 survival_training=29 survival_rows=29\n"}
+,{"stream_name":"stdout","time":132.06606704,"data":"[DCIE/SSM] game=g50t-5849a774 action=30 causal_training=29 survival_training=29 survival_rows=29\n"}
+,{"stream_name":"stdout","time":132.228301928,"data":"[DCIE/SSM] game=re86-8af5384d action=30 causal_training=29 survival_training=29 survival_rows=29\n"}
+,{"stream_name":"stdout","time":132.694866682,"data":"[DCIE/SSM] game=wa30-ee6fef47 action=30 causal_training=29 survival_training=29 survival_rows=29\n"}
+,{"stream_name":"stdout","time":143.558632329,"data":"[DCIE/SSM] game=su15-1944f8ab action=30 causal_training=29 survival_training=29 survival_rows=29\n"}
+,{"stream_name":"stdout","time":151.794785906,"data":"[DCIE/SSM] game=bp35-0a0ad940 action=30 causal_training=29 survival_training=29 survival_rows=29\n"}
+,{"stream_name":"stdout","time":152.33117307,"data":"[DCIE/SSM] game=sb26-7fbdac44 action=30 causal_training=29 survival_training=29 survival_rows=29\n"}
+,{"stream_name":"stdout","time":155.886789485,"data":"[DCIE/SSM] game=ka59-38d34dbb action=30 causal_training=29 survival_training=29 survival_rows=29\n"}
+,{"stream_name":"stdout","time":156.130594834,"data":"[DCIE/SSM] game=dc22-fdcac232 action=30 causal_training=29 survival_training=29 survival_rows=29\n"}
+,{"stream_name":"stdout","time":158.624066684,"data":"[DCIE/SSM] game=sc25-635fd71a action=30 causal_training=29 survival_training=29 survival_rows=29\n"}
+,{"stream_name":"stdout","time":164.122468725,"data":"[DCIE/SSM] game=cn04-2fe56bfb action=30 causal_training=29 survival_training=29 survival_rows=29\n"}
+,{"stream_name":"stdout","time":164.166718622,"data":"[DCIE/SSM] game=sp80-589a99af action=30 causal_training=29 survival_training=29 survival_rows=29\n"}
+,{"stream_name":"stdout","time":164.398036614,"data":"[DCIE/SSM] game=sk48-d8078629 action=30 causal_training=29 survival_training=29 survival_rows=29\n"}
+,{"stream_name":"stdout","time":164.915497739,"data":"[DCIE/SSM] game=lf52-271a04aa action=30 causal_training=29 survival_training=29 survival_rows=29\n"}
+,{"stream_name":"stdout","time":164.971081604,"data":"[DCIE/SSM] game=m0r0-492f87ba action=30 causal_training=29 survival_training=29 survival_rows=29\n"}
+,{"stream_name":"stdout","time":165.878530771,"data":"[DCIE/SSM] game=cd82-fb555c5d action=30 causal_training=29 survival_training=29 survival_rows=29\n"}
+,{"stream_name":"stdout","time":167.738462223,"data":"[DCIE/SSM] game=ar25-0c556536 action=30 causal_training=29 survival_training=29 survival_rows=29\n"}
+,{"stream_name":"stdout","time":187.297041104,"data":"[DCIE/SSM] game=ls20-9607627b action=60 causal_training=59 survival_training=59 survival_rows=59\n"}
+,{"stream_name":"stdout","time":189.117877611,"data":"[DCIE/SSM] game=tr87-cd924810 action=60 causal_training=59 survival_training=59 survival_rows=59\n"}
+,{"stream_name":"stdout","time":190.889317309,"data":"[DCIE/SSM] game=tu93-0768757b action=60 causal_training=59 survival_training=59 survival_rows=59\n"}
+,{"stream_name":"stdout","time":244.768733207,"data":"[DCIE/SSM] game=s5i5-18d95033 action=60 causal_training=59 survival_training=59 survival_rows=59\n"}
+,{"stream_name":"stdout","time":246.113802381,"data":"[DCIE/SSM] game=vc33-5430563c action=60 causal_training=59 survival_training=59 survival_rows=59\n"}
+,{"stream_name":"stdout","time":246.144442779,"data":"[DCIE/SSM] game=lp85-305b61c3 action=60 causal_training=59 survival_training=59 survival_rows=59\n"}
+,{"stream_name":"stdout","time":246.167646158,"data":"[DCIE/SSM] game=tn36-ef4dde99 action=60 causal_training=59 survival_training=59 survival_rows=59\n"}
+,{"stream_name":"stdout","time":246.259463973,"data":"[DCIE/SSM] game=r11l-495a7899 action=60 causal_training=59 survival_training=59 survival_rows=59\n"}
+,{"stream_name":"stdout","time":249.065513112,"data":"[DCIE/SSM] game=ft09-0d8bbf25 action=60 causal_training=59 survival_training=59 survival_rows=59\n"}
+,{"stream_name":"stdout","time":255.134295522,"data":"[DCIE/SSM] game=re86-8af5384d action=60 causal_training=59 survival_training=59 survival_rows=59\n"}
+,{"stream_name":"stdout","time":255.844716275,"data":"[DCIE/SSM] game=wa30-ee6fef47 action=60 causal_training=59 survival_training=59 survival_rows=59\n"}
+,{"stream_name":"stdout","time":258.818937852,"data":"[DCIE/SSM] game=g50t-5849a774 action=60 causal_training=59 survival_training=59 survival_rows=59\n"}
+,{"stream_name":"stdout","time":273.255129388,"data":"[DCIE/SSM] game=ls20-9607627b action=90 causal_training=89 survival_training=89 survival_rows=89\n"}
+,{"stream_name":"stdout","time":279.033075181,"data":"[DCIE/SSM] game=tu93-0768757b action=90 causal_training=89 survival_training=89 survival_rows=89\n"}
+,{"stream_name":"stdout","time":279.138942844,"data":"[DCIE/SSM] game=tr87-cd924810 action=90 causal_training=89 survival_training=89 survival_rows=89\n"}
+,{"stream_name":"stdout","time":287.218727395,"data":"[DCIE/SSM] game=su15-1944f8ab action=60 causal_training=59 survival_training=59 survival_rows=59\n"}
+,{"stream_name":"stdout","time":302.194669914,"data":"[DCIE/SSM] game=sb26-7fbdac44 action=60 causal_training=59 survival_training=59 survival_rows=59\n"}
+,{"stream_name":"stdout","time":307.414684986,"data":"[DCIE/SSM] game=bp35-0a0ad940 action=60 causal_training=59 survival_training=59 survival_rows=59\n"}
+,{"stream_name":"stdout","time":317.7167907,"data":"[DCIE/SSM] game=ka59-38d34dbb action=60 causal_training=59 survival_training=59 survival_rows=59\n"}
+,{"stream_name":"stdout","time":318.34581005,"data":"[DCIE/SSM] game=dc22-fdcac232 action=60 causal_training=59 survival_training=59 survival_rows=59\n"}
+,{"stream_name":"stdout","time":323.852727632,"data":"[DCIE/SSM] game=sc25-635fd71a action=60 causal_training=59 survival_training=59 survival_rows=59\n"}
+,{"stream_name":"stdout","time":331.480839098,"data":"[DCIE/SSM] game=cn04-2fe56bfb action=60 causal_training=59 survival_training=59 survival_rows=59\n"}
+,{"stream_name":"stdout","time":331.656332558,"data":"[DCIE/SSM] game=lf52-271a04aa action=60 causal_training=59 survival_training=59 survival_rows=59\n"}
+,{"stream_name":"stdout","time":332.423416549,"data":"[DCIE/SSM] game=m0r0-492f87ba action=60 causal_training=59 survival_training=59 survival_rows=59\n"}
+,{"stream_name":"stdout","time":332.443940136,"data":"[DCIE/SSM] game=sk48-d8078629 action=60 causal_training=59 survival_training=59 survival_rows=59\n"}
+,{"stream_name":"stdout","time":332.987759576,"data":"[DCIE/SSM] game=sp80-589a99af action=60 causal_training=59 survival_training=59 survival_rows=59\n"}
+,{"stream_name":"stdout","time":334.004110713,"data":"[DCIE/SSM] game=cd82-fb555c5d action=60 causal_training=59 survival_training=59 survival_rows=59\n"}
+,{"stream_name":"stdout","time":339.518528693,"data":"[DCIE/SSM] game=ar25-0c556536 action=60 causal_training=59 survival_training=59 survival_rows=59\n"}
+,{"stream_name":"stdout","time":364.711604401,"data":"[DCIE/SSM] game=ls20-9607627b action=120 causal_training=119 survival_training=119 survival_rows=119\n"}
+,{"stream_name":"stdout","time":371.482955472,"data":"[DCIE/SSM] game=tu93-0768757b action=120 causal_training=119 survival_training=119 survival_rows=119\n"}
+,{"stream_name":"stdout","time":373.716385987,"data":"[DCIE/SSM] game=lp85-305b61c3 action=90 causal_training=89 survival_training=89 survival_rows=89\n"}
+,{"stream_name":"stdout","time":375.298084616,"data":"[DCIE/SSM] game=tr87-cd924810 action=120 causal_training=119 survival_training=119 survival_rows=119\n"}
+,{"stream_name":"stdout","time":375.907859443,"data":"[DCIE/SSM] game=s5i5-18d95033 action=90 causal_training=89 survival_training=89 survival_rows=89\n"}
+,{"stream_name":"stdout","time":377.111114961,"data":"[DCIE/SSM] game=vc33-5430563c action=90 causal_training=89 survival_training=89 survival_rows=89\n"}
+,{"stream_name":"stdout","time":378.684033282,"data":"[DCIE/SSM] game=r11l-495a7899 action=90 causal_training=89 survival_training=89 survival_rows=89\n"}
+,{"stream_name":"stdout","time":379.64842374,"data":"[DCIE/SSM] game=ft09-0d8bbf25 action=90 causal_training=89 survival_training=89 survival_rows=89\n"}
+,{"stream_name":"stdout","time":380.529203356,"data":"[DCIE/SSM] game=tn36-ef4dde99 action=90 causal_training=89 survival_training=89 survival_rows=89\n"}
+,{"stream_name":"stdout","time":386.185154874,"data":"[DCIE/SSM] game=wa30-ee6fef47 action=90 causal_training=89 survival_training=89 survival_rows=89\n"}
+,{"stream_name":"stdout","time":389.748590693,"data":"[DCIE/SSM] game=re86-8af5384d action=90 causal_training=89 survival_training=89 survival_rows=89\n"}
+,{"stream_name":"stdout","time":397.119197959,"data":"[DCIE/SSM] game=g50t-5849a774 action=90 causal_training=89 survival_training=89 survival_rows=89\n"}
+,{"stream_name":"stdout","time":441.436404645,"data":"[DCIE/SSM] game=su15-1944f8ab action=90 causal_training=89 survival_training=89 survival_rows=89\n"}
+,{"stream_name":"stdout","time":457.310634069,"data":"[DCIE/SSM] game=ls20-9607627b action=150 causal_training=149 survival_training=149 survival_rows=149\n"}
+,{"stream_name":"stdout","time":462.912473639,"data":"[DCIE/SSM] game=sb26-7fbdac44 action=90 causal_training=89 survival_training=89 survival_rows=89\n"}
+,{"stream_name":"stdout","time":465.165481173,"data":"[DCIE/SSM] game=tu93-0768757b action=150 causal_training=149 survival_training=149 survival_rows=149\n"}
+,{"stream_name":"stdout","time":471.577022983,"data":"[DCIE/SSM] game=tr87-cd924810 action=150 causal_training=149 survival_training=149 survival_rows=149\n"}
+,{"stream_name":"stdout","time":478.053815338,"data":"[DCIE/SSM] game=bp35-0a0ad940 action=90 causal_training=89 survival_training=89 survival_rows=89\n"}
+,{"stream_name":"stdout","time":489.920243477,"data":"[DCIE/SSM] game=ka59-38d34dbb action=90 causal_training=89 survival_training=89 survival_rows=89\n"}
+,{"stream_name":"stdout","time":491.068492981,"data":"[DCIE/SSM] game=dc22-fdcac232 action=90 causal_training=89 survival_training=89 survival_rows=89\n"}
+,{"stream_name":"stdout","time":500.609111788,"data":"[DCIE/SSM] game=sc25-635fd71a action=90 causal_training=89 survival_training=89 survival_rows=89\n"}
+,{"stream_name":"stdout","time":504.399898199,"data":"[DCIE/SSM] game=lp85-305b61c3 action=120 causal_training=119 survival_training=119 survival_rows=119\n"}
+,{"stream_name":"stdout","time":506.649449711,"data":"[DCIE/SSM] game=s5i5-18d95033 action=120 causal_training=119 survival_training=119 survival_rows=119\n"}
+,{"stream_name":"stdout","time":508.752203974,"data":"[DCIE/SSM] game=lf52-271a04aa action=90 causal_training=89 survival_training=89 survival_rows=89\n"}
+,{"stream_name":"stdout","time":509.005979107,"data":"[DCIE/SSM] game=vc33-5430563c action=120 causal_training=119 survival_training=119 survival_rows=119\n"}
+,{"stream_name":"stdout","time":509.083065422,"data":"[DCIE/SSM] game=sk48-d8078629 action=90 causal_training=89 survival_training=89 survival_rows=89\n"}
+,{"stream_name":"stdout","time":509.353164396,"data":"[DCIE/SSM] game=cn04-2fe56bfb action=90 causal_training=89 survival_training=89 survival_rows=89\n"}
+,{"stream_name":"stdout","time":510.894523167,"data":"[DCIE/SSM] game=m0r0-492f87ba action=90 causal_training=89 survival_training=89 survival_rows=89\n"}
+,{"stream_name":"stdout","time":511.691119527,"data":"[DCIE/SSM] game=sp80-589a99af action=90 causal_training=89 survival_training=89 survival_rows=89\n"}
+,{"stream_name":"stdout","time":511.7825415,"data":"[DCIE/SSM] game=cd82-fb555c5d action=90 causal_training=89 survival_training=89 survival_rows=89\n"}
+,{"stream_name":"stdout","time":513.501795408,"data":"[DCIE/SSM] game=ft09-0d8bbf25 action=120 causal_training=119 survival_training=119 survival_rows=119\n"}
+,{"stream_name":"stdout","time":514.692887466,"data":"[DCIE/SSM] game=r11l-495a7899 action=120 causal_training=119 survival_training=119 survival_rows=119\n"}
+,{"stream_name":"stdout","time":517.965447052,"data":"[DCIE/SSM] game=tn36-ef4dde99 action=120 causal_training=119 survival_training=119 survival_rows=119\n"}
+,{"stream_name":"stdout","time":518.118349752,"data":"[DCIE/SSM] game=wa30-ee6fef47 action=120 causal_training=119 survival_training=119 survival_rows=119\n"}
+,{"stream_name":"stdout","time":521.624537988,"data":"[DCIE/SSM] game=ar25-0c556536 action=90 causal_training=89 survival_training=89 survival_rows=89\n"}
+,{"stream_name":"stdout","time":525.567064023,"data":"[DCIE/SSM] game=re86-8af5384d action=120 causal_training=119 survival_training=119 survival_rows=119\n"}
+,{"stream_name":"stdout","time":534.797494347,"data":"[DCIE/SSM] game=g50t-5849a774 action=120 causal_training=119 survival_training=119 survival_rows=119\n"}
+,{"stream_name":"stdout","time":547.338260132,"data":"[DCIE/SSM] game=ls20-9607627b action=180 causal_training=179 survival_training=179 survival_rows=179\n"}
+,{"stream_name":"stdout","time":556.049935526,"data":"[DCIE/SSM] game=tu93-0768757b action=180 causal_training=179 survival_training=179 survival_rows=179\n"}
+,{"stream_name":"stdout","time":564.301122795,"data":"[DCIE/SSM] game=tr87-cd924810 action=180 causal_training=179 survival_training=179 survival_rows=179\n"}
+,{"stream_name":"stdout","time":591.031946656,"data":"[DCIE/SSM] game=su15-1944f8ab action=120 causal_training=119 survival_training=119 survival_rows=119\n"}
+,{"stream_name":"stdout","time":620.22298082,"data":"[DCIE/SSM] game=sb26-7fbdac44 action=120 causal_training=119 survival_training=119 survival_rows=119\n"}
+,{"stream_name":"stdout","time":628.06044612,"data":"[DCIE/SSM] game=lp85-305b61c3 action=150 causal_training=149 survival_training=149 survival_rows=149\n"}
+,{"stream_name":"stdout","time":629.555789075,"data":"[DCIE/SSM] game=s5i5-18d95033 action=150 causal_training=149 survival_training=149 survival_rows=149\n"}
+,{"stream_name":"stdout","time":633.115416609,"data":"[DCIE/SSM] game=ls20-9607627b action=210 causal_training=209 survival_training=209 survival_rows=209\n"}
+,{"stream_name":"stdout","time":633.619619109,"data":"[DCIE/SSM] game=vc33-5430563c action=150 causal_training=149 survival_training=149 survival_rows=149\n"}
+,{"stream_name":"stdout","time":637.412280594,"data":"[DCIE/SSM] game=r11l-495a7899 action=150 causal_training=149 survival_training=149 survival_rows=149\n"}
+,{"stream_name":"stdout","time":638.753206746,"data":"[DCIE/SSM] game=ft09-0d8bbf25 action=150 causal_training=149 survival_training=149 survival_rows=149\n"}
+,{"stream_name":"stdout","time":641.91377796,"data":"[DCIE/SSM] game=tn36-ef4dde99 action=150 causal_training=149 survival_training=149 survival_rows=149\n"}
+,{"stream_name":"stdout","time":641.937850352,"data":"[DCIE/SSM] game=bp35-0a0ad940 action=120 causal_training=119 survival_training=119 survival_rows=119\n"}
+,{"stream_name":"stdout","time":643.529816541,"data":"[DCIE/SSM] game=wa30-ee6fef47 action=150 causal_training=149 survival_training=149 survival_rows=149\n"}
+,{"stream_name":"stdout","time":644.276324616,"data":"[DCIE/SSM] game=tu93-0768757b action=210 causal_training=209 survival_training=209 survival_rows=208\n"}
+,{"stream_name":"stdout","time":653.338349105,"data":"[DCIE/SSM] game=re86-8af5384d action=150 causal_training=149 survival_training=149 survival_rows=149\n"}
+,{"stream_name":"stdout","time":654.27072478,"data":"[DCIE/SSM] game=tr87-cd924810 action=210 causal_training=209 survival_training=209 survival_rows=209\n"}
+,{"stream_name":"stdout","time":655.296637646,"data":"[DCIE/SSM] game=ka59-38d34dbb action=120 causal_training=119 survival_training=119 survival_rows=119\n"}
+,{"stream_name":"stdout","time":655.631290004,"data":"[DCIE/SSM] game=dc22-fdcac232 action=120 causal_training=119 survival_training=119 survival_rows=119\n"}
+,{"stream_name":"stdout","time":662.251056416,"data":"[DCIE/SSM] game=sc25-635fd71a action=120 causal_training=119 survival_training=119 survival_rows=119\n"}
+,{"stream_name":"stdout","time":665.963356371,"data":"[DCIE/SSM] game=g50t-5849a774 action=150 causal_training=149 survival_training=149 survival_rows=149\n"}
+,{"stream_name":"stdout","time":673.122520271,"data":"[DCIE/SSM] game=cn04-2fe56bfb action=120 causal_training=119 survival_training=119 survival_rows=119\n"}
+,{"stream_name":"stdout","time":676.209983783,"data":"[DCIE/SSM] game=m0r0-492f87ba action=120 causal_training=119 survival_training=119 survival_rows=119\n"}
+,{"stream_name":"stdout","time":676.537087894,"data":"[DCIE/SSM] game=sk48-d8078629 action=120 causal_training=119 survival_training=119 survival_rows=119\n"}
+,{"stream_name":"stdout","time":676.826443999,"data":"[DCIE/SSM] game=sp80-589a99af action=120 causal_training=119 survival_training=119 survival_rows=119\n"}
+,{"stream_name":"stdout","time":677.25902958,"data":"[DCIE/SSM] game=lf52-271a04aa action=120 causal_training=119 survival_training=119 survival_rows=119\n"}
+,{"stream_name":"stdout","time":679.195273778,"data":"[DCIE/SSM] game=cd82-fb555c5d action=120 causal_training=119 survival_training=119 survival_rows=119\n"}
+,{"stream_name":"stdout","time":685.645785562,"data":"[DCIE/SSM] game=ar25-0c556536 action=120 causal_training=119 survival_training=119 survival_rows=119\n"}
+,{"stream_name":"stdout","time":717.885833707,"data":"[DCIE/SSM] game=ls20-9607627b action=240 causal_training=239 survival_training=239 survival_rows=239\n"}
+,{"stream_name":"stdout","time":730.001923445,"data":"[DCIE/SSM] game=tu93-0768757b action=240 causal_training=239 survival_training=239 survival_rows=238\n"}
+,{"stream_name":"stdout","time":734.49256847,"data":"[DCIE/SSM] game=su15-1944f8ab action=150 causal_training=149 survival_training=149 survival_rows=149\n"}
+,{"stream_name":"stdout","time":740.83530305,"data":"[DCIE/SSM] game=tr87-cd924810 action=240 causal_training=239 survival_training=239 survival_rows=239\n"}
+,{"stream_name":"stdout","time":748.172756916,"data":"[DCIE/SSM] game=lp85-305b61c3 action=180 causal_training=179 survival_training=179 survival_rows=179\n"}
+,{"stream_name":"stdout","time":750.152734334,"data":"[DCIE/SSM] game=s5i5-18d95033 action=180 causal_training=179 survival_training=179 survival_rows=179\n"}
+,{"stream_name":"stdout","time":753.42483418,"data":"[DCIE/SSM] game=vc33-5430563c action=180 causal_training=179 survival_training=179 survival_rows=179\n"}
+,{"stream_name":"stdout","time":756.476507753,"data":"[DCIE/SSM] game=r11l-495a7899 action=180 causal_training=179 survival_training=179 survival_rows=179\n"}
+,{"stream_name":"stdout","time":761.107828703,"data":"[DCIE/SSM] game=ft09-0d8bbf25 action=180 causal_training=179 survival_training=179 survival_rows=179\n"}
+,{"stream_name":"stdout","time":761.822541903,"data":"[DCIE/SSM] game=tn36-ef4dde99 action=180 causal_training=179 survival_training=179 survival_rows=179\n"}
+,{"stream_name":"stdout","time":765.461758368,"data":"[DCIE/SSM] game=wa30-ee6fef47 action=180 causal_training=179 survival_training=179 survival_rows=179\n"}
+,{"stream_name":"stdout","time":771.569696617,"data":"[DCIE/SSM] game=sb26-7fbdac44 action=150 causal_training=149 survival_training=149 survival_rows=149\n"}
+,{"stream_name":"stdout","time":774.828249873,"data":"[DCIE/SSM] game=re86-8af5384d action=180 causal_training=179 survival_training=179 survival_rows=179\n"}
+,{"stream_name":"stdout","time":792.725780582,"data":"[DCIE/SSM] game=g50t-5849a774 action=180 causal_training=179 survival_training=179 survival_rows=179\n"}
+,{"stream_name":"stdout","time":793.040900435,"data":"[DCIE/SSM] game=bp35-0a0ad940 action=150 causal_training=149 survival_training=149 survival_rows=149\n"}
+,{"stream_name":"stdout","time":802.765377496,"data":"[DCIE/SSM] game=ls20-9607627b action=270 causal_training=269 survival_training=269 survival_rows=269\n"}
+,{"stream_name":"stdout","time":810.498803828,"data":"[DCIE/SSM] game=ka59-38d34dbb action=150 causal_training=149 survival_training=149 survival_rows=149\n"}
+,{"stream_name":"stdout","time":816.343182541,"data":"[DCIE/SSM] game=tu93-0768757b action=270 causal_training=269 survival_training=269 survival_rows=267\n"}
+,{"stream_name":"stdout","time":816.661195118,"data":"[DCIE/SSM] game=dc22-fdcac232 action=150 causal_training=149 survival_training=149 survival_rows=149\n"}
+,{"stream_name":"stdout","time":817.571966245,"data":"[DCIE/SSM] game=sc25-635fd71a action=150 causal_training=149 survival_training=149 survival_rows=149\n"}
+,{"stream_name":"stdout","time":828.757873511,"data":"[DCIE/SSM] game=tr87-cd924810 action=270 causal_training=269 survival_training=269 survival_rows=269\n"}
+,{"stream_name":"stdout","time":830.298458237,"data":"[DCIE/SSM] game=cn04-2fe56bfb action=150 causal_training=149 survival_training=149 survival_rows=149\n"}
+,{"stream_name":"stdout","time":832.794703804,"data":"[DCIE/SSM] game=sk48-d8078629 action=150 causal_training=149 survival_training=149 survival_rows=149\n"}
+,{"stream_name":"stdout","time":833.659310101,"data":"[DCIE/SSM] game=m0r0-492f87ba action=150 causal_training=149 survival_training=149 survival_rows=149\n"}
+,{"stream_name":"stdout","time":836.342747353,"data":"[DCIE/SSM] game=lf52-271a04aa action=150 causal_training=149 survival_training=149 survival_rows=149\n"}
+,{"stream_name":"stdout","time":839.134017084,"data":"[DCIE/SSM] game=sp80-589a99af action=150 causal_training=149 survival_training=149 survival_rows=149\n"}
+,{"stream_name":"stdout","time":841.796038308,"data":"[DCIE/SSM] game=cd82-fb555c5d action=150 causal_training=149 survival_training=149 survival_rows=149\n"}
+,{"stream_name":"stdout","time":845.544251438,"data":"[DCIE/SSM] game=ar25-0c556536 action=150 causal_training=149 survival_training=149 survival_rows=149\n"}
+,{"stream_name":"stdout","time":869.421824662,"data":"[DCIE/SSM] game=lp85-305b61c3 action=210 causal_training=209 survival_training=209 survival_rows=209\n"}
+,{"stream_name":"stdout","time":870.628739451,"data":"[DCIE/SSM] game=s5i5-18d95033 action=210 causal_training=209 survival_training=209 survival_rows=209\n"}
+,{"stream_name":"stdout","time":875.061094149,"data":"[DCIE/SSM] game=vc33-5430563c action=210 causal_training=209 survival_training=209 survival_rows=209\n"}
+,{"stream_name":"stdout","time":877.427189434,"data":"[DCIE/SSM] game=su15-1944f8ab action=180 causal_training=179 survival_training=179 survival_rows=179\n"}
+,{"stream_name":"stdout","time":877.86488267,"data":"[DCIE/SSM] game=r11l-495a7899 action=210 causal_training=209 survival_training=209 survival_rows=209\n"}
+,{"stream_name":"stdout","time":883.319179188,"data":"[DCIE/SSM] game=tn36-ef4dde99 action=210 causal_training=209 survival_training=209 survival_rows=209\n"}
+,{"stream_name":"stdout","time":884.173699753,"data":"[DCIE/SSM] game=ft09-0d8bbf25 action=210 causal_training=209 survival_training=209 survival_rows=209\n"}
+,{"stream_name":"stdout","time":887.57860307,"data":"[DCIE/SSM] game=ls20-9607627b action=300 causal_training=299 survival_training=299 survival_rows=299\n"}
+,{"stream_name":"stdout","time":888.117600087,"data":"[DCIE/SSM] game=wa30-ee6fef47 action=210 causal_training=209 survival_training=209 survival_rows=209\n"}
+,{"stream_name":"stdout","time":897.818590994,"data":"[DCIE/SSM] game=re86-8af5384d action=210 causal_training=209 survival_training=209 survival_rows=209\n"}
+,{"stream_name":"stdout","time":902.909839121,"data":"[DCIE/SSM] game=tu93-0768757b action=300 causal_training=299 survival_training=299 survival_rows=297\n"}
+,{"stream_name":"stdout","time":916.756158273,"data":"[DCIE/SSM] game=tr87-cd924810 action=300 causal_training=299 survival_training=299 survival_rows=299\n"}
+,{"stream_name":"stdout","time":922.651620705,"data":"[DCIE/SSM] game=g50t-5849a774 action=210 causal_training=209 survival_training=209 survival_rows=209\n"}
+,{"stream_name":"stdout","time":923.334824159,"data":"[DCIE/SSM] game=sb26-7fbdac44 action=180 causal_training=179 survival_training=179 survival_rows=179\n"}
+,{"stream_name":"stdout","time":924.716564284,"data":"bp35-0a0ad940 {'levels': 0, 'actions': 179, 'error': None}\n"}
+,{"stream_name":"stdout","time":925.233588225,"data":"ft09-0d8bbf25 {'levels': 0, 'actions': 220, 'error': None}\n"}
+,{"stream_name":"stdout","time":925.335041012,"data":"lp85-305b61c3 {'levels': 1, 'actions': 224, 'error': None}\n"}
+,{"stream_name":"stdout","time":925.530953243,"data":"ar25-0c556536r11l-495a7899 {'levels': 0, 'actions': 225, 'error': None}\n"}
+,{"stream_name":"stdout","time":925.537726266,"data":" {'levels': 0, 'actions': 166, 'error': None}\n"}
+,{"stream_name":"stdout","time":925.868508133,"data":"lf52-271a04aa {'levels': 1, 'actions': 167, 'error': None}\n"}
+,{"stream_name":"stdout","time":926.08717471,"data":"re86-8af5384d {'levels': 0, 'actions': 219, 'error': None}\n"}
+,{"stream_name":"stdout","time":926.152642106,"data":"cn04-2fe56bfb {'levels': 0, 'actions': 170, 'error': None}\n"}
+,{"stream_name":"stdout","time":926.184489591,"data":"s5i5-18d95033 {'levels': 0, 'actions': 228, 'error': None}\n"}
+,{"stream_name":"stdout","time":926.471329162,"data":"vc33-5430563c {'levels': 0, 'actions': 227, 'error': None}\n"}
+,{"stream_name":"stdout","time":926.482648836,"data":"dc22-fdcac232 {'levels': 0, 'actions': 172, 'error': None}\n"}
+,{"stream_name":"stdout","time":926.50073513,"data":"g50t-5849a774 {'levels': 0, 'actions': 212, 'error': None}\n"}
+,{"stream_name":"stdout","time":926.632943946,"data":"sk48-d8078629 {'levels': 0, 'actions': 168, 'error': None}\n"}
+,{"stream_name":"stdout","time":926.673036989,"data":"ls20-9607627b {'levels': 1, 'actions': 318, 'error': None}\n"}
+,{"stream_name":"stdout","time":926.761668605,"data":"tn36-ef4dde99 {'levels': 0, 'actions': 224, 'error': None}\n"}
+,{"stream_name":"stdout","time":926.963070186,"data":"sc25-635fd71a {'levels': 0, 'actions': 172, 'error': None}\n"}
+,{"stream_name":"stdout","time":927.0507928,"data":"tr87-cd924810 {'levels': 0, 'actions': 306, 'error': None}\n"}
+,{"stream_name":"stdout","time":927.116179497,"data":"sb26-7fbdac44 {'levels': 0, 'actions': 182, 'error': None}\n"}
+,{"stream_name":"stdout","time":927.197855847,"data":"wa30-ee6fef47 {'levels': 0, 'actions': 221, 'error': None}\n"}
+,{"stream_name":"stdout","time":927.244109837,"data":"tu93-0768757b {'levels': 0, 'actions': 315, 'error': None}\n"}
+,{"stream_name":"stdout","time":927.244928584,"data":"cd82-fb555c5d {'levels': 0, 'actions': 167, 'error': None}\n"}
+,{"stream_name":"stdout","time":927.29518343,"data":"m0r0-492f87ba {'levels': 0, 'actions': 169, 'error': None}\n"}
+,{"stream_name":"stdout","time":927.345415099,"data":"su15-1944f8ab {'levels': 0, 'actions': 192, 'error': None}\n"}
+,{"stream_name":"stdout","time":927.361634218,"data":"ka59-38d34dbb {'levels': 0, 'actions': 174, 'error': None}\n"}
+,{"stream_name":"stdout","time":927.385840312,"data":"sp80-589a99af {'levels': 0, 'actions': 175, 'error': None}\n"}
+,{"stream_name":"stdout","time":927.389874674,"data":"2026-11-02 16:16:57 | INFO | Closed scorecard: 90c787bf-251f-434d-9c08-4d1148d5baf5\n"}
+,{"stream_name":"stderr","time":927.393806841,"data":"INFO:arc_agi.base:Closed scorecard: 90c787bf-251f-434d-9c08-4d1148d5baf5\n"}
+,{"stream_name":"stderr","time":927.393823793,"data":"\n"}
+,{"stream_name":"stderr","time":927.393828775,"data":"INFO:arc_agi.base:Closed scorecard: 90c787bf-251f-434d-9c08-4d1148d5baf5\n"}
+,{"stream_name":"stdout","time":927.397007824,"data":"*** PUBLIC-25 TOTAL levels: 3 | scorecard score: 0.18596205396926116\n"}
+,{"stream_name":"stderr","time":932.877807921,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":932.877835867,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":933.062843414,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":933.062868824,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":933.925220972,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":934.042132842,"data":"[NbConvertApp] Writing 96233 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":936.559831668,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":937.178106333,"data":"[NbConvertApp] Writing 489235 bytes to __results__.html\n"}
+]

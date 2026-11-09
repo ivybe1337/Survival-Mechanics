@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ARC Prize 2026 Submissions</title>
+<meta name="description" content="The ARC-AGI-2 and ARC-AGI-3 submissions behind Likely and Allowed: every number recomputed live from the published run data and Kaggle records.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f6f2;--bg2:#ecece6;--panel:#ffffffcc;--fg:#15161a;--muted:#5d6068;--faint:#9a9ca3;--rule:#d9d9d2;
+  --eps:#0a8f9e;--kap:#b86a00;--joint:#4b3fd1;--dead:#c2263d;--ok:#1f8a4c;--none:#cfd0c8;
+  --mono:"JetBrains Mono",ui-monospace,monospace;--sans:"Inter Tight",system-ui,sans-serif;--serif:"Newsreader",Georgia,serif}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#07080b;--bg2:#0e1016;--panel:#10131acc;--fg:#ecedf0;--muted:#a2a6b1;--faint:#5f6470;--rule:#232733;--eps:#45e0ee;--kap:#ffb547;--joint:#a99bff;--dead:#ff5c74;--ok:#4fdc8c;--none:#2a2e39}}
+:root[data-theme="dark"]{--bg:#07080b;--bg2:#0e1016;--panel:#10131acc;--fg:#ecedf0;--muted:#a2a6b1;--faint:#5f6470;--rule:#232733;--eps:#45e0ee;--kap:#ffb547;--joint:#a99bff;--dead:#ff5c74;--ok:#4fdc8c;--none:#2a2e39}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;background-image:linear-gradient(var(--rule) 1px,transparent 1px),linear-gradient(90deg,var(--rule) 1px,transparent 1px);background-size:64px 64px;opacity:.28;mask-image:radial-gradient(ellipse at 50% 0%,#000 0%,transparent 70%)}
+a{color:inherit}
+.wrap{position:relative;z-index:1;max-width:1120px;margin:0 auto;padding:0 20px}
+nav.top{position:sticky;top:0;z-index:10;backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 78%,transparent);border-bottom:1px solid var(--rule)}
+nav.top .wrap{display:flex;align-items:center;gap:22px;height:56px}
+nav.top .brand{font-weight:600;text-decoration:none;white-space:nowrap}
+nav.top .links{display:flex;gap:18px;margin-left:auto;font-size:14px;color:var(--muted)} nav.top .links a{text-decoration:none} nav.top .links a:hover{color:var(--fg)}
+#theme{background:none;border:1px solid var(--rule);color:var(--muted);border-radius:8px;padding:4px 8px;font:13px var(--mono);cursor:pointer}
+@media (max-width:640px){nav.top .links .hide-s{display:none}}
+header.hero{padding:80px 0 30px}
+.eyebrow{font:500 12px/1 var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+h1{font:600 clamp(40px,7vw,80px)/.98 var(--sans);letter-spacing:-.035em;margin:18px 0 20px}
+h1 span{color:var(--faint);font-weight:300}
+.lede{font:400 clamp(19px,2.2vw,24px)/1.45 var(--serif);max-width:840px;margin:0}
+section{padding:64px 0;border-top:1px solid var(--rule)}
+h2{font:600 clamp(26px,3.6vw,40px)/1.1 var(--sans);letter-spacing:-.02em;margin:10px 0 12px}
+.sub{font:400 18.5px/1.55 var(--serif);color:var(--muted);max-width:780px;margin:0 0 26px}
+.panel{background:var(--panel);border:1px solid var(--rule);border-radius:18px;padding:22px;backdrop-filter:blur(8px)}
+.panel h3{font:600 15px/1.3 var(--sans);margin:0 0 4px} .hint{font-size:13.5px;color:var(--muted);margin:0 0 14px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px} .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:900px){.grid2,.grid3{grid-template-columns:1fr}}
+.mono{font-family:var(--mono)}
+.score{display:flex;flex-direction:column;gap:6px}
+.score .n{font:600 52px/1 var(--sans);letter-spacing:-.03em}
+.score .lab{font:500 11px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+.score .d{font-size:13.5px;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:14px} th,td{padding:8px 10px;border-bottom:1px solid var(--rule);text-align:left;vertical-align:top}
+th{font:500 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--faint)} td.num,th.num{text-align:right;font-family:var(--mono)}
+.tablewrap{overflow-x:auto}
+.pos{color:var(--ok)} .neg{color:var(--dead)}
+/* funnel */
+.funnel{display:grid;gap:14px}
+.fstep{display:grid;grid-template-columns:220px 1fr 70px;gap:14px;align-items:center;font-size:14.5px}
+@media (max-width:640px){.fstep{grid-template-columns:1fr 60px}.fstep .ft{grid-column:1/-1}}
+.fbar{height:26px;border-radius:6px;background:var(--bg2);border:1px solid var(--rule);overflow:hidden}
+.fbar div{height:100%;border-radius:5px;width:0;transition:width 1s cubic-bezier(.2,.8,.2,1)}
+.eq{font:15px/1.6 var(--mono);margin-top:18px;padding:12px 14px;border:1px dashed var(--rule);border-radius:12px;overflow-x:auto;white-space:nowrap}
+/* explorer */
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:13px;color:var(--muted);margin-bottom:12px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.dots{display:grid;grid-template-columns:repeat(auto-fill,minmax(18px,1fr));gap:4px}
+.dot{aspect-ratio:1;border-radius:4px;cursor:pointer;border:0;padding:0;transition:transform .12s}
+.dot:hover,.dot:focus-visible{transform:scale(1.35);outline:2px solid var(--fg);outline-offset:1px}
+.dot.sel{outline:2px solid var(--joint);outline-offset:2px}
+.dot.win{box-shadow:0 0 0 2px var(--joint),0 0 16px var(--joint)}
+.dot.loss4{box-shadow:inset 0 0 0 2px var(--dead)}
+.detail{font-size:14px} .detail dl{display:grid;grid-template-columns:1fr auto;gap:6px 14px;margin:8px 0 0} .detail dt{color:var(--muted)} .detail dd{margin:0;font-family:var(--mono);text-align:right}
+input[type=search]{background:var(--bg2);color:var(--fg);border:1px solid var(--rule);border-radius:10px;padding:8px 12px;font:14px var(--mono);width:100%;max-width:280px}
+/* ARC grids */
+.taskrow{display:flex;flex-wrap:wrap;gap:22px;align-items:flex-start}
+.pair{display:flex;gap:8px;align-items:center}
+.pair .arrow{color:var(--faint);font-family:var(--mono)}
+.gwrap{display:flex;flex-direction:column;gap:6px;align-items:center;font:11px var(--mono);color:var(--muted)}
+canvas.g{image-rendering:pixelated;border-radius:4px;border:1px solid var(--rule);max-width:100%}
+.prof{font:12px var(--mono);color:var(--muted)}
+/* charts */
+svg{display:block;max-width:100%;height:auto} .axis{stroke:var(--rule)} .tick{fill:var(--faint);font:11px var(--mono)}
+.tip{position:fixed;pointer-events:none;z-index:50;background:var(--fg);color:var(--bg);font:12px var(--mono);padding:6px 9px;border-radius:8px;opacity:0;transition:opacity .1s;max-width:280px}
+/* arc3 heatmap */
+.heat{display:grid;grid-template-columns:120px repeat(3,1fr);gap:4px;font:12px var(--mono);align-items:center}
+.heat .h{color:var(--faint);text-align:center;font-size:11px;letter-spacing:.06em;text-transform:uppercase}
+.heat .c{height:24px;border-radius:5px;background:var(--bg2);border:1px solid var(--rule);display:flex;align-items:center;justify-content:center;color:var(--faint)}
+.heat .c.l1{background:color-mix(in srgb,var(--ok) 35%,var(--bg2));color:var(--fg);border-color:var(--ok)}
+.heat .c.l2{background:color-mix(in srgb,var(--ok) 65%,var(--bg2));color:var(--fg);border-color:var(--ok)}
+.heat .c.err{border-color:var(--dead);color:var(--dead)}
+.files{columns:2;column-gap:28px;font:13px/1.9 var(--mono)} @media (max-width:700px){.files{columns:1}}
+.files a{color:var(--muted)} .files a:hover{color:var(--fg)}
+.note{font-size:13px;color:var(--faint);margin-top:12px}
+footer{padding:48px 0 80px;border-top:1px solid var(--rule);color:var(--muted);font-size:14px}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="tip" id="tip"></div>
+<nav class="top"><div class="wrap">
+  <a class="brand" href="./">Likely <span style="color:var(--faint)">&amp;</span> Allowed</a>
+  <div class="links"><a href="./">Theory</a><a href="#arc2">ARC-AGI-2</a><a href="#arc3">ARC-AGI-3</a><a href="#evidence" class="hide-s">Evidence</a><a href="paper.html" class="hide-s">Paper</a></div>
+  <button id="theme" aria-label="Toggle color theme">◐</button>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div class="eyebrow">ARC Prize 2026 · Joshua Matthew Carter</div>
+  <h1>Likely orders.<br><span>Allowed</span> demotes.</h1>
+  <p class="lede">My ARC-AGI-2 entry puts one rule from the theory inside a real solver: a learned score may only order candidate answers, and only an invariant that holds on every demonstration may push one down. Everything on this page is recomputed in your browser from the published run data and Kaggle's own records, and every file is linked at the bottom.</p>
+  <div class="grid3" style="margin-top:40px" id="scores"></div>
+</div></header>
+
+<section id="arc2"><div class="wrap">
+  <div class="eyebrow">ARC-AGI-2 · official public-evaluation run</div>
+  <h2>Where the accuracy goes</h2>
+  <p class="sub">The generator is the open NVARC pipeline (Qwen3-4B with per-task test-time training), unchanged. Each test output gets a pool of decoded candidates and two attempts. Accuracy factors exactly into two numbers: how often the right answer was generated at all, and how often selection then put it in the top two.</p>
+  <div class="panel">
+    <div class="funnel" id="funnel"></div>
+    <div class="eq" id="eq"></div>
+  </div>
+
+  <div class="panel" style="margin-top:22px">
+    <h3>Selection rules, replayed on identical pools</h3>
+    <p class="hint">Every count is recomputed from the 157 per-output records. The rules were pre-registered before any pool was read. V4 breaks the rule on purpose: it deletes candidates whose likelihood trails the best by more than ln 10.</p>
+    <div class="tablewrap"><table id="rules"></table></div>
+    <p class="note" id="boot"></p>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="eyebrow">Explorer</div>
+  <h2>All 157 test outputs</h2>
+  <p class="sub">One square per test output that received any candidate. Click one to see what happened to it. The glowing square is the layer's entire available gain; the red-rimmed ones are what deleting by likelihood cost.</p>
+  <div class="grid2">
+    <div class="panel">
+      <div class="legend" id="legend"></div>
+      <div class="dots" id="dots" role="grid" aria-label="Test outputs"></div>
+      <div style="margin-top:14px"><input type="search" id="find" placeholder="find task id, e.g. 2b83f449" aria-label="Find a task"></div>
+    </div>
+    <div class="panel detail" id="detail"><h3>Select an output</h3><p class="hint">Status, candidate counts, the truth's rank under each rule, and which invariants fired.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="eyebrow">The one fix · task 2b83f449</div>
+  <h2>13 of 14 candidates broke a law the demonstrations obey</h2>
+  <p class="sub">In every demonstration the output uses exactly the same multiset of colour counts as the input. Most candidates the model proposed for the test did not, so the ledger moved them behind the admissible ones and the true answer rose from third place to first. The grids and colour profiles below are computed live from the public task.</p>
+  <div class="panel"><div id="task" class="taskrow"></div></div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="eyebrow">Mechanism</div>
+  <h2>Local laws are absorbed. Global ones are not.</h2>
+  <div class="grid2">
+    <div class="panel">
+      <h3>Which invariants ever catch a wrong candidate</h3>
+      <p class="hint">An invariant is active on an output only if it holds on every demonstration of that task.</p>
+      <div class="tablewrap"><table id="inv"></table></div>
+      <p class="note">My reading: a generator fitted to the demonstrations learns what a cell-by-cell decoder can enforce, and does not learn global counting, which no single cell can see.</p>
+    </div>
+    <div class="panel">
+      <h3>More sampling raises recall, not accuracy</h3>
+      <p class="hint">Recall and top-2 accuracy as the fraction of decoded runs grows.</p>
+      <div id="rare"></div>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="eyebrow">Noise</div>
+  <h2>The whole leaderboard, and why one task is invisible on it</h2>
+  <p class="sub">Every team's public score from the November 8 snapshot, parsed live. My two identical-code runs differ by 1.66 points, so a one-task effect cannot be read off a single leaderboard comparison.</p>
+  <div class="panel"><div id="lb"></div><div class="grid3" id="lbstats" style="margin-top:16px"></div></div>
+</div></section>
+
+<section id="arc3"><div class="wrap">
+  <div class="eyebrow">ARC-AGI-3</div>
+  <h2>What I submitted, and what the agents did on the public games</h2>
+  <p class="sub">I submitted the wrong notebook to ARC-AGI-3. Submission 57913002 was the agent's foundation and its gateway scaffolding, not a finished agent, and it scored 0.00 on the hidden games. Below are the offline scorecards of three agents run on the 25 public games: 183 levels in total. These are public-game results, not hidden-set scores.</p>
+  <div class="grid3" id="a3cards"></div>
+  <div class="panel" style="margin-top:22px">
+    <h3>Levels completed per public game</h3>
+    <p class="hint">Empty cells mean zero levels. A red cell means the run recorded an error for that game.</p>
+    <div class="heat" id="heat"></div>
+  </div>
+</div></section>
+
+<section id="evidence"><div class="wrap">
+  <div class="eyebrow">Evidence</div>
+  <h2>Every file behind every number</h2>
+  <p class="sub">The Kaggle submission records were pulled with the Kaggle CLI. The run logs are the notebooks' own output. Nothing here is summarized by hand.</p>
+  <div class="panel"><div class="files" id="files"></div></div>
+</div></section>
+
+<footer><div class="wrap">Joshua Matthew Carter · <a href="./">Likely and Allowed</a> · <a href="https://github.com/ivybe1337/survival-mechanics">Repository</a> · Code MIT-0, text CC BY-SA 4.0. The candidate generator is the public NVARC pipeline and is not my work.</div></footer>
+
+<script>
+"use strict";
+const $=id=>document.getElementById(id);
+const D="arc/data/";
+const tip=$("tip");
+const showTip=(e,html)=>{tip.innerHTML=html;tip.style.opacity=1;tip.style.left=Math.min(e.clientX+14,innerWidth-300)+"px";tip.style.top=(e.clientY+14)+"px"};
+const hideTip=()=>tip.style.opacity=0;
+const css=v=>getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+function parseCSV(t){const rows=[];let row=[],f="",q=false;for(let i=0;i<t.length;i++){const c=t[i];if(q){if(c==='"'){if(t[i+1]==='"'){f+='"';i++}else q=false}else f+=c}else if(c==='"')q=true;else if(c===","){row.push(f);f=""}else if(c==="\n"){row.push(f.replace(/\r$/,""));rows.push(row);row=[];f=""}else f+=c}if(f||row.length){row.push(f);rows.push(row)}return rows}
+const fmt=(x,d=1)=>Number(x).toFixed(d);
+
+/* ---------- Kaggle scoreboard ---------- */
+Promise.all([fetch(D+"kaggle_submissions_arc-agi-2.csv").then(r=>r.text()),fetch(D+"kaggle_submissions_arc-agi-3.csv").then(r=>r.text())]).then(([a2,a3])=>{
+  const take=t=>{const r=parseCSV(t.replace(/^﻿/,"")).filter(x=>x.length>5);const h=r[0];return r.slice(1).map(x=>Object.fromEntries(h.map((k,i)=>[k,x[i]])))};
+  const s2=take(a2),s3=take(a3);const fin=s2[0],rep=s2[1],f3=s3[0];
+  $("scores").innerHTML=[
+   [fin.publicScore,"ARC-AGI-2 · final",`Submission ${fin.ref} · ${fin.date.slice(0,10)}. Same code as ${rep.ref}, which scored ${rep.publicScore}.`],
+   [s2.length-1+" runs","ARC-AGI-2 · history",s2.map(x=>`${x.ref}: ${x.publicScore}`).join(" · ")],
+   [f3.publicScore,"ARC-AGI-3 · hidden",`Submission ${f3.ref} · ${f3.date.slice(0,10)}. The wrong notebook; see below.`]
+  ].map(([n,l,d])=>`<div class="panel score"><span class="lab">${l}</span><span class="n">${n}</span><span class="d">${d}</span></div>`).join("");
+});
+
+/* ---------- ARC-AGI-2 analysis ---------- */
+fetch(D+"official_v1_analysis.json").then(r=>r.json()).then(A=>{
+  const R=A.rows,N=R.length,cnt=k=>R.filter(r=>r[k]).length;
+  const inPool=cnt("in_pool"),v0=cnt("V0"),v1=cnt("V1"),v4=cnt("V4"),t1=cnt("top1");
+  // funnel
+  const steps=[["Test outputs with candidates",N,N,"var(--faint)"],["Truth generated somewhere in the pool",inPool,N,"var(--eps)"],["Truth selected in top two · submitted rule V1",v1,N,"var(--joint)"]];
+  $("funnel").innerHTML=steps.map(([t,k,n,c])=>`<div class="fstep"><span class="ft">${t}</span><div class="fbar"><div style="background:${c}" data-w="${100*k/n}"></div></div><span class="mono" style="text-align:right">${k}</span></div>`).join("");
+  requestAnimationFrame(()=>setTimeout(()=>document.querySelectorAll(".fbar div").forEach(d=>d.style.width=d.dataset.w+"%"),80));
+  $("eq").innerHTML=`${v1}/${N} = (${inPool}/${N} generated) × (${v1}/${inPool} selected) &nbsp;·&nbsp; ${fmt(100*v1/N)}% = ${fmt(100*inPool/N)}% × ${fmt(100*v1/inPool)}% &nbsp;·&nbsp; truth never generated: ${N-inPool} outputs`;
+  // rules table
+  const diff=k=>({w:R.filter(r=>r[k]&&!r.V0).length,l:R.filter(r=>!r[k]&&r.V0).length});
+  const rows=[["V0","Baseline: votes minus mean augmentation NLL","V0"],["V1","Ledger demotes inadmissible candidates (submitted)","V1"],["V4","Control: delete by likelihood (breaks the rule)","V4"],["Top-1","Only the first attempt counts","top1"],["Oracle","Truth anywhere in the pool","in_pool"]];
+  $("rules").innerHTML=`<tr><th>Rule</th><th>What it does</th><th class="num">Correct</th><th class="num">%</th><th class="num">vs V0</th></tr>`+rows.map(([n,d,k])=>{const c=cnt(k);const {w,l}=diff(k);const vs=k==="V0"?"":(k==="in_pool"||k==="top1")?`${c-v0>=0?"+":""}${c-v0}`:`<span class="pos">+${w}</span> <span class="neg">−${l}</span>`;return`<tr><td class="mono">${n}</td><td>${d}</td><td class="num">${c}</td><td class="num">${fmt(100*c/N)}</td><td class="num">${vs}</td></tr>`}).join("");
+  const b=A.bootstrap_diff_outputs;$("boot").textContent=`Task-level bootstrap intervals on the difference from V0, in test outputs: V1 [${b.V1.join(", ")}], V4 [${b.V4.join(", ")}]. Neither is significant. V1 wins: ${A.V1_wins.join(", ")||"none"}. V4 losses: ${A.V4_losses.join(", ")}.`;
+  // explorer
+  const cls=r=>r.key===A.V1_wins[0]?"win":(A.V4_losses.includes(r.key)?"loss4":"");
+  const col=r=>!r.in_pool?"var(--none)":(r.V1?"var(--ok)":"var(--kap)");
+  $("legend").innerHTML=[["var(--none)","truth never generated"],["var(--kap)","generated, not selected"],["var(--ok)","generated and selected"]].map(([c,t])=>`<span><i style="background:${c}"></i>${t}</span>`).join("")+`<span><i style="box-shadow:0 0 0 2px var(--joint)"></i>V1 fix</span><span><i style="box-shadow:inset 0 0 0 2px var(--dead)"></i>V4 loss</span>`;
+  const sorted=[...R].sort((a,b)=>(b.in_pool-a.in_pool)||(b.V1-a.V1)||a.key.localeCompare(b.key));
+  $("dots").innerHTML=sorted.map((r,i)=>`<button class="dot ${cls(r)}" style="background:${col(r)}" data-i="${R.indexOf(r)}" aria-label="${r.key}"></button>`).join("");
+  const rk=x=>x===null||x===undefined?"not in pool":"#"+(x+1);
+  const detail=r=>{const reasons=Object.entries(r.reasons||{}).map(([k,v])=>`${k}: ${v}`).join(", ")||"none";
+    $("detail").innerHTML=`<h3 class="mono">${r.key}</h3><p class="hint">${r.in_pool?(r.V1?"The truth was generated and selected.":"The truth was generated but ranked below the two attempts."):"The model never generated the truth, so no selection rule could help."}</p>
+    <dl><dt>Demonstrations</dt><dd>${r.n_demos}</dd><dt>Output cells</dt><dd>${r.out_area}</dd><dt>Distinct candidates</dt><dd>${r.n_cand}</dd><dt>Samples decoded</dt><dd>${r.n_samples}</dd>
+    <dt>Top candidate's vote share</dt><dd>${fmt(100*r.top_vote_share)}%</dd><dt>Truth rank, V0</dt><dd>${rk(r.rank0)}</dd><dt>Truth rank, V1</dt><dd>${rk(r.rank1)}</dd>
+    <dt>Correct under V0 · V1 · V4</dt><dd>${[r.V0,r.V1,r.V4].map(x=>x?'<span class="pos">✓</span>':'<span class="neg">·</span>').join(" ")}</dd>
+    <dt>Candidates demoted by the ledger</dt><dd>${r.nexc}</dd><dt>Invariants that fired</dt><dd>${reasons}</dd><dt>Truth admitted by every active invariant</dt><dd>${r.truth_admitted?"yes":"no"}</dd></dl>`;
+    document.querySelectorAll(".dot.sel").forEach(d=>d.classList.remove("sel"));const el=document.querySelector(`.dot[data-i="${R.indexOf(r)}"]`);el&&el.classList.add("sel")};
+  $("dots").addEventListener("click",e=>{const d=e.target.closest(".dot");if(d)detail(R[+d.dataset.i])});
+  $("dots").addEventListener("mousemove",e=>{const d=e.target.closest(".dot");if(!d)return hideTip();const r=R[+d.dataset.i];showTip(e,`${r.key}<br>${r.in_pool?"truth in pool":"truth not generated"} · ${r.n_cand} candidates · V1 ${r.V1?"✓":"✗"}`)});
+  $("dots").addEventListener("mouseleave",hideTip);
+  $("find").addEventListener("input",e=>{const q=e.target.value.trim().toLowerCase();if(q.length<3)return;const r=R.find(x=>x.key.startsWith(q));if(r)detail(r)});
+  detail(R.find(r=>r.key===A.V1_wins[0]));
+  // invariants
+  const L=A.ledger;
+  fetch(D+"invariant_activity.json").then(r=>r.json()).then(I=>{
+    const name={shape:"Output shape",palette:"Palette",count:"Exact colour count",profile:"Sorted colour profile"};
+    $("inv").innerHTML=`<tr><th>Invariant</th><th class="num">Outputs active</th><th class="num">Wrong candidates violating</th></tr>`+Object.keys(name).map(k=>`<tr><td>${name[k]}</td><td class="num">${I[k].outputs_active}</td><td class="num">${I[k].wrong_violating} of ${I[k].wrong_candidates.toLocaleString()}</td></tr>`).join("")+`<tr><td colspan="3" class="note" style="border:0">Wrong candidates that pass every active invariant: ${L.wrong_candidates_admissible} of ${L.wrong_candidates} (${(Math.round(L.wrong_admissible_rate*1000)/10).toFixed(1)}%). Among these outputs the ledger excluded the truth on ${L.truth_excluded.map(x=>x[0]).join(", ")}, at no cost: the model never generated the truth there.</td></tr>`;
+  }).catch(()=>{});
+  // rarefaction chart
+  const rf=Object.entries(A.rarefaction).map(([f,v])=>({f:+f,r:v.recall,t:v.top2}));
+  lineChart($("rare"),rf,[["r","Recall","var(--eps)"],["t","Top-2 accuracy","var(--joint)"]],"fraction of decoded runs");
+});
+
+/* ---------- small charts ---------- */
+function lineChart(el,data,series,xlab){
+  const W=520,H=260,P={l:44,r:16,t:16,b:40},xs=x=>P.l+(x-0.1)/(0.9)*(W-P.l-P.r),ys=y=>H-P.b-(y-0.15)/(0.25)*(H-P.t-P.b);
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Recall and accuracy versus fraction of runs">`;
+  for(const y of[0.15,0.2,0.25,0.3,0.35,0.4])s+=`<line class="axis" x1="${P.l}" x2="${W-P.r}" y1="${ys(y)}" y2="${ys(y)}"/><text class="tick" x="${P.l-8}" y="${ys(y)+4}" text-anchor="end">${Math.round(y*100)}%</text>`;
+  for(const d of data)s+=`<text class="tick" x="${xs(d.f)}" y="${H-P.b+18}" text-anchor="middle">${d.f}</text>`;
+  s+=`<text class="tick" x="${(W+P.l)/2}" y="${H-6}" text-anchor="middle">${xlab}</text>`;
+  for(const [k,lab,c] of series){s+=`<polyline fill="none" stroke="${c}" stroke-width="2" points="${data.map(d=>xs(d.f)+","+ys(d[k])).join(" ")}"/>`;
+    for(const d of data)s+=`<circle cx="${xs(d.f)}" cy="${ys(d[k])}" r="5" fill="${c}" stroke="var(--bg)" stroke-width="2" data-t="${lab} at ${d.f}: ${fmt(100*d[k])}%"/>`;
+    const last=data[data.length-1];s+=`<text x="${xs(last.f)-6}" y="${ys(last[k])-10}" text-anchor="end" style="fill:var(--muted);font:12px var(--sans)">${lab} ${fmt(100*last[k])}%</text>`}
+  el.innerHTML=s+"</svg>";
+  el.querySelectorAll("circle").forEach(c=>{c.addEventListener("mousemove",e=>showTip(e,c.dataset.t));c.addEventListener("mouseleave",hideTip)});
+}
+
+/* ---------- task 2b83f449 ---------- */
+const PAL=["#000000","#0074D9","#FF4136","#2ECC40","#FFDC00","#AAAAAA","#F012BE","#FF851B","#7FDBFF","#870C25"];
+function grid(g,label){const h=g.length,w=g[0].length,s=Math.max(4,Math.floor(150/Math.max(h,w)));const c=document.createElement("canvas");c.width=w*s;c.height=h*s;c.className="g";const x=c.getContext("2d");g.forEach((row,i)=>row.forEach((v,j)=>{x.fillStyle=PAL[v];x.fillRect(j*s,i*s,s-(s>5?1:0),s-(s>5?1:0))}));const wrap=document.createElement("div");wrap.className="gwrap";wrap.appendChild(c);const l=document.createElement("span");l.textContent=label;wrap.appendChild(l);return wrap}
+const profile=g=>{const m=new Array(10).fill(0);g.flat().forEach(v=>m[v]++);return m.filter(x=>x).sort((a,b)=>b-a)};
+fetch(D+"task_2b83f449.json").then(r=>r.json()).then(T=>{
+  const box=$("task");const add=(i,o,tag)=>{const p=document.createElement("div");p.className="pair";p.appendChild(grid(i,tag+" input"));const a=document.createElement("span");a.className="arrow";a.textContent="→";p.appendChild(a);p.appendChild(grid(o,tag+" output"));const pi=profile(i).join(","),po=profile(o).join(",");const pr=document.createElement("div");pr.className="prof";pr.innerHTML=`profile in&nbsp;&nbsp;[${pi}]<br>profile out [${po}] ${pi===po?'<span class="pos">equal ✓</span>':'<span class="neg">differs</span>'}`;const col=document.createElement("div");col.style.display="grid";col.style.gap="8px";col.appendChild(p);col.appendChild(pr);box.appendChild(col)};
+  T.train.forEach((x,i)=>add(x.input,x.output,"demo "+(i+1)));add(T.test_input,T.test_output,"test (truth)");
+  const n=document.createElement("p");n.className="note";n.style.width="100%";n.textContent="Sorted colour profile: the multiset of colour counts, ignoring which colour is which. It holds on every demonstration, so the ledger declares it for the test. The run log records 14 distinct candidates for this output, 13 of them violating the profile, and the truth moving from rank 3 under V0 to rank 1 under V1.";box.appendChild(n);
+});
+
+/* ---------- leaderboard ---------- */
+fetch(D+"public_leaderboard_2026-11-08.csv").then(r=>r.text()).then(t=>{
+  const rows=parseCSV(t.replace(/^﻿/,"")).filter(r=>r.length>=6);const h=rows[0];const iS=h.indexOf("Score"),iC=h.indexOf("SubmissionCount");
+  const teams=rows.slice(1).map(r=>({s:+r[iS],c:+r[iC]})).filter(x=>!isNaN(x.s));
+  const bins=new Array(45).fill(0);teams.forEach(x=>{bins[Math.min(44,Math.floor(x.s/2))]++});
+  const W=1000,H=280,P={l:50,r:16,t:20,b:40},mx=Math.max(...bins),bw=(W-P.l-P.r)/bins.length,xs=v=>P.l+v/90*(W-P.l-P.r),ys=v=>H-P.b-v/mx*(H-P.t-P.b);
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Histogram of public leaderboard scores">`;
+  for(const y of[0,250,500,750,1000].filter(y=>y<=mx*1.05))s+=`<line class="axis" x1="${P.l}" x2="${W-P.r}" y1="${ys(y)}" y2="${ys(y)}"/><text class="tick" x="${P.l-8}" y="${ys(y)+4}" text-anchor="end">${y}</text>`;
+  bins.forEach((b,i)=>{if(!b)return;s+=`<rect x="${P.l+i*bw+1}" y="${ys(b)}" width="${bw-2}" height="${H-P.b-ys(b)}" rx="3" fill="var(--faint)" opacity=".55" data-t="score ${i*2}–${i*2+2}: ${b} teams"/>`});
+  for(const v of[0,10,20,30,40,50,60,70,80,90])s+=`<text class="tick" x="${xs(v)}" y="${H-P.b+18}" text-anchor="middle">${v}</text>`;
+  s+=`<text class="tick" x="${(W+P.l)/2}" y="${H-6}" text-anchor="middle">public score</text>`;
+  for(const [v,l] of[[28.06,"28.06"],[29.72,"29.72"]])s+=`<line x1="${xs(v)}" x2="${xs(v)}" y1="${P.t}" y2="${H-P.b}" stroke="var(--joint)" stroke-width="2"/><text x="${xs(v)+(v>29?6:-6)}" y="${P.t+12}" text-anchor="${v>29?"start":"end"}" style="fill:var(--joint);font:600 12px var(--mono)">${l}</text>`;
+  $("lb").innerHTML=s+"</svg>";$("lb").querySelectorAll("rect").forEach(r=>{r.addEventListener("mousemove",e=>showTip(e,r.dataset.t));r.addEventListener("mouseleave",hideTip)});
+  const band=teams.filter(x=>x.s>=25&&x.s<=35),few=band.filter(x=>x.c<=2),many=band.filter(x=>x.c>=10);
+  const mean=a=>a.reduce((p,x)=>p+x.s,0)/a.length,sd=a=>{const m=mean(a);return Math.sqrt(a.reduce((p,x)=>p+(x.s-m)**2,0)/(a.length-1))};
+  const top=Math.max(...teams.map(x=>x.s));
+  $("lbstats").innerHTML=[[`${teams.length}`,"teams on the board",`top score ${top}`],[`${fmt(mean(few),2)} ± ${fmt(sd(few),2)}`,"band 25–35, ≤ 2 submissions",`${few.length} teams; 29.72 sits at z = ${fmt((29.72-mean(few))/sd(few),2)}`],[`${fmt(mean(many),2)}`,"band 25–35, ≥ 10 submissions",`${many.length} teams: the band rises with re-rolls`]].map(([n,l,d])=>`<div class="score"><span class="lab">${l}</span><span class="n" style="font-size:30px">${n}</span><span class="d">${d}</span></div>`).join("");
+});
+
+/* ---------- ARC-AGI-3 ---------- */
+Promise.all(["dcie","janus","fate3"].map(k=>fetch(D+`arc3_public25_${k}.json`).then(r=>r.json()))).then(([dc,ja,f3])=>{
+  const agents=[
+    {name:"DCIE · SSM",per:dc.per_game,card:dc.scorecard,run:"dcie-ssm-arc3-eval"},
+    {name:"JANUS · J only",per:ja.J_only.per_game,card:{score:ja.J_only.score,total_levels_completed:ja.J_only.total_levels,total_levels:183},run:"janus-ssm-arc3"},
+    {name:"FATE3 · EGRWI",per:f3.per_game,card:f3.official_offline_scorecard,run:"fate3-egrwi-public25-rtx6000-research"}];
+  $("a3cards").innerHTML=agents.map(a=>{const lv=Object.values(a.per).reduce((p,g)=>p+(g.levels||0),0);const act=Object.values(a.per).reduce((p,g)=>p+(g.actions||0),0);return`<div class="panel score"><span class="lab">${a.name}</span><span class="n">${lv}<span style="font-size:20px;color:var(--faint)"> / 183 levels</span></span><span class="d">Offline scorecard score ${fmt(a.card.score,3)} · ${act.toLocaleString()} actions · ${a.card.total_environments_completed??"—"} of 25 games completed · <a href="${D}logs/${a.run}.log">log</a></span></div>`}).join("");
+  const games=[...new Set(agents.flatMap(a=>Object.keys(a.per)))].sort();
+  let h=`<div></div>`+agents.map(a=>`<div class="h">${a.name}</div>`).join("");
+  for(const g of games){h+=`<div>${g.split("-")[0]}</div>`;for(const a of agents){const x=a.per[g]||{};const lv=x.levels||0;const err=x.error;h+=`<div class="c ${err?"err":lv>=2?"l2":lv===1?"l1":""}" title="${a.name} · ${g}: ${lv} levels, ${x.actions??"?"} actions${err?" · error: "+String(err).slice(0,80):""}">${err?"err":lv||""}</div>`}}
+  $("heat").innerHTML=h;
+});
+
+/* ---------- evidence list ---------- */
+const FILES=[["kaggle_submissions_arc-agi-2.csv","Kaggle CLI: ARC-AGI-2 submissions"],["kaggle_submissions_arc-agi-3.csv","Kaggle CLI: ARC-AGI-3 submissions"],["official_v1_analysis.json","Per-output analysis, official public-eval run"],["official_v1_analysis.txt","Same, readable summary"],["invariant_activity.json","Invariant activity"],["leaderboard_analysis.json","Leaderboard analysis"],["public_leaderboard_2026-11-08.csv","Public leaderboard snapshot"],["task_2b83f449.json","Public task 2b83f449"],["arc3_public25_dcie.json","ARC-3 public games: DCIE"],["arc3_public25_janus.json","ARC-3 public games: JANUS"],["arc3_public25_fate3.json","ARC-3 public games: FATE3"],["logs/fate-ssm-final.log","Run log: fate-ssm-final"],["logs/ssm-farseer-arc3-official-gateway-runner.log","Run log: ARC-3 submitted notebook"],["logs/dcie-ssm-arc3-eval.log","Run log: DCIE"],["logs/janus-ssm-arc3.log","Run log: JANUS"],["logs/ssm-farseer-v3-arc3.log","Run log: FARSEER v3"],["logs/fate3-egrwi-public25-rtx6000-research.log","Run log: FATE3"]];
+$("files").innerHTML=FILES.map(([f,l])=>`<div><a href="${D}${f}">${l}</a></div>`).join("");
+
+/* ---------- theme ---------- */
+$("theme").onclick=()=>{const r=document.documentElement,cur=r.dataset.theme||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");r.dataset.theme=cur==="dark"?"light":"dark";try{localStorage.setItem("theme",r.dataset.theme)}catch(_){}};
+try{const s=localStorage.getItem("theme");if(s)document.documentElement.dataset.theme=s}catch(_){}
+</script>
+</body>
+</html>

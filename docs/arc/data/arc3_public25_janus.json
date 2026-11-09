@@ -1,0 +1,184 @@
+{
+ "J_only": {
+  "per_game": {
+   "cd82-fb555c5d": {
+    "levels": 0,
+    "actions": 500,
+    "llm_calls": 0,
+    "llm_plans_adopted": 0,
+    "error": null
+   },
+   "cn04-2fe56bfb": {
+    "levels": 0,
+    "actions": 500,
+    "llm_calls": 0,
+    "llm_plans_adopted": 0,
+    "error": null
+   },
+   "ar25-0c556536": {
+    "levels": 0,
+    "actions": 500,
+    "llm_calls": 0,
+    "llm_plans_adopted": 0,
+    "error": null
+   },
+   "ft09-0d8bbf25": {
+    "levels": 0,
+    "actions": 500,
+    "llm_calls": 0,
+    "llm_plans_adopted": 0,
+    "error": null
+   },
+   "bp35-0a0ad940": {
+    "levels": 0,
+    "actions": 500,
+    "llm_calls": 0,
+    "llm_plans_adopted": 0,
+    "error": null
+   },
+   "dc22-fdcac232": {
+    "levels": 0,
+    "actions": 500,
+    "llm_calls": 0,
+    "llm_plans_adopted": 0,
+    "error": null
+   },
+   "lp85-305b61c3": {
+    "levels": 1,
+    "actions": 500,
+    "llm_calls": 0,
+    "llm_plans_adopted": 0,
+    "error": null
+   },
+   "ka59-38d34dbb": {
+    "levels": 0,
+    "actions": 500,
+    "llm_calls": 0,
+    "llm_plans_adopted": 0,
+    "error": null
+   },
+   "g50t-5849a774": {
+    "levels": 0,
+    "actions": 500,
+    "llm_calls": 0,
+    "llm_plans_adopted": 0,
+    "error": null
+   },
+   "ls20-9607627b": {
+    "levels": 1,
+    "actions": 500,
+    "llm_calls": 0,
+    "llm_plans_adopted": 0,
+    "error": null
+   },
+   "m0r0-492f87ba": {
+    "levels": 0,
+    "actions": 500,
+    "llm_calls": 0,
+    "llm_plans_adopted": 0,
+    "error": null
+   },
+   "s5i5-18d95033": {
+    "levels": 0,
+    "actions": 500,
+    "llm_calls": 0,
+    "llm_plans_adopted": 0,
+    "error": null
+   },
+   "r11l-495a7899": {
+    "levels": 1,
+    "actions": 500,
+    "llm_calls": 0,
+    "llm_plans_adopted": 0,
+    "error": null
+   },
+   "re86-8af5384d": {
+    "levels": 0,
+    "actions": 500,
+    "llm_calls": 0,
+    "llm_plans_adopted": 0,
+    "error": null
+   },
+   "lf52-271a04aa": {
+    "levels": 0,
+    "actions": 500,
+    "llm_calls": 0,
+    "llm_plans_adopted": 0,
+    "error": null
+   },
+   "sc25-635fd71a": {
+    "levels": 0,
+    "actions": 500,
+    "llm_calls": 0,
+    "llm_plans_adopted": 0,
+    "error": null
+   },
+   "sk48-d8078629": {
+    "levels": 0,
+    "actions": 500,
+    "llm_calls": 0,
+    "llm_plans_adopted": 0,
+    "error": null
+   },
+   "sp80-589a99af": {
+    "levels": 0,
+    "actions": 500,
+    "llm_calls": 0,
+    "llm_plans_adopted": 0,
+    "error": null
+   },
+   "tr87-cd924810": {
+    "levels": 0,
+    "actions": 500,
+    "llm_calls": 0,
+    "llm_plans_adopted": 0,
+    "error": null
+   },
+   "su15-1944f8ab": {
+    "levels": 0,
+    "actions": 500,
+    "llm_calls": 0,
+    "llm_plans_adopted": 0,
+    "error": null
+   },
+   "tn36-ef4dde99": {
+    "levels": 1,
+    "actions": 500,
+    "llm_calls": 0,
+    "llm_plans_adopted": 0,
+    "error": null
+   },
+   "sb26-7fbdac44": {
+    "levels": 0,
+    "actions": 500,
+    "llm_calls": 0,
+    "llm_plans_adopted": 0,
+    "error": null
+   },
+   "tu93-0768757b": {
+    "levels": 2,
+    "actions": 500,
+    "llm_calls": 0,
+    "llm_plans_adopted": 0,
+    "error": null
+   },
+   "vc33-5430563c": {
+    "levels": 1,
+    "actions": 500,
+    "llm_calls": 0,
+    "llm_plans_adopted": 0,
+    "error": null
+   },
+   "wa30-ee6fef47": {
+    "levels": 0,
+    "actions": 500,
+    "llm_calls": 0,
+    "llm_plans_adopted": 0,
+    "error": null
+   }
+  },
+  "total_levels": 7,
+  "seconds": 196,
+  "score": 0.14580593675640452
+ }
+}
