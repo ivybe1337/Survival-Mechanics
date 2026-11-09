@@ -44,7 +44,7 @@ The full report on every submission built on this work, ARC-AGI-2 and ARC-AGI-3,
 
 ## Linked code submission
 
-My ARC Prize 2026 entry for the ARC-AGI-2 track is the Kaggle notebook `netphantom17/fate-ssm-final` (submission 57677356). The paper says what it does and does not show, and gives a legend from the notebook's terms to the paper's.
+My final ARC Prize 2026 ARC-AGI-2 entry is Kaggle notebook `netphantom17/fate-ssm-final`, **submission 57913192** (public score **29.72**). Earlier run **57677356** scored **28.06**. FATE V1 is the admissibility-aware candidate-selection layer built over the public NVARC pipeline; the generator and its pretrained model are third-party work. The [full ARC Prize report](reports/ARC_PRIZE_2026_REPORT.md) documents the evaluations, limits, attribution, and separate ARC-AGI-3 results. The accompanying paper studies the mathematics of predictive and residual admissibility states and does not claim that these submissions prove its theorems.
 
 ## Citation
 
