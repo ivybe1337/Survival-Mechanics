@@ -7,7 +7,7 @@ date: "November 2026"
 
 ## Abstract
 
-I entered both ARC Prize 2026 code tracks with systems built on one idea from my theory: what a model finds likely and what the task allows are different states, and they should be allowed to do different things. A learned score may order candidates. Only evidence that a candidate breaks a law of the task may push it down. On ARC-AGI-2 I added a pre-registered selection layer to the open NVARC pipeline. My final submission, 57913192, scored 29.72 on the public leaderboard, and a same-code replicate, 57677356, scored 28.06. Replayed on the identical candidate pools of the official public-evaluation run, the layer gains one test output of 157 and loses none, while a control that deletes by likelihood loses two. I show exactly why one is the right size: the truth is never generated for 103 of 157 outputs, the generator already respects every local law, and the global laws that catch wrong answers can be declared on only 12 outputs. On ARC-AGI-3 my hidden-set submission, 57913002, scored 0.00. The same code, run on the 25 public games under the official offline scorecard, completed 3 of 183 levels. None of these is a strong score, and I claim none as one. What I claim is an exact accounting of where accuracy goes in a generate-then-select system, a selection rule that held under a deliberate violation, and the evidence for every number, published with this report.
+I entered both ARC Prize 2026 code tracks with systems built on one idea from my theory: what a model finds likely and what the task allows are different states, and they should be allowed to do different things. A learned score may order candidates. Only evidence that a candidate breaks a law of the task may push it down. On ARC-AGI-2 I added a pre-registered selection layer to the open NVARC pipeline. My final submission, 57677356, scored 28.06 on the public leaderboard, and a later rerun of identical code, 57913192, scored 29.72. Replayed on the identical candidate pools of the official public-evaluation run, the layer gains one test output of 157 and loses none, while a control that deletes by likelihood loses two. I show exactly why one is the right size: the truth is never generated for 103 of 157 outputs, the generator already respects every local law, and the global laws that catch wrong answers can be declared on only 12 outputs. On ARC-AGI-3 my hidden-set submission, 57913002, scored 0.00. The same code, run on the 25 public games under the official offline scorecard, completed 3 of 183 levels. None of these is a strong score, and I claim none as one. What I claim is an exact accounting of where accuracy goes in a generate-then-select system, a selection rule that held under a deliberate violation, and the evidence for every number, published with this report.
 
 ## 1. Introduction
 
@@ -21,8 +21,8 @@ All numbers below come from files published alongside this report: Kaggle's own 
 
 | Track | Submission | Date | Public score | What it is |
 |---|---|---|---|---|
-| ARC-AGI-2 | 57913192 | Nov 2, 2026 | **29.72** | Final: V1 admissibility selection over open NVARC |
-| ARC-AGI-2 | 57677356 | Oct 26, 2026 | 28.06 | Same code, earlier run |
+| ARC-AGI-2 | 57913192 | Nov 2, 2026 | 29.72 | Same code, later rerun |
+| ARC-AGI-2 | 57677356 | Oct 26, 2026 | **28.06** | Linked submission: V1 admissibility selection over open NVARC; full run analysed |
 | ARC-AGI-2 | 56404958 | Sep 20, 2026 | 0.00 | FARSEER exact-program searcher, pipeline validation |
 | ARC-AGI-3 | 57913002 | Nov 2, 2026 | **0.00** | DCIE agent through the official gateway |
 
