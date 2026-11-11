@@ -7,7 +7,7 @@ date: "November 2026"
 
 ## Abstract
 
-I entered both ARC Prize 2026 code tracks with systems built on one idea from my theory: what a model finds likely and what the task allows are different states, and they should be allowed to do different things. A learned score may order candidates. Only evidence that a candidate breaks a law of the task may push it down. On ARC-AGI-2 I added a pre-registered selection layer to the open NVARC pipeline. My linked submission, 57677356, scored 28.06 on the public leaderboard, and a later rerun of identical code, 57913192, scored 29.72. Replayed on the identical candidate pools of the official public-evaluation run, the layer gains one test output of 157 and loses none, while a control that deletes by likelihood loses two. I show exactly why one is the right size: the truth is never generated for 103 of 157 outputs, the generator already respects every local law, and the global laws that catch wrong answers can be declared on only 12 outputs. On ARC-AGI-3 my hidden-set submission, 57913002, scored 0.00. The same code, run on the 25 public games under the official offline scorecard, completed 3 of 183 levels. None of these is a strong score, and I claim none as one. What I claim is an exact accounting of where accuracy goes in a generate-then-select system, a selection rule that held under a deliberate violation, and the evidence for every number, published with this report.
+I entered both ARC Prize 2026 code tracks with systems built on one idea from my theory: what a model finds likely and what the task allows are different states, and they should be allowed to do different things. A learned score may order candidates. Only evidence that a candidate breaks a law of the task may push it down. On ARC-AGI-2 I added a pre-registered selection layer to the open NVARC pipeline. My linked submission, 57677356, scored 28.06 on the public leaderboard, and a later rerun of identical code, 57913192, scored 29.72. Replayed on the identical candidate pools of the official public-evaluation run, the layer gains one test output of 157 and loses none, while a control that deletes by likelihood loses two. I show exactly why one is the right size: the truth is never generated for 103 of 157 outputs, the generator already respects every local law, and the global laws that catch wrong answers can be declared on only 12 outputs. On ARC-AGI-3 my hidden-set submission, 57913002, scored 0.00. The same code, run on the 25 public games under the official offline scorecard, completed 3 of 183 levels. None of these is a strong score, and I claim none as one. What I claim is an exact accounting of where accuracy goes in a generate-then-select system, a selection layer that lost nothing while a deliberate violation lost two answers (neither difference significant), and the evidence for every number, published with this report.
 
 ## 1. Introduction
 
@@ -57,7 +57,7 @@ Candidates that break an active invariant move behind every admissible candidate
 
 **Control, V4.** V4 deletes every candidate whose likelihood trails the best by more than ln 10. It breaks the rule on purpose, so the rule can be tested.
 
-**Safety.** Any error in the layer falls back to the pipeline's own order for that task, and a CPU path fills tasks the 12-hour budget never reaches.
+**Safety.** Any error in the layer falls back to the pipeline's own order for that task, and a CPU path fills any test output that received no candidate.
 
 **Pre-registration.** I wrote seven predictions before any pool or precision result was read. I report only paired differences between rules on identical pools, because the public checkpoint may have seen public-evaluation tasks during training.
 
@@ -75,7 +75,7 @@ ARC-AGI-3 is interactive: an agent plays games it has never seen, through action
 
 ### 5.1 ARC-AGI-2: the official public-evaluation run
 
-The official commit run covered all 120 public-evaluation tasks: 172 test outputs, 157 of which received at least one candidate. Five tasks were not reached in that run.
+The official commit run covered all 120 public-evaluation tasks: 172 test outputs, 157 of which received at least one candidate. Every task finished; 15 test outputs yielded no grid, leaving 157 pools.
 
 | Rule | Top-2 correct of 157 | Change from V0 |
 |---|---|---|
@@ -128,7 +128,7 @@ $$\frac{44}{172} \;=\; \underbrace{\frac{157}{172}}_{\text{received a pool}} \ti
 
 A demotion rule can win an output only when the truth was generated, sits below the two answer slots, and enough candidates above it break a law. It can lose one only when the truth itself breaks a law and was already in the top two. Eleven outputs had the truth in the pool but outside the top two. Exactly one of them had an inadmissible candidate ahead of the truth, and V1 fixed it. In task `2b83f449`, 13 of the 14 distinct candidates broke the colour profile that every demonstration obeys, and the truth rose from third place to first. That was the layer's entire available gain, and it took it.
 
-The layer is safe. Among the 157 outputs, the ledger excluded the truth once, on `a25697e4_0`, and it cost nothing because the model had never generated the truth there.
+The layer was safe here. The ledger excluded the truth on 2 of 172 outputs, `a25697e4_0` and `581f7754_0`, at no cost: the truth was not generated there.
 
 ### 6.3 Local laws are absorbed; global laws are not
 
@@ -139,9 +139,9 @@ The layer is safe. Among the 157 outputs, the ledger excluded the truth once, on
 | Exact colour count | 9 | 48 of 74 |
 | Sorted colour profile | 3 | 22 of 22 |
 
-Across all pools, 1,084 of 1,155 wrong candidates (93.9%) pass every active invariant. The table shows the mechanism. Wrong candidates essentially never break shape or palette, because a generator fitted to the demonstrations learns what a cell-by-cell decoder can enforce. They break global counting laws often, because no single cell can see a count. My reading is that the binding limit on this residual state is how seldom a global law can be declared, not how well it discriminates: the strong invariants were declarable on only 12 of 157 outputs, and only one of those held a fixable ranking error. This matches the theory's prediction that the two states carry different information, here measured as a split between laws the predictor already absorbs and laws it cannot.
+Across all pools, 1,084 of 1,155 wrong candidates (93.9%) pass every active invariant. The table shows the mechanism. Wrong candidates essentially never break shape or palette, because a generator fitted to the demonstrations learns what a cell-by-cell decoder can enforce. They break global counting laws often, because no single cell can see a count. My reading is that the binding limit on this residual state is how seldom a global law can be declared, not how well it discriminates: the strong invariants were declarable on only 12 of 157 outputs, and only one of those held a fixable ranking error. Small and clustered: 13 of the 22 profile violations come from one output. The independence theorem of [6] concerns exact objects, and this run does not test it.
 
-Finer laws fail differently. Forcing each cell from its 3×3 input neighbourhood is violated by the truth on 74% of applicable outputs and by the wrong top candidate on 68%, so it can neither delete safely nor discriminate.
+Finer laws fail differently (exploratory). Forcing each cell from its 3×3 input neighbourhood is violated by the truth on 74% of applicable outputs and by the wrong top candidate on 68%, so it can neither delete safely nor discriminate.
 
 ### 6.4 FATE certified nothing on the evaluation set
 
@@ -161,11 +161,11 @@ Both of V4's losses, `4c3d4a41_1` and `b6f77b65_2`, are correct answers in secon
 | 0.75 | 32.9% | 27.4% | 6.43 |
 | 1.00 | 34.4% | 27.4% | 7.70 |
 
-From half the runs to all of them, recall rises 3.5 points and top-2 accuracy only 0.8. The extra truths arrive with few votes, and selection cannot promote them. The run used 5.4 of its 12 hours (`official_v1_task_times.json`).
+From half the runs to all of them, recall rises 3.5 points and top-2 accuracy only 0.8. Missed truths hold a median of 2 votes (10.5% of samples) and selected truths 8 (37.5%), consistent with late arrivals staying below slot 2. A truth enters the pool only if some view gives the whole grid over 20%; lowering that threshold is untested. The run used 5.4 of its 12 hours (`official_v1_task_times.json`).
 
 ### 6.7 Noise
 
-My two identical-code runs differ by 1.66 points. Among teams scoring 25 to 35 with at most two submissions, the mean is 29.48 with standard deviation 1.40, so 28.06 sits at z = −1.01. Teams in the same band with ten or more submissions average 31.31, consistent with re-rolling. To detect a one-task effect (0.83 points) at a two-sided 5% level with 80% power takes $n = 2(1.96+0.84)^2\sigma^2/\delta^2$ runs per arm, which is 31 with σ = 1.17 from my pair and 44 with σ = 1.40 from the band. A paired replay on fixed pools costs one run.  Source: `public_leaderboard_2026-11-08.csv`.
+My two identical-code runs differ by 1.66 points. Among teams scoring 25 to 35 with at most two submissions, the mean is 29.48 with standard deviation 1.40, so 28.06 sits at z = −1.01. Teams in the same band with ten or more submissions average 31.31, consistent with re-rolling. To detect a one-task effect (0.83 points) at a two-sided 5% level with 80% power takes $n = 2(1.96+0.84)^2\sigma^2/\delta^2$ runs per arm, which is 31 with σ = 1.17 from my pair and 44 with σ = 1.40 from the band. A paired replay on fixed pools costs one run. Source: `public_leaderboard_2026-11-08.csv`.
 
 ## 7. What carries beyond ARC
 
@@ -175,7 +175,7 @@ The rule itself carries further. Letting likelihood order and only declared laws
 
 ## 8. Reproducibility and evidence
 
-Everything referenced here is in this repository under `docs/arc/data/`, and the interactive version at `arc.html` recomputes the main numbers in the browser from the same files.
+Everything referenced here is in this repository under `docs/arc/data/`, and the interactive version at `arc.html` draws its charts and tables in the browser from the same files.
 
 | File | What it holds |
 |---|---|
@@ -187,11 +187,11 @@ Everything referenced here is in this repository under `docs/arc/data/`, and the
 | `arc3_public25_dcie.json`, `arc3_public25_fate3.json` | Offline scorecards on the 25 public ARC-AGI-3 games |
 | `logs/*.log` | Run logs of every notebook named in this report |
 
-The notebooks are on Kaggle under `netphantom17`: `fate-ssm-final` (ARC-AGI-2), `ssm-farseer-arc3-official-gateway-runner` (the ARC-AGI-3 submission), `dcie-ssm-arc3-eval`, `ssm-farseer-v3-arc3` and `fate3-egrwi-public25-rtx6000-research`. My code is released under MIT-0 and this text under CC BY-SA 4.0. The generator, the ARC-AGI-3 framework and the model weights belong to their authors and keep their own licences.
+The notebooks are on Kaggle under `netphantom17`: `fate-ssm-final` (ARC-AGI-2), `ssm-farseer-arc3-official-gateway-runner` (the ARC-AGI-3 submission), `dcie-ssm-arc3-eval`, `ssm-farseer-v3-arc3` and `fate3-egrwi-public25-rtx6000-research`. The ARC submission code and this report are released under CC BY 4.0, as the ARC Prize rules require; the code is in the public repositories [FATE-ARC-AGI-2](https://github.com/ivybe1337/FATE-ARC-AGI-2) and [DCIE-ARC-AGI-3](https://github.com/ivybe1337/DCIE-ARC-AGI-3). The theory paper is CC BY-SA 4.0 and its proof code MIT-0. The generator, the ARC-AGI-3 framework and the model weights belong to their authors and keep their own licences.
 
 ## 9. Conclusion
 
-Keeping what is likely separate from what is allowed was safe in a real solver, and the rule held when I broke it on purpose. It did not measurably raise accuracy, and I can say exactly why: the right answer is usually never generated, the generator already respects every local law, and the global laws that do separate right from wrong can rarely be declared. On ARC-AGI-3 I submitted the wrong notebook and scored 0.00. The same agent completes 3 of 183 public levels. The value of this work is not a score. It is a falsifiable accounting of where accuracy goes, a selection rule with a stated failure mode that showed up exactly where predicted, and every number published with the files that produced it.
+Keeping what is likely separate from what is allowed lost nothing in a real solver and the deliberate violation lost two answers, but neither difference is significant, and the layer did not measurably raise accuracy. I can say exactly why: the right answer is usually never generated, the generator already respects every local law, and the global laws that do separate right from wrong can rarely be declared. On ARC-AGI-3 I submitted the wrong notebook and scored 0.00. The same agent completes 3 of 183 public levels. The value of this work is not a score. It is a falsifiable accounting of where accuracy goes, a pre-registered selection rule whose control lost answers in the predicted direction, and every number published with the files that produced it.
 
 ## References
 
@@ -200,5 +200,5 @@ Keeping what is likely separate from what is allowed was safe in a real solver, 
 [3] F. Chollet et al., *ARC Prize 2025: Technical Report*, arXiv:2601.10904, 2026.
 [4] I. Sorokin and J.-F. Puget, *NVARC solution to ARC-AGI-2 2025*, ARC Prize 2025 solution write-up.
 [5] D. Franzen, J. Disselhoff and D. Hartmann, *Product of Experts with LLMs: Boosting Performance on ARC Is a Matter of Perspective*, 2025.
-[6] J. M. Carter, *Likely and Allowed: The Joint State of Prediction and Admissibility*, 2026, https://ivybe1337.github.io/Survival-Mechanics/.
+[6] J. M. Carter, *Likely and Allowed: The Joint State of Prediction and Admissibility*, 2026, https://doi.org/10.5281/zenodo.24093939.
 [7] A. K. Mackworth, *Consistency in Networks of Relations*, Artificial Intelligence 8 (1977), 99–118.
