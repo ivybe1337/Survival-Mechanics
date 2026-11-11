@@ -296,7 +296,7 @@ do not claim it.</p>
 generation untouched, so one recorded pool supports every selection rule
 offline, and the comparison between rules is exact. FATE’s elimination
 step descends from arc consistency [7] and the forward–backward
-algorithm; what it adds is a logged reason for every removal.</p>
+algorithm.</p>
 <h2 id="approach">4. Approach</h2>
 <h3 id="the-rule">4.1 The rule</h3>
 <p>Every system here obeys one rule from the theory: <strong>a learned
@@ -327,12 +327,9 @@ answer slots unless at least two admissible candidates exist.</p>
 <p><strong>FATE, V2 and V3.</strong> FATE intersects forward
 reachability from the input with backward preimages of the output. It
 meets in the middle over 60 exact invertible grid operations at depth 2
-+ 2, plus a global colour map, and it logs the reason for every
-eliminated state. A program counts only if it reproduces every
++ 2, plus a global colour map. A program counts only if it reproduces every
 demonstration. When one exists, its output becomes the first attempt
-(V2), or the first attempt over the ledger order (V3). On 600 random
-nondeterministic systems with a planted trajectory, the engine never
-eliminated a true state.</p>
+(V2), or the first attempt over the ledger order (V3). FATE was inactive in the submitted V1.</p>
 <p><strong>Control, V4.</strong> V4 deletes every candidate whose
 likelihood trails the best by more than ln 10. It breaks the rule on
 purpose, so the rule can be tested.</p>
@@ -532,10 +529,8 @@ whether the agent or the harness failed there.</p>
 <h2 id="analysis">6. Analysis</h2>
 <h3 id="where-the-accuracy-goes">6.1 Where the accuracy goes</h3>
 <p>Accuracy factors exactly:</p>
-<p><span class="math display">\[\frac{44}{157} \;=\;
-\underbrace{\frac{54}{157}}_{\text{truth generated}} \times
-\underbrace{\frac{44}{54}}_{\text{truth selected}} .\]</span></p>
-<p>For 103 of the 157 outputs the model never generated the right
+<p><span class="math display">\[\frac{44}{172} \;=\; \underbrace{\frac{157}{172}}_{\text{received a pool}} \times \underbrace{\frac{54}{157}}_{\text{truth generated}} \times \underbrace{\frac{44}{54}}_{\text{truth selected}} .\]</span></p>
+<p>15 of the 172 test outputs yielded no grid although every task finished. For 103 of the 157 outputs with a pool the model never generated the right
 answer, and no selection rule can recover an answer that is not in the
 pool. Selection is already efficient: 44 of the 54 available truths
 reach the top two.</p>
@@ -614,14 +609,11 @@ certified 15 of 1,000, of which 14 were correct. My inference is that
 ARC-AGI-2 evaluation tasks are rarely compositions of global invertible
 operations, so an exact engine over that library is precise but almost
 never applicable.</p>
-<h3 id="deleting-by-likelihood-is-measurably-wrong">6.5 Deleting by
-likelihood is measurably wrong</h3>
+<h3 id="deleting-by-likelihood-is-measurably-wrong">6.5 Deleting by likelihood cost answers here</h3>
 <p>Both of V4’s losses, <code>4c3d4a41_1</code> and
 <code>b6f77b65_2</code>, are correct answers in second place, deleted on
-likelihood alone. That is the rule’s failure mode, observed exactly
-where the theory says it will appear.</p>
-<h3 id="more-sampling-raises-recall-not-accuracy">6.6 More sampling
-raises recall, not accuracy</h3>
+likelihood alone. Two losses are not significant (sign test p = 0.5).</p>
+<h3 id="more-sampling-raises-recall-not-accuracy">6.6 Generation is the main loss, and late sampling bought little accuracy</h3>
 <table>
 <thead>
 <tr class="header">
@@ -669,16 +661,14 @@ accuracy only 0.8. The extra truths arrive with few votes, and selection
 cannot promote them. The run used 5.4 of its 12 hours
 (<code>official_v1_task_times.json</code>).</p>
 <h3 id="noise">6.7 Noise</h3>
-<p>My two identical-code runs differ by 1.66 points. The leaderboard
-agrees with that scale. Among teams scoring 25 to 35 with at most two
+<p>My two identical-code runs differ by 1.66 points. Among teams scoring 25 to 35 with at most two
 submissions, the mean is 29.48 with standard deviation 1.40, so 28.06
 sits at z = −1.01. Teams in the same band with ten or more submissions
-average 31.31: the band rises with re-rolls. To detect a one-task effect
+average 31.31, consistent with re-rolling. To detect a one-task effect
 (0.83 points) at a two-sided 5% level with 80% power takes <span
 class="math inline">\(n = 2(1.96+0.84)^2\sigma^2/\delta^2\)</span> runs
 per arm, which is 31 with σ = 1.17 from my pair and 44 with σ = 1.40
-from the band. A paired replay on fixed pools costs one run. Leaderboard
-differences this small are not measurements. Source:
+from the band. A paired replay on fixed pools costs one run.  Source:
 <code>public_leaderboard_2026-11-08.csv</code>.</p>
 <h2 id="what-carries-beyond-arc">7. What carries beyond ARC</h2>
 <p>The accounting is general. Any system that generates candidates and

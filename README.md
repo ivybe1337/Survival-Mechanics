@@ -40,6 +40,8 @@ python3 r8_extensions.py
 
 ## ARC Prize 2026 report
 
+The ARC Prize 2026 Paper Track submission, exactly as submitted: [reports/ARC_PRIZE_2026_PAPER_TRACK.md](reports/ARC_PRIZE_2026_PAPER_TRACK.md) ([PDF](reports/ARC_PRIZE_2026_PAPER_TRACK.pdf)). It is the canonical account of the ARC-AGI-2 entry; everything below agrees with it.
+
 The full report on every submission built on this work, ARC-AGI-2 and ARC-AGI-3, with all results and the data behind them: [reports/ARC_PRIZE_2026_REPORT.md](reports/ARC_PRIZE_2026_REPORT.md), also [on the site](https://ivybe1337.github.io/Survival-Mechanics/report.html) and [as live data](https://ivybe1337.github.io/Survival-Mechanics/arc.html).
 
 ## Linked code submission
@@ -53,6 +55,7 @@ My ARC Prize 2026 entry for the ARC-AGI-2 track is the Kaggle notebook `netphant
   author       = {Joshua Matthew Carter},
   title        = {Likely and Allowed: The Joint State of Prediction and Admissibility},
   year         = {2026},
+  doi          = {10.5281/zenodo.24093938},
   howpublished = {\url{https://ivybe1337.github.io/Survival-Mechanics/}}
 }
 ```

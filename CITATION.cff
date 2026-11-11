@@ -5,7 +5,8 @@ authors:
   - family-names: Carter
     given-names: Joshua Matthew
 date-released: 2026-11-09
-version: "1.0"
+version: "1.0.1"
 url: "https://ivybe1337.github.io/Survival-Mechanics/"
 repository-code: "https://github.com/ivybe1337/survival-mechanics"
 license: CC-BY-SA-4.0
+doi: 10.5281/zenodo.24093938

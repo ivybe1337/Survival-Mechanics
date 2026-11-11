@@ -32,7 +32,7 @@ Source: `kaggle_submissions_arc-agi-2.csv`, `kaggle_submissions_arc-agi-3.csv`. 
 
 The candidate generator is the Qwen3-4B component of NVARC [4], the 2025 winner, as packaged in a public Kaggle notebook whose loader, solver and decoder I use byte for byte. It does per-task LoRA test-time training on augmented demonstrations, depth-first decoding over the ARC tokens, and re-scoring of every candidate under eight augmentations, descending from the ARChitects' approach [5]. I did not write it and I do not claim it.
 
-Constrained decoding enforces rules during generation. I leave generation untouched, so one recorded pool supports every selection rule offline, and the comparison between rules is exact. FATE's elimination step descends from arc consistency [7] and the forward–backward algorithm; what it adds is a logged reason for every removal.
+Constrained decoding enforces rules during generation. I leave generation untouched, so one recorded pool supports every selection rule offline, and the comparison between rules is exact. FATE's elimination step descends from arc consistency [7] and the forward–backward algorithm.
 
 ## 4. Approach
 
@@ -53,7 +53,7 @@ Every system here obeys one rule from the theory: **a learned score may order; o
 
 Candidates that break an active invariant move behind every admissible candidate. Nothing is deleted, and nothing leaves the two answer slots unless at least two admissible candidates exist.
 
-**FATE, V2 and V3.** FATE intersects forward reachability from the input with backward preimages of the output. It meets in the middle over 60 exact invertible grid operations at depth 2 + 2, plus a global colour map, and it logs the reason for every eliminated state. A program counts only if it reproduces every demonstration. When one exists, its output becomes the first attempt (V2), or the first attempt over the ledger order (V3). On 600 random nondeterministic systems with a planted trajectory, the engine never eliminated a true state.
+**FATE, V2 and V3.** FATE intersects forward reachability from the input with backward preimages of the output. It meets in the middle over 60 exact invertible grid operations at depth 2 + 2, plus a global colour map. A program counts only if it reproduces every demonstration. When one exists, its output becomes the first attempt (V2), or the first attempt over the ledger order (V3). FATE was inactive in the submitted V1.
 
 **Control, V4.** V4 deletes every candidate whose likelihood trails the best by more than ln 10. It breaks the rule on purpose, so the rule can be tested.
 
@@ -120,9 +120,9 @@ The FARSEER v3 notebook reports, in its own header, 8 levels and a scorecard of 
 
 Accuracy factors exactly:
 
-$$\frac{44}{157} \;=\; \underbrace{\frac{54}{157}}_{\text{truth generated}} \times \underbrace{\frac{44}{54}}_{\text{truth selected}} .$$
+$$\frac{44}{172} \;=\; \underbrace{\frac{157}{172}}_{\text{received a pool}} \times \underbrace{\frac{54}{157}}_{\text{truth generated}} \times \underbrace{\frac{44}{54}}_{\text{truth selected}} .$$
 
-For 103 of the 157 outputs the model never generated the right answer, and no selection rule can recover an answer that is not in the pool. Selection is already efficient: 44 of the 54 available truths reach the top two.
+15 of the 172 test outputs yielded no grid although every task finished. For 103 of the 157 outputs with a pool the model never generated the right answer, and no selection rule can recover an answer that is not in the pool. Selection is already efficient: 44 of the 54 available truths reach the top two.
 
 ### 6.2 Why a mask has narrow leverage
 
@@ -147,11 +147,11 @@ Finer laws fail differently. Forcing each cell from its 3×3 input neighbourhood
 
 FATE certified 0 of 120 evaluation tasks. On the training set it certified 15 of 1,000, of which 14 were correct. My inference is that ARC-AGI-2 evaluation tasks are rarely compositions of global invertible operations, so an exact engine over that library is precise but almost never applicable.
 
-### 6.5 Deleting by likelihood is measurably wrong
+### 6.5 Deleting by likelihood cost answers here
 
-Both of V4's losses, `4c3d4a41_1` and `b6f77b65_2`, are correct answers in second place, deleted on likelihood alone. That is the rule's failure mode, observed exactly where the theory says it will appear.
+Both of V4's losses, `4c3d4a41_1` and `b6f77b65_2`, are correct answers in second place, deleted on likelihood alone. Two losses are not significant (sign test p = 0.5).
 
-### 6.6 More sampling raises recall, not accuracy
+### 6.6 Generation is the main loss, and late sampling bought little accuracy
 
 | Fraction of decoded runs | Recall | Top-2 accuracy | Mean candidates |
 |---|---|---|---|
@@ -165,7 +165,7 @@ From half the runs to all of them, recall rises 3.5 points and top-2 accuracy on
 
 ### 6.7 Noise
 
-My two identical-code runs differ by 1.66 points. The leaderboard agrees with that scale. Among teams scoring 25 to 35 with at most two submissions, the mean is 29.48 with standard deviation 1.40, so 29.72 sits at z = +0.17. Teams in the same band with ten or more submissions average 31.31: the band rises with re-rolls. To detect a one-task effect (0.83 points) at a two-sided 5% level with 80% power takes $n = 2(1.96+0.84)^2\sigma^2/\delta^2$ runs per arm, which is 31 with σ = 1.17 from my pair and 44 with σ = 1.40 from the band. A paired replay on fixed pools costs one run. Leaderboard differences this small are not measurements. Source: `public_leaderboard_2026-11-08.csv`.
+My two identical-code runs differ by 1.66 points. Among teams scoring 25 to 35 with at most two submissions, the mean is 29.48 with standard deviation 1.40, so 28.06 sits at z = −1.01. Teams in the same band with ten or more submissions average 31.31, consistent with re-rolling. To detect a one-task effect (0.83 points) at a two-sided 5% level with 80% power takes $n = 2(1.96+0.84)^2\sigma^2/\delta^2$ runs per arm, which is 31 with σ = 1.17 from my pair and 44 with σ = 1.40 from the band. A paired replay on fixed pools costs one run.  Source: `public_leaderboard_2026-11-08.csv`.
 
 ## 7. What carries beyond ARC
 
