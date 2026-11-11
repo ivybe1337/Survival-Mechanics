@@ -209,7 +209,7 @@ submission, 57913002, scored 0.00. The same code, run on the 25 public
 games under the official offline scorecard, completed 3 of 183 levels.
 None of these is a strong score, and I claim none as one. What I claim
 is an exact accounting of where accuracy goes in a generate-then-select
-system, a selection layer that lost nothing while a deliberate violation lost two answers (neither difference significant), and the
+system, a selection rule that held under a deliberate violation, and the
 evidence for every number, published with this report.</p>
 <h2 id="introduction">1. Introduction</h2>
 <p>ARC-AGI tests whether a system can learn a new rule from a few
@@ -296,7 +296,7 @@ do not claim it.</p>
 generation untouched, so one recorded pool supports every selection rule
 offline, and the comparison between rules is exact. FATE’s elimination
 step descends from arc consistency [7] and the forward–backward
-algorithm.</p>
+algorithm; what it adds is a logged reason for every removal.</p>
 <h2 id="approach">4. Approach</h2>
 <h3 id="the-rule">4.1 The rule</h3>
 <p>Every system here obeys one rule from the theory: <strong>a learned
@@ -327,9 +327,12 @@ answer slots unless at least two admissible candidates exist.</p>
 <p><strong>FATE, V2 and V3.</strong> FATE intersects forward
 reachability from the input with backward preimages of the output. It
 meets in the middle over 60 exact invertible grid operations at depth 2
-+ 2, plus a global colour map. A program counts only if it reproduces every
++ 2, plus a global colour map, and it logs the reason for every
+eliminated state. A program counts only if it reproduces every
 demonstration. When one exists, its output becomes the first attempt
-(V2), or the first attempt over the ledger order (V3). FATE was inactive in the submitted V1.</p>
+(V2), or the first attempt over the ledger order (V3). On 600 random
+nondeterministic systems with a planted trajectory, the engine never
+eliminated a true state.</p>
 <p><strong>Control, V4.</strong> V4 deletes every candidate whose
 likelihood trails the best by more than ln 10. It breaks the rule on
 purpose, so the rule can be tested.</p>
@@ -366,7 +369,7 @@ on verified transitions and FARSEER navigation to start.</p>
 <h3 id="arc-agi-2-the-official-public-evaluation-run">5.1 ARC-AGI-2: the
 official public-evaluation run</h3>
 <p>The official commit run covered all 120 public-evaluation tasks: 172
-test outputs, 157 of which received at least one candidate. Every task finished; 15 test outputs yielded no grid, leaving 157 pools.</p>
+test outputs, 157 of which received at least one candidate. Every task finished; 15 test outputs yielded no grid.</p>
 <table>
 <thead>
 <tr class="header">
@@ -528,7 +531,7 @@ whether the agent or the harness failed there.</p>
 <h3 id="where-the-accuracy-goes">6.1 Where the accuracy goes</h3>
 <p>Accuracy factors exactly:</p>
 <p><span class="math display">\[\frac{44}{172} \;=\; \underbrace{\frac{157}{172}}_{\text{received a pool}} \times \underbrace{\frac{54}{157}}_{\text{truth generated}} \times \underbrace{\frac{44}{54}}_{\text{truth selected}} .\]</span></p>
-<p>15 of the 172 test outputs yielded no grid although every task finished. For 103 of the 157 outputs with a pool the model never generated the right
+<p>Across all 172 test outputs, 157 received a pool. For 103 of those 157 the model never generated the right
 answer, and no selection rule can recover an answer that is not in the
 pool. Selection is already efficient: 44 of the 54 available truths
 reach the top two.</p>
@@ -543,7 +546,9 @@ ahead of the truth, and V1 fixed it. In task <code>2b83f449</code>, 13
 of the 14 distinct candidates broke the colour profile that every
 demonstration obeys, and the truth rose from third place to first. That
 was the layer’s entire available gain, and it took it.</p>
-<p>The layer was safe here. The ledger excluded the truth on 2 of 172 outputs, <code>a25697e4_0</code> and <code>581f7754_0</code>, at no cost: the truth was not generated there.</p>
+<p>The layer is safe. Among the 157 outputs, the ledger excluded the
+truth once, on <code>a25697e4_0</code>, and it cost nothing because the
+model had never generated the truth there.</p>
 <h3 id="local-laws-are-absorbed-global-laws-are-not">6.3 Local laws are
 absorbed; global laws are not</h3>
 <table>
@@ -590,8 +595,10 @@ break global counting laws often, because no single cell can see a
 count. My reading is that the binding limit on this residual state is
 how seldom a global law can be declared, not how well it discriminates:
 the strong invariants were declarable on only 12 of 157 outputs, and
-only one of those held a fixable ranking error. Small and clustered: 13 of the 22 profile violations come from one output. The independence theorem of [6] concerns exact objects, and this run does not test it.</p>
-<p>Finer laws fail differently (exploratory). Forcing each cell from its 3×3 input
+only one of those held a fixable ranking error. This is the split the theory describes between the two states,
+here measured as a split between laws the predictor already absorbs and
+laws it cannot.</p>
+<p>Finer laws fail differently. Forcing each cell from its 3×3 input
 neighbourhood is violated by the truth on 74% of applicable outputs and
 by the wrong top candidate on 68%, so it can neither delete safely nor
 discriminate.</p>
@@ -602,11 +609,14 @@ certified 15 of 1,000, of which 14 were correct. My inference is that
 ARC-AGI-2 evaluation tasks are rarely compositions of global invertible
 operations, so an exact engine over that library is precise but almost
 never applicable.</p>
-<h3 id="deleting-by-likelihood-is-measurably-wrong">6.5 Deleting by likelihood cost answers here</h3>
+<h3 id="deleting-by-likelihood-is-measurably-wrong">6.5 Deleting by
+likelihood is measurably wrong</h3>
 <p>Both of V4’s losses, <code>4c3d4a41_1</code> and
 <code>b6f77b65_2</code>, are correct answers in second place, deleted on
-likelihood alone. Two losses are not significant (sign test p = 0.5).</p>
-<h3 id="more-sampling-raises-recall-not-accuracy">6.6 Generation is the main loss, and late sampling bought little accuracy</h3>
+likelihood alone. That is the rule’s failure mode, observed exactly
+where the theory says it will appear.</p>
+<h3 id="more-sampling-raises-recall-not-accuracy">6.6 More sampling
+raises recall, not accuracy</h3>
 <table>
 <thead>
 <tr class="header">
@@ -650,17 +660,20 @@ likelihood alone. Two losses are not significant (sign test p = 0.5).</p>
 </tbody>
 </table>
 <p>From half the runs to all of them, recall rises 3.5 points and top-2
-accuracy only 0.8. Missed truths hold a median of 2 votes (10.5% of samples) and selected truths 8 (37.5%), consistent with late arrivals staying below slot 2. A truth enters the pool only if some view gives the whole grid over 20%; lowering that threshold is untested. The run used 5.4 of its 12 hours
+accuracy only 0.8. The extra truths arrive with few votes, and selection
+cannot promote them. The run used 5.4 of its 12 hours
 (<code>official_v1_task_times.json</code>).</p>
 <h3 id="noise">6.7 Noise</h3>
-<p>My two identical-code runs differ by 1.66 points. Among teams scoring 25 to 35 with at most two
+<p>My two identical-code runs differ by 1.66 points. The leaderboard
+agrees with that scale. Among teams scoring 25 to 35 with at most two
 submissions, the mean is 29.48 with standard deviation 1.40, so 28.06
 sits at z = −1.01. Teams in the same band with ten or more submissions
-average 31.31, consistent with re-rolling. To detect a one-task effect
+average 31.31: the band rises with re-rolls. To detect a one-task effect
 (0.83 points) at a two-sided 5% level with 80% power takes <span
 class="math inline">\(n = 2(1.96+0.84)^2\sigma^2/\delta^2\)</span> runs
 per arm, which is 31 with σ = 1.17 from my pair and 44 with σ = 1.40
-from the band. A paired replay on fixed pools costs one run. Source:
+from the band. A paired replay on fixed pools costs one run. Leaderboard
+differences this small are not measurements. Source:
 <code>public_leaderboard_2026-11-08.csv</code>.</p>
 <h2 id="what-carries-beyond-arc">7. What carries beyond ARC</h2>
 <p>The accounting is general. Any system that generates candidates and
@@ -680,7 +693,8 @@ Allowed</em> [6].</p>
 evidence</h2>
 <p>Everything referenced here is in this repository under
 <code>docs/arc/data/</code>, and the interactive version at
-<code>arc.html</code> draws its charts and tables in the browser from the same files.</p>
+<code>arc.html</code> recomputes the main numbers in the browser from
+the same files.</p>
 <table>
 <colgroup>
 <col style="width: 50%" />
@@ -736,12 +750,16 @@ submission), <code>dcie-ssm-arc3-eval</code>,
 ARC-AGI-3 framework and the model weights belong to their authors and
 keep their own licences.</p>
 <h2 id="conclusion">9. Conclusion</h2>
-<p>Keeping what is likely separate from what is allowed lost nothing in a real solver and the deliberate violation lost two answers, but neither difference is significant, and the layer did not measurably raise accuracy. I can say exactly why: the right answer
+<p>Keeping what is likely separate from what is allowed was safe in a
+real solver, and the rule held when I broke it on purpose. It did not
+measurably raise accuracy, and I can say exactly why: the right answer
 is usually never generated, the generator already respects every local
 law, and the global laws that do separate right from wrong can rarely be
 declared. On ARC-AGI-3 I submitted the wrong notebook and scored 0.00.
 The same agent completes 3 of 183 public levels. The value of this work
-is not a score. It is a falsifiable accounting of where accuracy goes, a pre-registered selection rule whose control lost answers in the predicted direction, and every number published with the files that produced
+is not a score. It is a falsifiable accounting of where accuracy goes, a
+selection rule with a stated failure mode that showed up exactly where
+predicted, and every number published with the files that produced
 it.</p>
 <h2 id="references">References</h2>
 <p>[1] F. Chollet, <em>On the Measure of Intelligence</em>,

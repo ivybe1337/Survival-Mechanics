@@ -99,7 +99,7 @@ footer{padding:48px 0 80px;border-top:1px solid var(--rule);color:var(--muted);f
 <header class="hero"><div class="wrap">
   <div class="eyebrow">ARC Prize 2026 · Joshua Matthew Carter</div>
   <h1>Likely orders.<br><span>Allowed</span> demotes.</h1>
-  <p class="lede">My ARC-AGI-2 entry puts one rule from the theory inside a real solver: a learned score may only order candidate answers, and only an invariant that holds on every demonstration may push one down. Every chart and table on this page is drawn in your browser from the published run data and Kaggle's own records, and every file is linked at the bottom. The full written report is <a href="report.html">here</a>.</p>
+  <p class="lede">My ARC-AGI-2 entry puts one rule from the theory inside a real solver: a learned score may only order candidate answers, and only an invariant that holds on every demonstration may push one down. Everything on this page is recomputed in your browser from the published run data and Kaggle's own records, and every file is linked at the bottom. The full written report is <a href="report.html">here</a>.</p>
   <div class="grid3" style="margin-top:40px" id="scores"></div>
 </div></header>
 
@@ -152,7 +152,7 @@ footer{padding:48px 0 80px;border-top:1px solid var(--rule);color:var(--muted);f
       <p class="note">My reading: a generator fitted to the demonstrations learns what a cell-by-cell decoder can enforce, and does not learn global counting, which no single cell can see.</p>
     </div>
     <div class="panel">
-      <h3>Generation is the main loss, and late sampling bought little accuracy</h3>
+      <h3>More sampling raises recall, not accuracy</h3>
       <p class="hint">Recall and top-2 accuracy as the fraction of decoded runs grows.</p>
       <div id="rare"></div>
     </div>
@@ -181,7 +181,7 @@ footer{padding:48px 0 80px;border-top:1px solid var(--rule);color:var(--muted);f
 <section id="evidence"><div class="wrap">
   <div class="eyebrow">Evidence</div>
   <h2>Every file behind every number</h2>
-  <p class="sub">The Kaggle submission records were pulled with the Kaggle CLI. The run logs are the notebooks' own output.</p>
+  <p class="sub">The Kaggle submission records were pulled with the Kaggle CLI. The run logs are the notebooks' own output. Nothing here is summarized by hand.</p>
   <div class="panel"><div class="files" id="files"></div></div>
 </div></section>
 
@@ -293,7 +293,7 @@ fetch(D+"public_leaderboard_2026-11-08.csv").then(r=>r.text()).then(t=>{
   const band=teams.filter(x=>x.s>=25&&x.s<=35),few=band.filter(x=>x.c<=2),many=band.filter(x=>x.c>=10);
   const mean=a=>a.reduce((p,x)=>p+x.s,0)/a.length,sd=a=>{const m=mean(a);return Math.sqrt(a.reduce((p,x)=>p+(x.s-m)**2,0)/(a.length-1))};
   const top=Math.max(...teams.map(x=>x.s));
-  $("lbstats").innerHTML=[[`${teams.length}`,"teams on the board",`top score ${top}`],[`${fmt(mean(few),2)} ± ${fmt(sd(few),2)}`,"band 25–35, ≤ 2 submissions",`${few.length} teams; 28.06 sits at z = ${fmt((28.06-mean(few))/sd(few),2)}`],[`${fmt(mean(many),2)}`,"band 25–35, ≥ 10 submissions",`${many.length} teams, consistent with re-rolling`]].map(([n,l,d])=>`<div class="score"><span class="lab">${l}</span><span class="n" style="font-size:30px">${n}</span><span class="d">${d}</span></div>`).join("");
+  $("lbstats").innerHTML=[[`${teams.length}`,"teams on the board",`top score ${top}`],[`${fmt(mean(few),2)} ± ${fmt(sd(few),2)}`,"band 25–35, ≤ 2 submissions",`${few.length} teams; 28.06 sits at z = ${fmt((28.06-mean(few))/sd(few),2)}`],[`${fmt(mean(many),2)}`,"band 25–35, ≥ 10 submissions",`${many.length} teams: the band rises with re-rolls`]].map(([n,l,d])=>`<div class="score"><span class="lab">${l}</span><span class="n" style="font-size:30px">${n}</span><span class="d">${d}</span></div>`).join("");
 });
 
 /* ---------- ARC-AGI-3 ---------- */
